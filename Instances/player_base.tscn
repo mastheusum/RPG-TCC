@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8tnwtydplp3h"]
+
+[ext_resource type="Script" path="res://Scripts/player_base.gd" id="1_c1gcv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k26js"]
+radius = 16.0
+
+[node name="PlayerBase" type="CharacterBody2D"]
+position = Vector2(540, 360)
+script = ExtResource("1_c1gcv")
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.999988, 0.391043, 0.205126, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k26js")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AttackOffset" type="Node2D" parent="."]
+
+[node name="HUD" type="Control" parent="."]
+custom_minimum_size = Vector2(1080, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LifeBar" type="ProgressBar" parent="HUD"]
+custom_minimum_size = Vector2(400, 24)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 416.0
+offset_bottom = 40.0
+value = 50.0
+show_percentage = false
+
+[node name="ManaBar" type="ProgressBar" parent="HUD"]
+custom_minimum_size = Vector2(400, 24)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 416.0
+offset_bottom = 72.0
+value = 50.0
+show_percentage = false
+
+[node name="ManaBar2" type="ProgressBar" parent="HUD"]
+custom_minimum_size = Vector2(1048, 16)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 688.0
+offset_right = 1064.0
+offset_bottom = 704.0
+value = 50.0
+show_percentage = false
