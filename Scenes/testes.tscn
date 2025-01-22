@@ -1,8 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkuet134dnhli"]
+[gd_scene load_steps=11 format=3 uid="uid://bkuet134dnhli"]
 
+[ext_resource type="Script" path="res://Scripts/start_game.gd" id="1_2lpga"]
 [ext_resource type="Texture2D" uid="uid://dx7yx6vbk33g2" path="res://Resources/WeaponSword.tres" id="1_fs4ro"]
+[ext_resource type="PackedScene" uid="uid://bkhle73tjrws3" path="res://Instances/player_melee.tscn" id="2_nvr7u"]
 [ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/WeaponBow.tres" id="2_s7eyt"]
+[ext_resource type="PackedScene" uid="uid://q8nlvukq8ql7" path="res://Instances/player_ranged_long.tscn" id="3_1lspw"]
 [ext_resource type="Texture2D" uid="uid://wtcsbv3bqrgn" path="res://Resources/WeaponStaff.tres" id="3_bwvf1"]
+[ext_resource type="PackedScene" uid="uid://nyvqscl27yt7" path="res://Instances/player_ranged_short.tscn" id="4_gj1nf"]
+[ext_resource type="PackedScene" uid="uid://cxnpjk21ghf37" path="res://Instances/spawn_enemy.tscn" id="8_pqlbi"]
+[ext_resource type="PackedScene" uid="uid://cw15xcrj5a2lk" path="res://Instances/enemy_base.tscn" id="9_opcyf"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_dglq1"]
+vertices = PackedVector2Array(1118, 742, -38, 742, -38, -22, 1118, -22)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-48, -32, 1128, -32, 1128, 752, -48, 752)])
 
 [node name="testes" type="Node2D"]
 
@@ -11,7 +22,14 @@ visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="PlayerSpawnPoint" type="Node2D" parent="."]
+position = Vector2(576, 360)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_2lpga")
+knight = ExtResource("2_nvr7u")
+ranger = ExtResource("3_1lspw")
+wizzard = ExtResource("4_gj1nf")
 
 [node name="GUI" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -26,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="WarriorButton" type="Button" parent="CanvasLayer/GUI"]
+[node name="KnightButton" type="Button" parent="CanvasLayer/GUI"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -37,7 +55,7 @@ offset_bottom = 64.0
 grow_vertical = 2
 metadata/_edit_group_ = true
 
-[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/WarriorButton"]
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/KnightButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -53,7 +71,7 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("1_fs4ro")
 
-[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/WarriorButton"]
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/KnightButton"]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 1
 anchors_preset = 12
@@ -66,7 +84,7 @@ mouse_filter = 2
 bbcode_enabled = true
 text = "[center]Cavaleiro"
 
-[node name="ArcherButton" type="Button" parent="CanvasLayer/GUI"]
+[node name="RangerButton" type="Button" parent="CanvasLayer/GUI"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -81,7 +99,7 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_group_ = true
 
-[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/ArcherButton"]
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/RangerButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -97,7 +115,7 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_s7eyt")
 
-[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/ArcherButton"]
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/RangerButton"]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 1
 anchors_preset = 12
@@ -110,7 +128,7 @@ mouse_filter = 2
 bbcode_enabled = true
 text = "[center]Arqueiro"
 
-[node name="MageButton" type="Button" parent="CanvasLayer/GUI"]
+[node name="WizzardButton" type="Button" parent="CanvasLayer/GUI"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -124,7 +142,7 @@ grow_horizontal = 0
 grow_vertical = 2
 metadata/_edit_group_ = true
 
-[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/MageButton"]
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/WizzardButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -140,7 +158,7 @@ grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("3_bwvf1")
 
-[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/MageButton"]
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/WizzardButton"]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 1
 anchors_preset = 12
@@ -152,3 +170,15 @@ grow_vertical = 0
 mouse_filter = 2
 bbcode_enabled = true
 text = "[center]Feiticeiro"
+
+[node name="SpawnEnemy" parent="." instance=ExtResource("8_pqlbi")]
+autostart = false
+enemy = ExtResource("9_opcyf")
+max_pos = Vector2(1080, 720)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_dglq1")
+
+[connection signal="pressed" from="CanvasLayer/GUI/KnightButton" to="CanvasLayer" method="_on_warrior_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/RangerButton" to="CanvasLayer" method="_on_ranger_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/WizzardButton" to="CanvasLayer" method="_on_wizzard_button_pressed"]
