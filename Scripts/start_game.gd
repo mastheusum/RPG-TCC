@@ -15,6 +15,7 @@ func _ready() -> void:
 func _on_warrior_button_pressed() -> void:
 	var player = knight.instantiate()
 	player.global_position = pos
+	player.name = "Player"
 	get_parent().add_child(player)
 	get_parent().get_node("REFERENCIAL").visible = true
 	visible = false
@@ -24,6 +25,7 @@ func _on_warrior_button_pressed() -> void:
 func _on_ranger_button_pressed() -> void:
 	var player = ranger.instantiate()
 	player.global_position = pos
+	player.name = "Player"
 	get_parent().add_child(player)
 	get_parent().get_node("REFERENCIAL").visible = true
 	visible = false
@@ -33,6 +35,7 @@ func _on_ranger_button_pressed() -> void:
 func _on_wizzard_button_pressed() -> void:
 	var player = wizzard.instantiate()
 	player.global_position = pos
+	player.name = "Player"
 	get_parent().add_child(player)
 	get_parent().get_node("REFERENCIAL").visible = true
 	visible = false

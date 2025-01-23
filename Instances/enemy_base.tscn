@@ -6,6 +6,8 @@
 radius = 20.0
 
 [node name="EnemyBase" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_0qosb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -26,3 +28,4 @@ color = Color(1, 0.215686, 0.227451, 1)
 shape = SubResource("CircleShape2D_ylcxn")
 
 [node name="Agent" type="NavigationAgent2D" parent="."]
+target_desired_distance = 20.0

@@ -8,6 +8,7 @@ radius = 16.0
 
 [sub_resource type="Animation" id="Animation_rygud"]
 resource_name = "Attacking"
+length = 0.1
 
 [sub_resource type="Animation" id="Animation_li0st"]
 resource_name = "Idle"
