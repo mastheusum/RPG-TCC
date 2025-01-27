@@ -5,8 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_k26js"]
 radius = 16.0
 
-[node name="PlayerBase" type="CharacterBody2D"]
-position = Vector2(540, 360)
+[node name="PlayerBase" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_c1gcv")
 metadata/_edit_group_ = true
 
@@ -32,40 +31,44 @@ shape = SubResource("CircleShape2D_k26js")
 [node name="AttackOffset" type="Node2D" parent="."]
 
 [node name="HUD" type="Control" parent="."]
-custom_minimum_size = Vector2(1080, 720)
+custom_minimum_size = Vector2(720, 600)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -300.0
+offset_right = 360.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="LifeBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(400, 24)
+custom_minimum_size = Vector2(296, 24)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 416.0
+offset_right = 312.0
 offset_bottom = 40.0
 value = 50.0
 show_percentage = false
 
 [node name="ManaBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(400, 24)
+custom_minimum_size = Vector2(296, 24)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 48.0
-offset_right = 416.0
+offset_right = 312.0
 offset_bottom = 72.0
 value = 50.0
 show_percentage = false
 
 [node name="ExperienceBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(1048, 16)
+custom_minimum_size = Vector2(688, 16)
 layout_mode = 0
 offset_left = 16.0
-offset_top = 688.0
-offset_right = 1064.0
-offset_bottom = 704.0
+offset_top = 564.0
+offset_right = 704.0
+offset_bottom = 580.0
 value = 50.0
 show_percentage = false

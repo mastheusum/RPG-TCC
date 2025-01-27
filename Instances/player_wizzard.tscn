@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://nyvqscl27yt7"]
 
-[ext_resource type="Script" path="res://Scripts/player_ranged.gd" id="1_nnecv"]
-[ext_resource type="PackedScene" uid="uid://d0nrat2jpp5hr" path="res://Instances/projectile.tscn" id="2_lkmbr"]
+[ext_resource type="Script" path="res://Scripts/player_wizzard.gd" id="1_eodji"]
+[ext_resource type="PackedScene" uid="uid://c57b6pgntm0uw" path="res://Instances/spell_base.tscn" id="2_2ot0s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k26js"]
 radius = 16.0
@@ -73,13 +73,11 @@ states/Idle/position = Vector2(380, 103.185)
 states/Start/position = Vector2(170.667, 108)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_3jke7"), "Idle", "Attacking", SubResource("AnimationNodeStateMachineTransition_cldcv"), "Attacking", "Idle", SubResource("AnimationNodeStateMachineTransition_elj5j")]
 
-[node name="PlayerRanged" type="CharacterBody2D"]
-position = Vector2(540, 360)
-script = ExtResource("1_nnecv")
-shoot_pre = ExtResource("2_lkmbr")
-shoot_speed = 300.0
-delay_to_free = 2.0
-damage = 10
+[node name="PlayerWizzard" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_eodji")
+spell_preload = ExtResource("2_2ot0s")
+power_min = 1
+power_max = 3
 metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -104,7 +102,7 @@ shape = SubResource("CircleShape2D_k26js")
 [node name="AttackOffset" type="Node2D" parent="."]
 
 [node name="HUD" type="Control" parent="."]
-custom_minimum_size = Vector2(1080, 720)
+custom_minimum_size = Vector2(720, 600)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -114,34 +112,34 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="LifeBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(400, 24)
+custom_minimum_size = Vector2(296, 24)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 416.0
+offset_right = 312.0
 offset_bottom = 40.0
 mouse_filter = 2
 value = 50.0
 show_percentage = false
 
 [node name="ManaBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(400, 24)
+custom_minimum_size = Vector2(296, 24)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 48.0
-offset_right = 416.0
+offset_right = 312.0
 offset_bottom = 72.0
 mouse_filter = 2
 value = 50.0
 show_percentage = false
 
 [node name="ExperienceBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(1048, 16)
+custom_minimum_size = Vector2(688, 16)
 layout_mode = 0
 offset_left = 16.0
-offset_top = 688.0
-offset_right = 1064.0
-offset_bottom = 704.0
+offset_top = 568.0
+offset_right = 704.0
+offset_bottom = 584.0
 mouse_filter = 2
 value = 50.0
 show_percentage = false

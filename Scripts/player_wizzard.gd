@@ -1,8 +1,8 @@
 extends PlayerBase
 
-class_name PlayerRanged
+class_name PlayerWizzard
 
-@export var shoot_preload : PackedScene
+@export var spell_preload : PackedScene
 @export var shoot_speed : float
 @export var delay_to_free : float
 
@@ -12,9 +12,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			shooting()
 
 func shooting():
-	var shoot = shoot_preload.instantiate() as ProjectileMovement
-	shoot.global_position = self.global_position
-	shoot.speed = shoot_speed
+	var shoot = spell_preload.instantiate() as SpellBase
+	shoot.global_position = get_global_mouse_position()
 	shoot.power_min = power_min
 	shoot.power_max = power_max
 	get_parent().add_child(shoot)

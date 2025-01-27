@@ -2,7 +2,10 @@ extends CharacterBody2D
 
 class_name PlayerBase
 
-var speed = 200
+@export var speed = 200
+@export var power_min : int = 5
+@export var power_max : int = 15
+
 var direction := Vector2()
 
 func _physics_process(delta: float) -> void:

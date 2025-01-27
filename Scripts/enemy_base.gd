@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+class_name EnemyBase
+
+@export var life_max : float = 0
+@onready var life : float = life_max
+
 @onready var agent : NavigationAgent2D = $Agent
 var speed = 100.0
 var target : Node2D = null
@@ -19,3 +24,14 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = global_position.direction_to(_next_pos) * speed
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var collider = get_slide_collision(i).get_collider() as Node2D
+		if collider.is_in_group("Player"):
+			print("Bateu no Player")
+			queue_free()
+
+func take_damage(damage):
+	life -= damage
+	if life <= 0:
+		queue_free()

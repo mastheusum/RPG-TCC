@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/WeaponBow.tres" id="2_s7eyt"]
 [ext_resource type="PackedScene" uid="uid://q8nlvukq8ql7" path="res://Instances/player_ranged_long.tscn" id="3_1lspw"]
 [ext_resource type="Texture2D" uid="uid://wtcsbv3bqrgn" path="res://Resources/WeaponStaff.tres" id="3_bwvf1"]
-[ext_resource type="PackedScene" uid="uid://nyvqscl27yt7" path="res://Instances/player_ranged_short.tscn" id="4_gj1nf"]
+[ext_resource type="PackedScene" uid="uid://nyvqscl27yt7" path="res://Instances/player_wizzard.tscn" id="4_gj1nf"]
 [ext_resource type="PackedScene" uid="uid://cxnpjk21ghf37" path="res://Instances/spawn_enemy.tscn" id="8_pqlbi"]
 [ext_resource type="PackedScene" uid="uid://cw15xcrj5a2lk" path="res://Instances/enemy_base.tscn" id="9_opcyf"]
 

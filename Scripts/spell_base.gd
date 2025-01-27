@@ -1,0 +1,30 @@
+extends Node2D
+
+class_name SpellBase
+
+@export var power_min : int = 5
+@export var power_max : int = 15
+
+var targets_entered : Array[EnemyBase] = []
+
+func _on_end_spell() -> void:
+	get_parent().remove_child(self)
+	queue_free()
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Enemy"):
+		targets_entered.append(body as EnemyBase)
+		print(body.name)
+
+func _on_body_exited(body: Node2D) -> void:
+	if body.is_in_group("Enemy"):
+		targets_entered.erase(body as EnemyBase)
+		print(body.name)
+
+func _process(delta: float) -> void:
+	var t = $EndSpell.time_left / $EndSpell.wait_time
+	$ColorRect.color = Color(1, t, t)
+
+func _on_tick_timeout() -> void:
+	for target in targets_entered:
+		target.take_damage( randi_range(power_min, power_max) )
