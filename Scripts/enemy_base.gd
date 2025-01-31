@@ -8,7 +8,7 @@ class_name EnemyBase
 @onready var agent : NavigationAgent2D = $Agent
 var speed = 100.0
 var target : Node2D = null
-
+var attack : float = 5
 var _next_pos : Vector2
 
 func _ready() -> void:
@@ -28,7 +28,8 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
 		var collider = get_slide_collision(i).get_collider() as Node2D
 		if collider.is_in_group("Player"):
-			print("Bateu no Player")
+			collider = collider as PlayerBase
+			collider.take_damage(attack)
 			queue_free()
 
 func take_damage(damage):

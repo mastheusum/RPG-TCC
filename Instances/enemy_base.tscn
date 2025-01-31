@@ -23,6 +23,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(1, 0.215686, 0.227451, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

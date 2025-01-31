@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bs42svyup8efj"]
+
+[node name="HUD" type="Control"]
+custom_minimum_size = Vector2(720, 600)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -300.0
+offset_right = 360.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LifeBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(296, 24)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 312.0
+offset_bottom = 40.0
+mouse_filter = 2
+value = 50.0
+show_percentage = false
+
+[node name="Label_DamageTaken" type="RichTextLabel" parent="LifeBar"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = -12.0
+offset_right = 296.0
+offset_bottom = 36.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "[center]0000"
+
+[node name="ManaBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(296, 24)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 312.0
+offset_bottom = 72.0
+mouse_filter = 2
+value = 50.0
+show_percentage = false
+
+[node name="ExperienceBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(688, 16)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 564.0
+offset_right = 704.0
+offset_bottom = 580.0
+mouse_filter = 2
+value = 50.0
+show_percentage = false

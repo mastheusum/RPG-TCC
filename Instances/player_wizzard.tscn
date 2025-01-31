@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://nyvqscl27yt7"]
+[gd_scene load_steps=15 format=3 uid="uid://nyvqscl27yt7"]
 
 [ext_resource type="Script" path="res://Scripts/player_wizzard.gd" id="1_eodji"]
 [ext_resource type="PackedScene" uid="uid://c57b6pgntm0uw" path="res://Instances/spell_base.tscn" id="2_2ot0s"]
+[ext_resource type="PackedScene" uid="uid://bs42svyup8efj" path="res://Instances/GUI/hud.tscn" id="3_67fsc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k26js"]
 radius = 16.0
@@ -92,6 +93,7 @@ offset_right = 16.0
 offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.999988, 0.391043, 0.205126, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -101,48 +103,7 @@ shape = SubResource("CircleShape2D_k26js")
 
 [node name="AttackOffset" type="Node2D" parent="."]
 
-[node name="HUD" type="Control" parent="."]
-custom_minimum_size = Vector2(720, 600)
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="LifeBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(296, 24)
-layout_mode = 0
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 312.0
-offset_bottom = 40.0
-mouse_filter = 2
-value = 50.0
-show_percentage = false
-
-[node name="ManaBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(296, 24)
-layout_mode = 0
-offset_left = 16.0
-offset_top = 48.0
-offset_right = 312.0
-offset_bottom = 72.0
-mouse_filter = 2
-value = 50.0
-show_percentage = false
-
-[node name="ExperienceBar" type="ProgressBar" parent="HUD"]
-custom_minimum_size = Vector2(688, 16)
-layout_mode = 0
-offset_left = 16.0
-offset_top = 568.0
-offset_right = 704.0
-offset_bottom = 584.0
-mouse_filter = 2
-value = 50.0
-show_percentage = false
+[node name="HUD" parent="." instance=ExtResource("3_67fsc")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
