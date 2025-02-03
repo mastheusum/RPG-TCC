@@ -6,14 +6,14 @@ class_name ProjectileMovement
 @export var delay_to_free : float
 @export var power_min : int = 15
 @export var power_max : int = 35
-var direction := Vector2()
 
 func _ready() -> void:
 	$TimerToFree.start(delay_to_free)
-	direction = global_position.direction_to( get_global_mouse_position() )
+	$AnimatedSprite2D.play("default")
+	look_at( get_global_mouse_position() )
 
 func _physics_process(delta: float) -> void:
-	velocity = direction * speed
+	velocity = Vector2.RIGHT.rotated(rotation) * speed
 	move_and_slide()
 	
 	for i in get_slide_collision_count():

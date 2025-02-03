@@ -1,4 +1,48 @@
-[gd_scene format=3 uid="uid://bs42svyup8efj"]
+[gd_scene load_steps=8 format=3 uid="uid://bs42svyup8efj"]
+
+[ext_resource type="FontFile" uid="uid://cuse44lun3f1h" path="res://Fonts/antiquity-print.ttf" id="1_t6py1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tygx5"]
+bg_color = Color(0.6, 0.6, 0.6, 0.392157)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfm5d"]
+bg_color = Color(1, 0.207843, 0.207843, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7onn1"]
+bg_color = Color(0.6, 0.6, 0.6, 0.392157)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2h0w7"]
+bg_color = Color(0.207843, 0.207843, 0.6, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bnaji"]
+bg_color = Color(0.6, 0.6, 0.6, 0.392157)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xex3j"]
+bg_color = Color(1, 0.737255, 0.207843, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [node name="HUD" type="Control"]
 custom_minimum_size = Vector2(720, 600)
@@ -6,10 +50,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -360.0
-offset_top = -300.0
-offset_right = 360.0
-offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -17,11 +57,13 @@ mouse_filter = 2
 [node name="LifeBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(296, 24)
 layout_mode = 0
-offset_left = 16.0
+offset_left = 80.0
 offset_top = 16.0
-offset_right = 312.0
+offset_right = 376.0
 offset_bottom = 40.0
 mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_tygx5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qfm5d")
 value = 50.0
 show_percentage = false
 
@@ -38,11 +80,13 @@ text = "[center]0000"
 [node name="ManaBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(296, 24)
 layout_mode = 0
-offset_left = 16.0
+offset_left = 80.0
 offset_top = 48.0
-offset_right = 312.0
+offset_right = 376.0
 offset_bottom = 72.0
 mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_7onn1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2h0w7")
 value = 50.0
 show_percentage = false
 
@@ -54,5 +98,25 @@ offset_top = 564.0
 offset_right = 704.0
 offset_bottom = 580.0
 mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bnaji")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xex3j")
 value = 50.0
 show_percentage = false
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 72.0
+offset_bottom = 72.0
+
+[node name="Level" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 64.0
+theme_override_fonts/normal_font = ExtResource("1_t6py1")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[center]999"

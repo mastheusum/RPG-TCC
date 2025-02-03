@@ -35,4 +35,5 @@ func _physics_process(delta: float) -> void:
 func take_damage(damage):
 	life -= damage
 	if life <= 0:
+		target.gain_exp(1)
 		queue_free()

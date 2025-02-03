@@ -7,6 +7,9 @@ class_name SpellBase
 
 var targets_entered : Array[EnemyBase] = []
 
+func _ready() -> void:
+	$AnimatedSprite2D.play("default")
+
 func _on_end_spell() -> void:
 	get_parent().remove_child(self)
 	queue_free()
