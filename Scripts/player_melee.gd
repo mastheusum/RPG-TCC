@@ -8,5 +8,5 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_damage_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
-		print(body.name)
+		#print(body.name)
 		body.take_damage(randi_range(power_min, power_max))

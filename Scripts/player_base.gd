@@ -17,11 +17,10 @@ var experience : int = 0
 @export var exp_to_next_level : int = 0
 
 var direction := Vector2()
-var label_tween : Tween 
-@onready var _label_damage : RichTextLabel = $HUD/LifeBar/Label_DamageTaken
+
+@onready var sprite : Sprite2D = $Sprite2D
 
 func _ready() -> void:
-	_label_damage.visible = false
 	$HUD/LifeBar.max_value = life_max
 	$HUD/LifeBar.value = life
 	
@@ -36,6 +35,11 @@ func _physics_process(delta: float) -> void:
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = direction.normalized() * speed
 	move_and_slide()
+	
+	if velocity.x < 0:
+		sprite.flip_h = true
+	elif  velocity.x > 0:
+		sprite.flip_h = false
 
 func _process(delta: float) -> void:
 	$AttackOffset.look_at( get_global_mouse_position() )
@@ -43,25 +47,9 @@ func _process(delta: float) -> void:
 func take_damage(damage : float):
 	life = clampf(life - damage, 0, life_max)
 	$HUD/LifeBar.value = life
-	taken_damage_intepolate(damage)
+	$HUD.taken_damage_on_hud(damage)
 	if life <= 0:
 		get_tree().paused = true
-
-func taken_damage_intepolate(value):
-	_label_damage.text = "[center]%.1f" % value
-	_label_damage.visible = true
-	label_tween = get_tree().create_tween()
-	label_tween.tween_property(
-		_label_damage,
-		"position",
-		_label_damage.position + Vector2(100, 0),
-		1
-	)
-	label_tween.tween_callback(_reset_damage_label)
-
-func _reset_damage_label():
-	_label_damage.position = _label_damage.position - Vector2(100, 0)
-	_label_damage.visible = false
 
 func _level_up():
 	level += 1

@@ -6,6 +6,7 @@ class_name EnemyBase
 @onready var life : float = life_max
 
 @onready var agent : NavigationAgent2D = $Agent
+@onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 var speed = 100.0
 var target : Node2D = null
 var attack : float = 5
@@ -24,6 +25,11 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = global_position.direction_to(_next_pos) * speed
 	move_and_slide()
+	
+	if velocity.x > 0:
+		sprite.flip_h = false
+	elif velocity.x < 0:
+		sprite.flip_h = true
 	
 	for i in get_slide_collision_count():
 		var collider = get_slide_collision(i).get_collider() as Node2D
