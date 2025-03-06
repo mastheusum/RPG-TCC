@@ -3,33 +3,28 @@ extends CharacterBody2D
 class_name PlayerBase
 
 @export var speed = 200
-@export var power_min : int = 5
-@export var power_max : int = 15
 
-@export_category("attributes")
-@export var level : int = 1
-
-var life_max : float = 100.0
-var life : float = 100.0
-var mana_max : float = 100.0
-var mana : float = 100.0
-var experience : int = 0
-@export var exp_to_next_level : int = 0
+#@export_category("grouth")
+#@export var life_up : float = 0
+#@export var mana_up : float = 0
+#@export var attack_up : float = 0
 
 var direction := Vector2()
 
 @onready var sprite : Sprite2D = $Sprite2D
 
-func _ready() -> void:
-	$HUD/LifeBar.max_value = life_max
-	$HUD/LifeBar.value = life
+func _ready() -> void:	
+	PlayerAttributes.connect("update_max_life", update_life_bar)
+	PlayerAttributes.connect("update_life", update_life_bar_val)
 	
-	$HUD/ExperienceBar.min_value = exp_to_next_level
-	exp_to_next_level = 2 * level + 1
-	$HUD/ExperienceBar.max_value = exp_to_next_level
-	$HUD/ExperienceBar.value = experience
+	PlayerAttributes.connect("update_max_mana", update_mana_bar)
+	PlayerAttributes.connect("update_mana", update_mana_bar_val)
 	
-	$HUD/Level.text = "[center]1"
+	PlayerAttributes.connect("update_level", update_level)
+	PlayerAttributes.connect("update_experience", update_experience)
+	
+	PlayerAttributes.start_attr(100, 100, 15, 5)
+	PlayerAttributes.level_up()
 
 func _physics_process(delta: float) -> void:
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -45,21 +40,31 @@ func _process(delta: float) -> void:
 	$AttackOffset.look_at( get_global_mouse_position() )
 
 func take_damage(damage : float):
-	life = clampf(life - damage, 0, life_max)
-	$HUD/LifeBar.value = life
+	PlayerAttributes.take_damage(damage)
+	$HUD/LifeBar.value = PlayerAttributes.life
 	$HUD.taken_damage_on_hud(damage)
-	if life <= 0:
-		get_tree().paused = true
+	if PlayerAttributes.life <= 0:
+		get_tree().reload_current_scene()
 
-func _level_up():
-	level += 1
-	$HUD/Level.text = "[center] %d " % level
-	experience -= exp_to_next_level
-	exp_to_next_level = (2 * level) + 1
-	$HUD/ExperienceBar.max_value = exp_to_next_level
+func gain_exp(amount : float):
+	PlayerAttributes.gain_exp(amount)
 
-func gain_exp(amount):
-	experience += amount
-	if experience >= exp_to_next_level:
-		_level_up()
-	$HUD/ExperienceBar.value = experience
+func update_life_bar_val(val : float):
+	$HUD/LifeBar.value = val
+
+func update_life_bar(val : float):
+	$HUD/LifeBar.max_value = val
+
+func update_mana_bar_val(val : float):
+	$HUD/ManaBar.value = val
+
+func update_mana_bar(val : float):
+	$HUD/ManaBar.max_value = val
+
+func update_experience(val : float):
+	$HUD/ExperienceBar.value = val
+
+func update_level(level, exp, exp_max):
+	$HUD/Level.text = "[center] %d" % PlayerAttributes.level
+	$HUD/ExperienceBar.max_value = PlayerAttributes.exp_to_next_level
+	$HUD/ExperienceBar.value = PlayerAttributes.experience

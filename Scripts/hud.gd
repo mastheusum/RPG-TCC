@@ -6,7 +6,6 @@ var label_tween : Tween
 func _ready() -> void:
 	_label_damage.visible = false
 
-
 func taken_damage_on_hud(value):
 	_label_damage.text = "[center]%.1f" % value
 	taken_damage_intepolate()

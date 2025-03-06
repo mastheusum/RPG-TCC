@@ -104,8 +104,6 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 [node name="PlayerWizzard" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_eodji")
 spell_preload = ExtResource("2_2ot0s")
-power_min = 1
-power_max = 3
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

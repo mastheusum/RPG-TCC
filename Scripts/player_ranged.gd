@@ -15,6 +15,6 @@ func shooting():
 	var shoot = shoot_preload.instantiate() as ProjectileMovement
 	shoot.global_position = self.global_position
 	shoot.speed = shoot_speed
-	shoot.power_min = power_min
-	shoot.power_max = power_max
+	shoot.power_min = PlayerAttributes.attack_base - PlayerAttributes.attack_delta
+	shoot.power_max = PlayerAttributes.attack_base + PlayerAttributes.attack_delta
 	get_parent().add_child(shoot)

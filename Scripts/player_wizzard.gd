@@ -14,6 +14,6 @@ func _unhandled_input(event: InputEvent) -> void:
 func shooting():
 	var shoot = spell_preload.instantiate() as SpellBase
 	shoot.global_position = get_global_mouse_position()
-	shoot.power_min = power_min
-	shoot.power_max = power_max
+	shoot.power_min = PlayerAttributes.attack_base - PlayerAttributes.attack_delta
+	shoot.power_max = PlayerAttributes.attack_base + PlayerAttributes.attack_delta
 	get_parent().add_child(shoot)

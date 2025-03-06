@@ -105,8 +105,6 @@ script = ExtResource("1_y7qre")
 shoot_preload = ExtResource("2_xt6sg")
 shoot_speed = 600.0
 delay_to_free = 2.5
-power_min = 15
-power_max = 35
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -17,12 +17,10 @@ func _on_end_spell() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
 		targets_entered.append(body as EnemyBase)
-		#print(body.name)
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
 		targets_entered.erase(body as EnemyBase)
-		#print(body.name)
 
 func _process(delta: float) -> void:
 	var t = $EndSpell.time_left / $EndSpell.wait_time

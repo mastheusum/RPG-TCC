@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		if collider.is_in_group("Player"):
 			collider = collider as PlayerBase
 			collider.take_damage(attack)
-			queue_free()
+			self.queue_free()
 
 func take_damage(damage):
 	life -= damage
