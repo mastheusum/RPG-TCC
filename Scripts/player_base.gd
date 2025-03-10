@@ -23,8 +23,7 @@ func _ready() -> void:
 	PlayerAttributes.connect("update_level", update_level)
 	PlayerAttributes.connect("update_experience", update_experience)
 	
-	PlayerAttributes.start_attr(100, 100, 15, 5)
-	PlayerAttributes.level_up()
+	PlayerAttributes.start_attr(15, 5, 5, 3)
 
 func _physics_process(delta: float) -> void:
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

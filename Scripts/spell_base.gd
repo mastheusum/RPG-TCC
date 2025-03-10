@@ -2,8 +2,7 @@ extends Node2D
 
 class_name SpellBase
 
-@export var power_min : int = 5
-@export var power_max : int = 15
+@export var power : float = 5
 
 var targets_entered : Array[EnemyBase] = []
 
@@ -28,4 +27,4 @@ func _process(delta: float) -> void:
 
 func _on_tick_timeout() -> void:
 	for target in targets_entered:
-		target.take_damage( randi_range(power_min, power_max) )
+		target.take_damage( power )

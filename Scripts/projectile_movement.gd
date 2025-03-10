@@ -4,8 +4,7 @@ class_name ProjectileMovement
 
 @export var speed : float
 @export var delay_to_free : float
-@export var power_min : int = 15
-@export var power_max : int = 35
+@export var power : float
 
 func _ready() -> void:
 	$TimerToFree.start(delay_to_free)
@@ -19,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
 		var collider = get_slide_collision(i).get_collider() as Node2D
 		if collider.is_in_group("Enemy"):
-			collider.take_damage(randi_range(power_min, power_max))
+			collider.take_damage(power)
 			queue_free()
 
 func _on_timer_to_free_timeout() -> void:

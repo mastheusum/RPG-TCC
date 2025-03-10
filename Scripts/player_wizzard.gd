@@ -12,8 +12,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			shooting()
 
 func shooting():
+	var power = randf_range(PlayerAttributes.magic_power, PlayerAttributes.magic_power + PlayerAttributes.magic_power_delta)
 	var shoot = spell_preload.instantiate() as SpellBase
 	shoot.global_position = get_global_mouse_position()
-	shoot.power_min = PlayerAttributes.attack_base - PlayerAttributes.attack_delta
-	shoot.power_max = PlayerAttributes.attack_base + PlayerAttributes.attack_delta
+	shoot.power = power
 	get_parent().add_child(shoot)

@@ -12,9 +12,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			shooting()
 
 func shooting():
+	var power = randf_range(PlayerAttributes.physic_power, PlayerAttributes.physic_power + PlayerAttributes.physic_power_delta)
 	var shoot = shoot_preload.instantiate() as ProjectileMovement
 	shoot.global_position = self.global_position
 	shoot.speed = shoot_speed
-	shoot.power_min = PlayerAttributes.attack_base - PlayerAttributes.attack_delta
-	shoot.power_max = PlayerAttributes.attack_base + PlayerAttributes.attack_delta
+	shoot.power = power
 	get_parent().add_child(shoot)

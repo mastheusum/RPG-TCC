@@ -9,4 +9,5 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_damage_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy"):
 		#body.take_damage(randi_range(power_min, power_max))
+		body.take_damage(randf_range(PlayerAttributes.physic_power,PlayerAttributes.physic_power + PlayerAttributes.physic_power_delta))
 		pass
