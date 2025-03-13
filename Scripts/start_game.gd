@@ -5,7 +5,6 @@ extends CanvasLayer
 @export var wizzard : PackedScene
 
 @onready var player_pos = $"../PlayerSpawnPoint"
-@onready var spawner = $"../SpawnEnemy"
 
 var pos : Vector2
 
@@ -19,8 +18,6 @@ func _on_warrior_button_pressed() -> void:
 	get_parent().add_child(player)
 	get_parent().get_node("REFERENCIAL").visible = true
 	visible = false
-	spawner.autostart = true
-	spawner.start()
 
 func _on_ranger_button_pressed() -> void:
 	var player = ranger.instantiate()
@@ -29,8 +26,6 @@ func _on_ranger_button_pressed() -> void:
 	get_parent().add_child(player)
 	get_parent().get_node("REFERENCIAL").visible = true
 	visible = false
-	spawner.autostart = true
-	spawner.start()
 
 func _on_wizzard_button_pressed() -> void:
 	var player = wizzard.instantiate()
@@ -39,5 +34,3 @@ func _on_wizzard_button_pressed() -> void:
 	get_parent().add_child(player)
 	get_parent().get_node("REFERENCIAL").visible = true
 	visible = false
-	spawner.autostart = true
-	spawner.start()

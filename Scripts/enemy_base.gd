@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 class_name EnemyBase
 
-@export var life_max : float = 0
-@onready var life : float = life_max
+var daddy : SpawnEnemy
+@export var life_max : float = 100
+var life : float = 0
 
 @onready var agent : NavigationAgent2D = $Agent
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
@@ -12,11 +13,13 @@ var target : Node2D = null
 var attack : float = 5
 var _next_pos : Vector2
 
-func _ready() -> void:
-	target = get_parent().get_node("Player")
-	agent.target_position = target.global_position
-
 func _physics_process(delta: float) -> void:
+	if life <= 0:
+		return
+	elif target == null:
+		target = get_parent().get_parent().get_node("Player")
+		agent.target_position = target.global_position
+	
 	if not target or agent.is_navigation_finished():
 		return
 		
@@ -36,10 +39,21 @@ func _physics_process(delta: float) -> void:
 		if collider.is_in_group("Player"):
 			collider = collider as PlayerBase
 			collider.take_damage(attack)
-			self.queue_free()
+			dead()
 
 func take_damage(damage):
 	life -= damage
 	if life <= 0:
 		target.gain_exp(1)
-		queue_free()
+		dead()
+
+func dead():
+	daddy.alive = false
+	$CollisionShape2D.disabled = true
+	$AnimatedSprite2D.visible = false
+
+func live():
+	daddy.alive = true
+	$CollisionShape2D.disabled = false
+	$AnimatedSprite2D.visible = true
+	life = life_max

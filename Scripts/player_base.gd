@@ -14,11 +14,9 @@ var direction := Vector2()
 @onready var sprite : Sprite2D = $Sprite2D
 
 func _ready() -> void:	
-	PlayerAttributes.connect("update_max_life", update_life_bar)
-	PlayerAttributes.connect("update_life", update_life_bar_val)
+	PlayerAttributes.connect("update_life", update_life_bar)
 	
-	PlayerAttributes.connect("update_max_mana", update_mana_bar)
-	PlayerAttributes.connect("update_mana", update_mana_bar_val)
+	PlayerAttributes.connect("update_mana", update_mana_bar)
 	
 	PlayerAttributes.connect("update_level", update_level)
 	PlayerAttributes.connect("update_experience", update_experience)
@@ -43,22 +41,18 @@ func take_damage(damage : float):
 	$HUD/LifeBar.value = PlayerAttributes.life
 	$HUD.taken_damage_on_hud(damage)
 	if PlayerAttributes.life <= 0:
-		get_tree().reload_current_scene()
+		get_tree().paused = true
 
 func gain_exp(amount : float):
 	PlayerAttributes.gain_exp(amount)
 
-func update_life_bar_val(val : float):
-	$HUD/LifeBar.value = val
+func update_life_bar(current : float, limit : float):
+	$HUD/LifeBar.max_value = limit
+	$HUD/LifeBar.value = current
 
-func update_life_bar(val : float):
-	$HUD/LifeBar.max_value = val
-
-func update_mana_bar_val(val : float):
-	$HUD/ManaBar.value = val
-
-func update_mana_bar(val : float):
-	$HUD/ManaBar.max_value = val
+func update_mana_bar(current : float, limit : float):
+	$HUD/ManaBar.max_value = limit
+	$HUD/ManaBar.value = current
 
 func update_experience(val : float):
 	$HUD/ExperienceBar.value = val

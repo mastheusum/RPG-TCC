@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://q8nlvukq8ql7" path="res://Instances/PlayerCharacters/ranger.tscn" id="3_1lspw"]
 [ext_resource type="Texture2D" uid="uid://wtcsbv3bqrgn" path="res://Resources/WeaponStaff.tres" id="3_bwvf1"]
 [ext_resource type="PackedScene" uid="uid://nyvqscl27yt7" path="res://Instances/PlayerCharacters/wizard.tscn" id="4_gj1nf"]
-[ext_resource type="PackedScene" uid="uid://cxnpjk21ghf37" path="res://Instances/spawn_enemy.tscn" id="8_pqlbi"]
+[ext_resource type="Script" path="res://Scripts/spawn_enemy.gd" id="8_t7mf4"]
 [ext_resource type="PackedScene" uid="uid://cw15xcrj5a2lk" path="res://Instances/enemy_base.tscn" id="9_opcyf"]
 [ext_resource type="PackedScene" uid="uid://b02n807pbraek" path="res://Maps/map_001.tscn" id="10_sg702"]
 
@@ -167,40 +167,21 @@ mouse_filter = 2
 bbcode_enabled = true
 text = "[center]Feiticeiro"
 
-[node name="SpawnEnemy" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_pqlbi")]
-autostart = false
-enemy = ExtResource("9_opcyf")
-spawn_points = [NodePath("Point 1"), NodePath("Point 2"), NodePath("Point 3"), NodePath("Point 4"), NodePath("Point 5"), NodePath("Point 6"), NodePath("Point 7"), NodePath("Point 8"), NodePath("Point 9")]
-
-[node name="Point 1" type="Node2D" parent="SpawnEnemy"]
+[node name="SpawnEnemy" type="Node2D" parent="."]
+z_index = 2
 position = Vector2(72, 120)
+script = ExtResource("8_t7mf4")
 
-[node name="Point 2" type="Node2D" parent="SpawnEnemy"]
-position = Vector2(648, 120)
+[node name="Timer" type="Timer" parent="SpawnEnemy"]
+wait_time = 2.0
+one_shot = true
+autostart = true
 
-[node name="Point 3" type="Node2D" parent="SpawnEnemy"]
-position = Vector2(408, 216)
-
-[node name="Point 4" type="Node2D" parent="SpawnEnemy"]
-position = Vector2(600, 264)
-
-[node name="Point 5" type="Node2D" parent="SpawnEnemy"]
-position = Vector2(696, 408)
-
-[node name="Point 6" type="Node2D" parent="SpawnEnemy"]
-position = Vector2(600, 552)
-
-[node name="Point 7" type="Node2D" parent="SpawnEnemy"]
-position = Vector2(256, 408)
-
-[node name="Point 8" type="Node2D" parent="SpawnEnemy"]
-position = Vector2(120, 360)
-
-[node name="Point 9" type="Node2D" parent="SpawnEnemy"]
-position = Vector2(72, 552)
+[node name="EnemyBase" parent="SpawnEnemy" instance=ExtResource("9_opcyf")]
 
 [node name="Map001" parent="." instance=ExtResource("10_sg702")]
 
 [connection signal="pressed" from="CanvasLayer/GUI/KnightButton" to="CanvasLayer" method="_on_warrior_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/RangerButton" to="CanvasLayer" method="_on_ranger_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/WizzardButton" to="CanvasLayer" method="_on_wizzard_button_pressed"]
+[connection signal="timeout" from="SpawnEnemy/Timer" to="SpawnEnemy" method="_on_timeout"]
