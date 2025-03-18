@@ -3,21 +3,33 @@ extends CharacterBody2D
 class_name EnemyBase
 
 var daddy : SpawnEnemy
-@export var life_max : float = 100
-var life : float = 0
-
-@onready var agent : NavigationAgent2D = $Agent
-@onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
-var speed = 100.0
 var target : Node2D = null
+@export var life_max : float = 100
+
+var life : float = 0
+var speed = 100.0
 var attack : float = 5
 var _next_pos : Vector2
 
+@onready var agent : NavigationAgent2D = $Agent
+@onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
+
+func _ready() -> void:
+	$FollowArea.connect("body_entered", body_entered)
+	$FollowArea.connect("body_exited", body_exited)
+
+func body_entered(body : Node2D):
+	if body.is_in_group("Player"):
+		target = body
+
+func body_exited(body : Node2D):
+	if body.is_in_group("Player"):
+		target = null
+
 func _physics_process(delta: float) -> void:
-	if life <= 0:
+	if life <= 0 or target == null:
 		return
-	elif target == null:
-		target = get_parent().get_parent().get_node("Player")
+	elif target != null:
 		agent.target_position = target.global_position
 	
 	if not target or agent.is_navigation_finished():
