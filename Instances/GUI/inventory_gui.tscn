@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7fjuu6jm6h2s"]
+
+[ext_resource type="Texture2D" uid="uid://e8yc776eyrsm" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_1.png" id="1_6quhn"]
+[ext_resource type="Script" path="res://Scripts/inventory_gui.gd" id="1_n1s14"]
+
+[node name="Inventory_gui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n1s14")
+
+[node name="Panel" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(288, 280)
+layout_mode = 0
+offset_left = 400.0
+offset_top = 64.0
+offset_right = 696.0
+offset_bottom = 352.0
+texture = ExtResource("1_6quhn")
+region_rect = Rect2(16, 16, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+custom_minimum_size = Vector2(268, 260)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 288.0
+offset_bottom = 276.0
+
+[node name="Grid" type="GridContainer" parent="Panel/ScrollContainer"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+columns = 4

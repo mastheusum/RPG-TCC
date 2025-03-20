@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Equipment" load_steps=2 format=3 uid="uid://cecskp20frwfm"]
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://cecskp20frwfm"]
 
 [ext_resource type="Script" path="res://Scripts/equipment.gd" id="1_awo3g"]
+[ext_resource type="Texture2D" uid="uid://dcn4obenklado" path="res://Resources/Boots.tres" id="2_hwau1"]
 
 [resource]
 script = ExtResource("1_awo3g")
@@ -10,3 +11,4 @@ mana = 0
 attack = 0
 identification = "Leather Boots"
 rarity = 0
+sprite = ExtResource("2_hwau1")

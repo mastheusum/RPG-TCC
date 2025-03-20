@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 PlayerAttributes="*res://Scripts/player_attributes.gd"
-ManageInventory="*res://Scripts/manage_inventory.gd"
+ManageInventory="*res://AutoLoads/manage_inventory.tscn"
 
 [display]
 
