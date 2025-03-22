@@ -9,6 +9,7 @@ life = 0
 defense = 2
 mana = 0
 attack = 0
+type = 1
 identification = "Leather Armor"
 rarity = 0
 sprite = ExtResource("2_nen1t")

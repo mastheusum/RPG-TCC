@@ -23,3 +23,17 @@ func add_item(item : Item, amount : int):
 	slot.amount = amount
 	item_list.append(slot)
 	
+func remove_item(item : Item, amount : int):
+	var selected_slot : ItemSlot = null
+	for content in item_list:
+		if content.item == item:
+			selected_slot = content
+	
+	if selected_slot:
+		if amount <= selected_slot.amount:
+			selected_slot.amount -= amount
+		
+		if selected_slot.amount <= 0:
+			item_list.erase(selected_slot)
+	else:
+		print('item não encontrado')

@@ -1,16 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dayg4w7godk5u"]
+[gd_scene load_steps=4 format=3 uid="uid://dayg4w7godk5u"]
 
 [ext_resource type="Texture2D" uid="uid://e8yc776eyrsm" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_1.png" id="1_6rp6k"]
+[ext_resource type="Script" path="res://Scripts/Inventory/inventory_slot_gui.gd" id="2_517py"]
 [ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/WeaponBow.tres" id="2_g2voi"]
 
 [node name="Slot" type="NinePatchRect"]
 custom_minimum_size = Vector2(64, 64)
+mouse_filter = 0
+mouse_default_cursor_shape = 2
 texture = ExtResource("1_6rp6k")
 region_rect = Rect2(16, 16, 64, 64)
 patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
+script = ExtResource("2_517py")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 0
@@ -18,6 +22,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
+mouse_filter = 2
 texture = ExtResource("2_g2voi")
 
 [node name="Amount" type="RichTextLabel" parent="."]
@@ -26,5 +31,9 @@ offset_left = 8.0
 offset_top = 40.0
 offset_right = 56.0
 offset_bottom = 64.0
+mouse_filter = 2
 bbcode_enabled = true
 text = "[right]1"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
