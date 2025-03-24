@@ -1,9 +1,16 @@
 extends Control
 
 var inventory_slot = preload("res://Instances/GUI/inventory_slot_gui.tscn")
+@onready var head : TextureRect = $Equipments/Head/Icon
+@onready var weapon : TextureRect = $Equipments/Weapon/Icon
+@onready var chest : TextureRect = $Equipments/Chest/Icon
+@onready var arms : TextureRect = $Equipments/Arms/Icon
+@onready var legs : TextureRect = $Equipments/Legs/Icon
+@onready var offhand : TextureRect = $Equipments/Offhand/Icon
 
 func _ready() -> void:
 	ManageInventory.connect("update_inventory", fill_inventory)
+	ManageInventory.connect("update_equiped_item", update_equiped_item)
 	free_inventory()
 	fill_inventory()
 
@@ -27,3 +34,18 @@ func create_slot(item : Item, amount):
 	slot.get_node("Amount").text = "[right] %d" % amount
 	slot.item = item
 	$Panel/ScrollContainer/Grid.add_child(slot)
+
+func update_equiped_item(type : Item.ItemType, icon : Texture2D):
+	match type:
+		Item.ItemType.HEAD:
+			head.texture = icon
+		Item.ItemType.WEAPON:
+			weapon.texture = icon
+		Item.ItemType.CHEST:
+			chest.texture = icon
+		Item.ItemType.ARMS:
+			arms.texture = icon
+		Item.ItemType.LEGS:
+			legs.texture = icon
+		Item.ItemType.OFFHAND:
+			offhand.texture = icon

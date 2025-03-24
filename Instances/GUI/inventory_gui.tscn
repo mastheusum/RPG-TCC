@@ -76,6 +76,13 @@ patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
 
+[node name="Icon" type="TextureRect" parent="Equipments/Head"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
+
 [node name="Weapon" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -89,6 +96,13 @@ patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="Equipments/Weapon"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
 
 [node name="Chest" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
@@ -104,6 +118,13 @@ patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
 
+[node name="Icon" type="TextureRect" parent="Equipments/Chest"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
+
 [node name="Arms" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -117,6 +138,13 @@ patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="Equipments/Arms"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
 
 [node name="Legs" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
@@ -132,6 +160,13 @@ patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
 
+[node name="Icon" type="TextureRect" parent="Equipments/Legs"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
+
 [node name="Offhand" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
@@ -145,3 +180,10 @@ patch_margin_left = 8
 patch_margin_top = 8
 patch_margin_right = 8
 patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="Equipments/Offhand"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+mouse_filter = 2
