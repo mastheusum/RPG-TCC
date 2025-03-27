@@ -14,6 +14,14 @@ enum ItemType {
 	WEAPON, OFFHAND
 }
 
+const RarityColor = {
+	ItemRarity.COMMON : Color.GRAY,
+	ItemRarity.UNCOMMON : Color.GREEN,
+	ItemRarity.RARE : Color.BLUE,
+	ItemRarity.MYTHICAL : Color.RED,
+	ItemRarity.LEGENDARY : Color.ORANGE
+}
+
 @export var identification : String
 @export var rarity : ItemRarity
 @export var sprite : Texture2D

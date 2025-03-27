@@ -49,3 +49,33 @@ func update_equiped_item(type : Item.ItemType, icon : Texture2D):
 			legs.texture = icon
 		Item.ItemType.OFFHAND:
 			offhand.texture = icon
+
+func _on_head_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.is_action_pressed("right_mouse_action"):
+			ManageInventory.unequip_item(Item.ItemType.HEAD)
+
+func _on_chest_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.is_action_pressed("right_mouse_action"):
+			ManageInventory.unequip_item(Item.ItemType.CHEST)
+
+func _on_arms_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.is_action_pressed("right_mouse_action"):
+			ManageInventory.unequip_item(Item.ItemType.ARMS)
+
+func _on_legs_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.is_action_pressed("right_mouse_action"):
+			ManageInventory.unequip_item(Item.ItemType.LEGS)
+
+func _on_weapon_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.is_action_pressed("right_mouse_action"):
+			ManageInventory.unequip_item(Item.ItemType.WEAPON)
+
+func _on_offhand_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.is_action_pressed("right_mouse_action"):
+			ManageInventory.unequip_item(Item.ItemType.OFFHAND)

@@ -1,18 +1,26 @@
 extends Node
 
-var level : int 
-var experience : int 
-var exp_to_next_level : int 
+@export_category("Experince")
+@export var level : int 
+@export var experience : int 
+@export var exp_to_next_level : int 
 
-var life_max : float
-var life : float
-var mana_max : float
-var mana : float
+@export_category("Status")
+@export_group("Life")
+@export var life_max : float
+@export var life : float
+@export_group("Mana")
+@export var mana_max : float
+@export var mana : float
 
-var physic_power : float 
-var physic_power_delta : float 
-var magic_power : float 
-var magic_power_delta : float 
+@export_category("Combat")
+@export_group("Physics")
+@export var physic_power : float 
+@export var physic_power_delta : float
+@export var physic_defense : float
+@export_group("Magic")
+@export var magic_power : float 
+@export var magic_power_delta : float 
 
 signal update_life(max_value : float, value : float)
 signal update_mana(max_value : float, value : float)

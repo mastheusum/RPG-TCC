@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://djtbkb6o3186q"]
+[gd_scene load_steps=11 format=3 uid="uid://djtbkb6o3186q"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory/manage_inventory.gd" id="1_tlqe5"]
 [ext_resource type="Script" path="res://Scripts/Inventory/item_slot.gd" id="2_hw5a0"]
 [ext_resource type="Resource" uid="uid://by5oxftwv1p5x" path="res://Resources/Itens/Chest001.tres" id="3_j55wo"]
 [ext_resource type="Script" path="res://Scripts/Inventory/invetory.gd" id="4_2smpw"]
 [ext_resource type="Resource" uid="uid://cecskp20frwfm" path="res://Resources/Itens/Boots001.tres" id="4_w6654"]
+[ext_resource type="Resource" uid="uid://rlpvv8vnowhh" path="res://Resources/Itens/Helmet001.tres" id="5_wyl2f"]
 
 [sub_resource type="Resource" id="Resource_i330t"]
 script = ExtResource("2_hw5a0")
@@ -16,9 +17,14 @@ script = ExtResource("2_hw5a0")
 item = ExtResource("4_w6654")
 amount = 1
 
+[sub_resource type="Resource" id="Resource_35vhy"]
+script = ExtResource("2_hw5a0")
+item = ExtResource("5_wyl2f")
+amount = 1
+
 [sub_resource type="Resource" id="Resource_fgg8o"]
 script = ExtResource("4_2smpw")
-item_list = Array[ExtResource("2_hw5a0")]([SubResource("Resource_i330t"), SubResource("Resource_lml7q")])
+item_list = Array[ExtResource("2_hw5a0")]([SubResource("Resource_i330t"), SubResource("Resource_lml7q"), SubResource("Resource_35vhy")])
 
 [node name="ManageInventory" type="Node"]
 script = ExtResource("1_tlqe5")

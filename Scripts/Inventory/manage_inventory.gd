@@ -59,3 +59,27 @@ func equip_item(item : Item):
 			
 	emit_signal('update_inventory')
 	emit_signal("update_equiped_item", item.type, item.sprite)
+
+func unequip_item(slot : Item.ItemType):
+	match slot:
+		Item.ItemType.HEAD:
+			add_item(head.item, 1)
+			head.item = null
+		Item.ItemType.CHEST:
+			add_item(chest.item, 1)
+			chest.item = null
+		Item.ItemType.ARMS:
+			add_item(arms.item, 1)
+			arms.item = null
+		Item.ItemType.LEGS:
+			add_item(legs.item, 1)
+			legs.item = null
+		Item.ItemType.WEAPON:
+			add_item(weapon.item, 1)
+			weapon.item = null
+		Item.ItemType.OFFHAND:
+			add_item(offhand.item, 1)
+			offhand.item = null
+	
+	emit_signal('update_inventory')
+	emit_signal("update_equiped_item", slot, null)

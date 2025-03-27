@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://rlpvv8vnowhh"]
+
+[ext_resource type="Script" path="res://Scripts/equipment.gd" id="1_6qme3"]
+[ext_resource type="Texture2D" uid="uid://bhx46rokgpggk" path="res://Resources/Helmet.tres" id="2_t1ou0"]
+
+[resource]
+script = ExtResource("1_6qme3")
+life = 0
+defense = 0
+mana = 1
+attack = 0
+type = 0
+identification = "Leather Helmet"
+rarity = 1
+sprite = ExtResource("2_t1ou0")
