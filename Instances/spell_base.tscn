@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://c57b6pgntm0uw"]
 
-[ext_resource type="Script" path="res://Scripts/spell_base.gd" id="1_5wqsu"]
+[ext_resource type="Script" uid="uid://cp0cp7l1i37w" path="res://Scripts/spell_base.gd" id="1_5wqsu"]
 [ext_resource type="Texture2D" uid="uid://eievro1era4" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 4/175.png" id="2_g25bb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pc7wh"]

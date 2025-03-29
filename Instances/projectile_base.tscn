@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0nrat2jpp5hr"]
 
-[ext_resource type="Script" path="res://Scripts/projectile_movement.gd" id="1_30113"]
+[ext_resource type="Script" uid="uid://cn3ih2vn8ldf5" path="res://Scripts/projectile_movement.gd" id="1_30113"]
 [ext_resource type="Texture2D" uid="uid://4y3pbj2tu2o8" path="res://Resources/SkillSprites/projectile_01.tres" id="2_7syip"]
 [ext_resource type="Texture2D" uid="uid://cfo0i587tia5s" path="res://Resources/SkillSprites/projectile_02.tres" id="3_juaex"]
 

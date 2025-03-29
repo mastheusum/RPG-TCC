@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy3n1a4mnxhu3"
-path="res://.godot/imported/Fissure.png-0881fc8e27fba0d1654836b88d19ca0a.ctex"
+uid="uid://u08k7be7bo8g"
+path="res://.godot/imported/64x64.png-1e1631312752dc772af69906a7fee469.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fissure.png"
-dest_files=["res://.godot/imported/Fissure.png-0881fc8e27fba0d1654836b88d19ca0a.ctex"]
+source_file="res://Sprites/Free - Raven Fantasy Icons/64x64.png"
+dest_files=["res://.godot/imported/64x64.png-1e1631312752dc772af69906a7fee469.ctex"]
 
 [params]
 

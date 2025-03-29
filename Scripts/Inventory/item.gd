@@ -25,3 +25,4 @@ const RarityColor = {
 @export var identification : String
 @export var rarity : ItemRarity
 @export var sprite : Texture2D
+@export var hability : SpellData

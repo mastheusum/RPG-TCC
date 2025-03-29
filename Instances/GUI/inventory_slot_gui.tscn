@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dayg4w7godk5u"]
 
 [ext_resource type="Texture2D" uid="uid://e8yc776eyrsm" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_1.png" id="1_6rp6k"]
-[ext_resource type="Script" path="res://Scripts/Inventory/inventory_slot_gui.gd" id="2_517py"]
-[ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/WeaponBow.tres" id="2_g2voi"]
+[ext_resource type="Script" uid="uid://cel38owf03nld" path="res://Scripts/Inventory/inventory_slot_gui.gd" id="2_517py"]
+[ext_resource type="Texture2D" uid="uid://lsu6jplq0g6d" path="res://Resources/Chest.tres" id="3_g4d24"]
 
 [node name="Slot" type="NinePatchRect"]
 custom_minimum_size = Vector2(64, 64)
@@ -22,7 +22,8 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
-texture = ExtResource("2_g2voi")
+texture = ExtResource("3_g4d24")
+expand_mode = 1
 
 [node name="Amount" type="RichTextLabel" parent="."]
 layout_mode = 0

@@ -1,7 +1,7 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://bhx46rokgpggk"]
 
-[ext_resource type="Texture2D" uid="uid://dml3txrl0xa6u" path="res://Sprites/32x32_PixelWeapons_Free.png" id="1_y2unw"]
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_65bvn"]
 
 [resource]
-atlas = ExtResource("1_y2unw")
-region = Rect2(224, 64, 32, 32)
+atlas = ExtResource("1_65bvn")
+region = Rect2(0, 5764, 64, 64)

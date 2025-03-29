@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c7fjuu6jm6h2s"]
 
-[ext_resource type="Script" path="res://Scripts/Inventory/inventory_gui.gd" id="1_n1s14"]
+[ext_resource type="Script" uid="uid://6ke3gnn3qtrr" path="res://Scripts/Inventory/inventory_gui.gd" id="1_n1s14"]
 [ext_resource type="Texture2D" uid="uid://6l6mg7d102hq" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_9Slices.png" id="2_e13u2"]
 [ext_resource type="Texture2D" uid="uid://d17snofvqg0rm" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_4.png" id="4_p5pgb"]
 [ext_resource type="Texture2D" uid="uid://c6mfba0hbibxj" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_2.png" id="5_gvrhq"]
@@ -84,6 +84,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
+expand_mode = 1
 
 [node name="Weapon" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
@@ -106,6 +107,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
+expand_mode = 1
 
 [node name="Chest" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
@@ -128,6 +130,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
+expand_mode = 1
 
 [node name="Arms" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
@@ -150,6 +153,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
+expand_mode = 1
 
 [node name="Legs" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
@@ -172,6 +176,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
+expand_mode = 1
 
 [node name="Offhand" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
@@ -194,6 +199,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
+expand_mode = 1
 
 [connection signal="gui_input" from="Equipments/Head" to="." method="_on_head_gui_input"]
 [connection signal="gui_input" from="Equipments/Weapon" to="." method="_on_weapon_gui_input"]

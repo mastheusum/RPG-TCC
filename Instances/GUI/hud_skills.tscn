@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmxvec4mi5shb"]
+
+[ext_resource type="Script" uid="uid://c8bon6qs3fk8d" path="res://Scripts/Spells/hud_skills.gd" id="1_gp6hp"]
+[ext_resource type="Texture2D" uid="uid://e8yc776eyrsm" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_1.png" id="1_rgd0q"]
+
+[node name="hud_skills" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gp6hp")
+
+[node name="HBox" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 448.0
+offset_right = 556.0
+offset_bottom = 512.0
+
+[node name="Skill 1" type="NinePatchRect" parent="HBox"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("1_rgd0q")
+region_rect = Rect2(16, 16, 64, 64)
+
+[node name="Icon" type="TextureRect" parent="HBox/Skill 1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+expand_mode = 1
+
+[node name="CountDown" type="RichTextLabel" parent="HBox/Skill 1"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 48.0
+bbcode_enabled = true
+text = "[center]30"
+
+[node name="Skill 2" type="NinePatchRect" parent="HBox"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("1_rgd0q")
+region_rect = Rect2(16, 16, 64, 64)
+
+[node name="Icon" type="TextureRect" parent="HBox/Skill 2"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+expand_mode = 1
+
+[node name="Skill 3" type="NinePatchRect" parent="HBox"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("1_rgd0q")
+region_rect = Rect2(16, 16, 64, 64)
+
+[node name="Icon" type="TextureRect" parent="HBox/Skill 3"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+expand_mode = 1
+
+[node name="Skill 4" type="NinePatchRect" parent="HBox"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("1_rgd0q")
+region_rect = Rect2(16, 16, 64, 64)
+
+[node name="Icon" type="TextureRect" parent="HBox/Skill 4"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+expand_mode = 1
+
+[node name="Skill 5" type="NinePatchRect" parent="HBox"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("1_rgd0q")
+region_rect = Rect2(16, 16, 64, 64)
+
+[node name="Icon" type="TextureRect" parent="HBox/Skill 5"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+expand_mode = 1
+
+[node name="Skill 6" type="NinePatchRect" parent="HBox"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("1_rgd0q")
+region_rect = Rect2(16, 16, 64, 64)
+
+[node name="Icon" type="TextureRect" parent="HBox/Skill 6"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+expand_mode = 1

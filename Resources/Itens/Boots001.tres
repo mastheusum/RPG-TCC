@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" load_steps=3 format=3 uid="uid://cecskp20frwfm"]
 
-[ext_resource type="Script" path="res://Scripts/equipment.gd" id="1_awo3g"]
+[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/equipment.gd" id="1_awo3g"]
 [ext_resource type="Texture2D" uid="uid://dcn4obenklado" path="res://Resources/Boots.tres" id="2_hwau1"]
 
 [resource]

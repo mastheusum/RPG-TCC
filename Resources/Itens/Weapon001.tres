@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=4 format=3 uid="uid://cv3peyxnov5hd"]
+
+[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/equipment.gd" id="1_56gpk"]
+[ext_resource type="Resource" uid="uid://k4hp3j45vyyu" path="res://Resources/SpellData/example.tres" id="1_gn13a"]
+[ext_resource type="Texture2D" uid="uid://bhx46rokgpggk" path="res://Resources/Helmet.tres" id="2_gn13a"]
+
+[resource]
+script = ExtResource("1_56gpk")
+life = 0
+defense = 0
+mana = 1
+attack = 0
+type = 4
+identification = "Little Sword"
+rarity = 0
+sprite = ExtResource("2_gn13a")
+hability = ExtResource("1_gn13a")
