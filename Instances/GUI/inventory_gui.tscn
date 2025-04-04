@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7fjuu6jm6h2s"]
+[gd_scene load_steps=8 format=3 uid="uid://c7fjuu6jm6h2s"]
 
 [ext_resource type="Script" uid="uid://6ke3gnn3qtrr" path="res://Scripts/Inventory/inventory_gui.gd" id="1_n1s14"]
 [ext_resource type="Texture2D" uid="uid://6l6mg7d102hq" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_9Slices.png" id="2_e13u2"]
 [ext_resource type="Texture2D" uid="uid://d17snofvqg0rm" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_4.png" id="4_p5pgb"]
 [ext_resource type="Texture2D" uid="uid://c6mfba0hbibxj" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_2.png" id="5_gvrhq"]
 [ext_resource type="Texture2D" uid="uid://s6656e8x647x" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_5.png" id="6_o3cru"]
-[ext_resource type="Texture2D" uid="uid://cwcfp3181svr1" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_7.png" id="7_doebq"]
 [ext_resource type="Texture2D" uid="uid://tcqpqvdohhni" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_8.png" id="8_o6ffj"]
 [ext_resource type="Texture2D" uid="uid://uhlvsmk66c3j" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_3.png" id="9_hooas"]
 
@@ -54,7 +53,7 @@ custom_minimum_size = Vector2(248, 248)
 layout_mode = 0
 offset_left = 424.0
 offset_top = 176.0
-offset_right = 672.0
+offset_right = 680.0
 offset_bottom = 424.0
 texture = ExtResource("2_e13u2")
 region_rect = Rect2(0, 0, 96, 96)
@@ -63,36 +62,13 @@ patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
 
-[node name="Head" type="NinePatchRect" parent="Equipments"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 88.0
-offset_bottom = 88.0
-mouse_filter = 0
-texture = ExtResource("4_p5pgb")
-region_rect = Rect2(16, 16, 64, 64)
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-
-[node name="Icon" type="TextureRect" parent="Equipments/Head"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
-expand_mode = 1
-
 [node name="Weapon" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-offset_left = 160.0
-offset_top = 24.0
-offset_right = 224.0
-offset_bottom = 88.0
+offset_left = 24.0
+offset_top = 92.0
+offset_right = 88.0
+offset_bottom = 156.0
 mouse_filter = 0
 texture = ExtResource("5_gvrhq")
 region_rect = Rect2(16, 16, 64, 64)
@@ -109,58 +85,12 @@ offset_right = 56.0
 offset_bottom = 56.0
 expand_mode = 1
 
-[node name="Chest" type="NinePatchRect" parent="Equipments"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-offset_left = 24.0
-offset_top = 92.0
-offset_right = 88.0
-offset_bottom = 156.0
-mouse_filter = 0
-texture = ExtResource("6_o3cru")
-region_rect = Rect2(16, 16, 64, 64)
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-
-[node name="Icon" type="TextureRect" parent="Equipments/Chest"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
-expand_mode = 1
-
-[node name="Arms" type="NinePatchRect" parent="Equipments"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-offset_left = 92.0
-offset_top = 92.0
-offset_right = 156.0
-offset_bottom = 156.0
-mouse_filter = 0
-texture = ExtResource("7_doebq")
-region_rect = Rect2(16, 16, 64, 64)
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-
-[node name="Icon" type="TextureRect" parent="Equipments/Arms"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
-expand_mode = 1
-
 [node name="Legs" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-offset_left = 24.0
+offset_left = 96.0
 offset_top = 160.0
-offset_right = 88.0
+offset_right = 160.0
 offset_bottom = 224.0
 mouse_filter = 0
 texture = ExtResource("8_o6ffj")
@@ -178,13 +108,59 @@ offset_right = 56.0
 offset_bottom = 56.0
 expand_mode = 1
 
+[node name="Chest" type="NinePatchRect" parent="Equipments"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_left = 96.0
+offset_top = 92.0
+offset_right = 160.0
+offset_bottom = 156.0
+mouse_filter = 0
+texture = ExtResource("6_o3cru")
+region_rect = Rect2(16, 16, 64, 64)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="Equipments/Chest"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+expand_mode = 1
+
+[node name="Head" type="NinePatchRect" parent="Equipments"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+offset_left = 96.0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 88.0
+mouse_filter = 0
+texture = ExtResource("4_p5pgb")
+region_rect = Rect2(16, 16, 64, 64)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="Equipments/Head"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 56.0
+expand_mode = 1
+
 [node name="Offhand" type="NinePatchRect" parent="Equipments"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-offset_left = 160.0
-offset_top = 160.0
-offset_right = 224.0
-offset_bottom = 224.0
+offset_left = 168.0
+offset_top = 92.0
+offset_right = 232.0
+offset_bottom = 156.0
 mouse_filter = 0
 texture = ExtResource("9_hooas")
 region_rect = Rect2(16, 16, 64, 64)
@@ -201,9 +177,8 @@ offset_right = 56.0
 offset_bottom = 56.0
 expand_mode = 1
 
-[connection signal="gui_input" from="Equipments/Head" to="." method="_on_head_gui_input"]
 [connection signal="gui_input" from="Equipments/Weapon" to="." method="_on_weapon_gui_input"]
-[connection signal="gui_input" from="Equipments/Chest" to="." method="_on_chest_gui_input"]
-[connection signal="gui_input" from="Equipments/Arms" to="." method="_on_arms_gui_input"]
 [connection signal="gui_input" from="Equipments/Legs" to="." method="_on_legs_gui_input"]
+[connection signal="gui_input" from="Equipments/Chest" to="." method="_on_chest_gui_input"]
+[connection signal="gui_input" from="Equipments/Head" to="." method="_on_head_gui_input"]
 [connection signal="gui_input" from="Equipments/Offhand" to="." method="_on_offhand_gui_input"]

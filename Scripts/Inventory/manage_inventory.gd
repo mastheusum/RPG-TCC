@@ -4,7 +4,6 @@ extends Node
 
 @export var head : ItemSlot = ItemSlot.new()
 @export var chest : ItemSlot = ItemSlot.new()
-@export var arms : ItemSlot = ItemSlot.new()
 @export var legs : ItemSlot = ItemSlot.new()
 @export var weapon : ItemSlot = ItemSlot.new()
 @export var offhand : ItemSlot = ItemSlot.new()
@@ -41,18 +40,13 @@ func equip_item(item : Item):
 				inventory.add_item(chest.item, 1)
 			inventory.remove_item(item, 1)
 			chest.item = item
-		Item.ItemType.ARMS:
-			if arms.item:
-				inventory.add_item(arms.item, 1)
-			inventory.remove_item(item, 1)
-			arms.item = item
 		Item.ItemType.LEGS:
 			if legs.item:
 				inventory.add_item(legs.item, 1)
 			inventory.remove_item(item, 1)
 			legs.item = item
 		Item.ItemType.OFFHAND:
-			if arms.offhand:
+			if offhand.item:
 				inventory.add_item(offhand.item, 1)
 			inventory.remove_item(item, 1)
 			offhand.item = item
@@ -68,9 +62,6 @@ func unequip_item(slot : Item.ItemType):
 		Item.ItemType.CHEST:
 			add_item(chest.item, 1)
 			chest.item = null
-		Item.ItemType.ARMS:
-			add_item(arms.item, 1)
-			arms.item = null
 		Item.ItemType.LEGS:
 			add_item(legs.item, 1)
 			legs.item = null

@@ -4,7 +4,6 @@ var inventory_slot = preload("res://Instances/GUI/inventory_slot_gui.tscn")
 @onready var head : TextureRect = $Equipments/Head/Icon
 @onready var weapon : TextureRect = $Equipments/Weapon/Icon
 @onready var chest : TextureRect = $Equipments/Chest/Icon
-@onready var arms : TextureRect = $Equipments/Arms/Icon
 @onready var legs : TextureRect = $Equipments/Legs/Icon
 @onready var offhand : TextureRect = $Equipments/Offhand/Icon
 
@@ -43,8 +42,6 @@ func update_equiped_item(type : Item.ItemType, icon : Texture2D):
 			weapon.texture = icon
 		Item.ItemType.CHEST:
 			chest.texture = icon
-		Item.ItemType.ARMS:
-			arms.texture = icon
 		Item.ItemType.LEGS:
 			legs.texture = icon
 		Item.ItemType.OFFHAND:
@@ -59,11 +56,6 @@ func _on_chest_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_action_pressed("right_mouse_action"):
 			ManageInventory.unequip_item(Item.ItemType.CHEST)
-
-func _on_arms_gui_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.is_action_pressed("right_mouse_action"):
-			ManageInventory.unequip_item(Item.ItemType.ARMS)
 
 func _on_legs_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

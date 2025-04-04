@@ -9,8 +9,7 @@ enum ItemRarity {
 }
 
 enum ItemType {
-	HEAD, CHEST,
-	ARMS, LEGS,
+	HEAD, CHEST, LEGS,
 	WEAPON, OFFHAND
 }
 
