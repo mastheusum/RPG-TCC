@@ -20,7 +20,7 @@ extends Node
 @export var physic_defense : float
 @export_group("Magic")
 @export var magic_power : float 
-@export var magic_power_delta : float 
+@export var magic_power_delta : float
 
 signal update_life(max_value : float, value : float)
 signal update_mana(max_value : float, value : float)
@@ -85,3 +85,12 @@ func define_max_life():
 
 func define_max_mana():
 	mana_max = level * 10
+
+func define_physics_power():
+	pass
+
+func define_physics_defense():
+	pass
+
+func define_magic_power():
+	pass

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dmxvec4mi5shb"]
 
-[ext_resource type="Script" path="res://Scripts/Spells/hud_skills.gd" id="1_gp6hp"]
+[ext_resource type="Script" uid="uid://c8bon6qs3fk8d" path="res://Scripts/Spells/hud_skills.gd" id="1_gp6hp"]
 [ext_resource type="FontFile" uid="uid://by5japlqjs7tu" path="res://Resources/Fonts/Underdog-Regular.ttf" id="2_03bau"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l5qq3"]
@@ -102,6 +102,7 @@ offset_bottom = 56.0
 expand_mode = 1
 
 [node name="Identification" type="RichTextLabel" parent="HBox/Skill 2"]
+layout_mode = 0
 offset_left = -32.0
 offset_top = 64.0
 offset_right = 88.0
@@ -115,6 +116,7 @@ bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
 [node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 2"]
+layout_mode = 0
 offset_left = -28.0
 offset_top = 23.0
 offset_right = 92.0
@@ -145,6 +147,7 @@ offset_bottom = 56.0
 expand_mode = 1
 
 [node name="Identification" type="RichTextLabel" parent="HBox/Skill 3"]
+layout_mode = 0
 offset_left = -32.0
 offset_top = 64.0
 offset_right = 88.0
@@ -158,6 +161,7 @@ bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
 [node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 3"]
+layout_mode = 0
 offset_left = -28.0
 offset_top = 23.0
 offset_right = 92.0
@@ -188,6 +192,7 @@ offset_bottom = 56.0
 expand_mode = 1
 
 [node name="Identification" type="RichTextLabel" parent="HBox/Skill 4"]
+layout_mode = 0
 offset_left = -32.0
 offset_top = 64.0
 offset_right = 88.0
@@ -201,6 +206,7 @@ bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
 [node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 4"]
+layout_mode = 0
 offset_left = -28.0
 offset_top = 23.0
 offset_right = 92.0
@@ -231,6 +237,7 @@ offset_bottom = 56.0
 expand_mode = 1
 
 [node name="Identification" type="RichTextLabel" parent="HBox/Skill 5"]
+layout_mode = 0
 offset_left = -32.0
 offset_top = 64.0
 offset_right = 88.0
@@ -244,6 +251,7 @@ bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
 [node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 5"]
+layout_mode = 0
 offset_left = -28.0
 offset_top = 23.0
 offset_right = 92.0

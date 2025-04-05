@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://djtbkb6o3186q"]
 
-[ext_resource type="Script" path="res://Scripts/Inventory/manage_inventory.gd" id="1_tlqe5"]
-[ext_resource type="Script" path="res://Scripts/Inventory/item_slot.gd" id="2_hw5a0"]
+[ext_resource type="Script" uid="uid://bkgskxatepot7" path="res://Scripts/Inventory/manage_inventory.gd" id="1_tlqe5"]
+[ext_resource type="Script" uid="uid://ckmvn56iq08s0" path="res://Scripts/Inventory/item_slot.gd" id="2_hw5a0"]
 [ext_resource type="Resource" uid="uid://by5oxftwv1p5x" path="res://Resources/Itens/Chest001.tres" id="3_j55wo"]
-[ext_resource type="Script" path="res://Scripts/Inventory/invetory.gd" id="4_2smpw"]
+[ext_resource type="Script" uid="uid://ba2u7hy70gcoj" path="res://Scripts/Inventory/invetory.gd" id="4_2smpw"]
 [ext_resource type="Resource" uid="uid://cecskp20frwfm" path="res://Resources/Itens/Boots001.tres" id="4_w6654"]
 [ext_resource type="Resource" uid="uid://rlpvv8vnowhh" path="res://Resources/Itens/Helmet001.tres" id="5_wyl2f"]
 [ext_resource type="Resource" uid="uid://cv3peyxnov5hd" path="res://Resources/Itens/Weapon001.tres" id="6_h3cyq"]

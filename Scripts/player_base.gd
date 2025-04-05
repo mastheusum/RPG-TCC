@@ -4,7 +4,7 @@ class_name PlayerBase
 
 @export var speed = 200
 
-static var main_character = null
+static var main_character : PlayerBase = null
 
 #@export_category("grouth")
 #@export var life_up : float = 0
