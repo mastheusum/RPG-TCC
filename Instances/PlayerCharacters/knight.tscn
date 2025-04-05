@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://bkhle73tjrws3"]
 
-[ext_resource type="Script" uid="uid://bpicrwo1yi8on" path="res://Scripts/player_melee.gd" id="1_0ll4d"]
+[ext_resource type="Script" path="res://Scripts/player_melee.gd" id="1_0ll4d"]
 [ext_resource type="PackedScene" uid="uid://bs42svyup8efj" path="res://Instances/GUI/hud.tscn" id="2_4unuq"]
 [ext_resource type="Texture2D" uid="uid://ct64aich31lp5" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_idle_anim_f0.png" id="2_g0c8o"]
 [ext_resource type="Texture2D" uid="uid://hbky4iv3efxd" path="res://Resources/SkillSprites/melee_attack_03.tres" id="3_1f614"]
@@ -174,10 +174,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ru006"]
 _data = {
-&"Attacking": SubResource("Animation_rygud"),
-&"Idle": SubResource("Animation_li0st"),
-&"RESET": SubResource("Animation_ftaog"),
-&"walk": SubResource("Animation_urnsp")
+"Attacking": SubResource("Animation_rygud"),
+"Idle": SubResource("Animation_li0st"),
+"RESET": SubResource("Animation_ftaog"),
+"walk": SubResource("Animation_urnsp")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i7ivy"]
@@ -269,7 +269,7 @@ offset_bottom = 296.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_ru006")
+"": SubResource("AnimationLibrary_ru006")
 }
 autoplay = "Idle"
 

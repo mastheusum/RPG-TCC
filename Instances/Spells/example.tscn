@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cfappflx4vskn"]
 
-[ext_resource type="Script" uid="uid://hbpnkvfxl28w" path="res://Scripts/Spells/fissure.gd" id="1_011re"]
+[ext_resource type="Script" path="res://Scripts/Spells/fissure.gd" id="1_011re"]
 [ext_resource type="Texture2D" uid="uid://b5exe0gvmqqy8" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 1/16.png" id="2_3v0ab"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsppj"]
@@ -58,6 +58,7 @@ radius = 32.9848
 
 [node name="Example" type="Area2D"]
 script = ExtResource("1_011re")
+metadata/_edit_group_ = true
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

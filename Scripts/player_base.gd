@@ -4,6 +4,8 @@ class_name PlayerBase
 
 @export var speed = 200
 
+static var main_character = null
+
 #@export_category("grouth")
 #@export var life_up : float = 0
 #@export var mana_up : float = 0
@@ -13,7 +15,9 @@ var direction := Vector2()
 
 @onready var sprite : Sprite2D = $Sprite2D
 
-func _ready() -> void:	
+func _ready() -> void:
+	main_character = self
+	
 	PlayerAttributes.connect("update_life", update_life_bar)
 	
 	PlayerAttributes.connect("update_mana", update_mana_bar)

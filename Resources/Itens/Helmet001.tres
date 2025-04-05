@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Equipment" load_steps=4 format=3 uid="uid://rlpvv8vnowhh"]
 
-[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/equipment.gd" id="1_6qme3"]
-[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="2_wnx5o"]
+[ext_resource type="Script" path="res://Scripts/equipment.gd" id="1_6qme3"]
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="2_wcncj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mv8nd"]
-atlas = ExtResource("2_wnx5o")
+atlas = ExtResource("2_wcncj")
 region = Rect2(768, 7808, 64, 64)
 
 [resource]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bkuet134dnhli"]
 
-[ext_resource type="Script" uid="uid://bowxmcyu5evyu" path="res://Scripts/start_game.gd" id="1_2lpga"]
+[ext_resource type="Script" path="res://Scripts/start_game.gd" id="1_2lpga"]
 [ext_resource type="Texture2D" uid="uid://dx7yx6vbk33g2" path="res://Resources/WeaponSword.tres" id="1_fs4ro"]
 [ext_resource type="PackedScene" uid="uid://bkhle73tjrws3" path="res://Instances/PlayerCharacters/knight.tscn" id="2_nvr7u"]
 [ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/WeaponBow.tres" id="2_s7eyt"]
