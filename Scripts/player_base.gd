@@ -6,11 +6,6 @@ class_name PlayerBase
 
 static var main_character : PlayerBase = null
 
-#@export_category("grouth")
-#@export var life_up : float = 0
-#@export var mana_up : float = 0
-#@export var attack_up : float = 0
-
 var direction := Vector2()
 
 @onready var sprite : Sprite2D = $Sprite2D
@@ -25,7 +20,7 @@ func _ready() -> void:
 	PlayerAttributes.connect("update_level", update_level)
 	PlayerAttributes.connect("update_experience", update_experience)
 	
-	PlayerAttributes.start_attr(15, 5, 5, 3)
+	PlayerAttributes.start_attr(15, 5, 5, 5, 3)
 
 func _physics_process(delta: float) -> void:
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -41,9 +36,25 @@ func _process(delta: float) -> void:
 	$AttackOffset.look_at( get_global_mouse_position() )
 
 func take_damage(damage : float):
-	PlayerAttributes.take_damage(damage)
+	var total_def = PlayerAttributes.physic_defense
+	
+	if ManageInventory.head.item:
+		total_def += (ManageInventory.head.item as Equipment).defense
+	if ManageInventory.chest.item:
+		total_def += (ManageInventory.chest.item as Equipment).defense
+	if ManageInventory.legs.item:
+		total_def += (ManageInventory.legs.item as Equipment).defense
+	if ManageInventory.weapon.item:
+		total_def += (ManageInventory.weapon.item as Equipment).defense
+	if ManageInventory.offhand.item:
+		total_def += (ManageInventory.offhand.item as Equipment).defense
+	
+	var dealty = damage - total_def
+	PlayerAttributes.take_damage(dealty)
+	
 	$HUD/LifeBar.value = PlayerAttributes.life
-	$HUD.taken_damage_on_hud(damage)
+	$HUD.taken_damage_on_hud(dealty)
+	
 	if PlayerAttributes.life <= 0:
 		get_tree().paused = true
 

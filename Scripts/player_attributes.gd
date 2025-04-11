@@ -27,7 +27,7 @@ signal update_mana(max_value : float, value : float)
 signal update_experience(value : float)
 signal update_level(level : int, exp_current : float, exp_max : float)
 
-func start_attr(physic_power : float, physic_delta : float, magic_power : float, magic_delta : float):
+func start_attr(physic_power : float, physic_delta : float, physic_defense : float, magic_power : float, magic_delta : float):
 	self.level = 1
 	experience = 0
 	exp_to_next_level = (2 * level) + 1
@@ -40,6 +40,7 @@ func start_attr(physic_power : float, physic_delta : float, magic_power : float,
 	
 	self.physic_power = physic_power
 	self.physic_power_delta = physic_delta
+	self.physic_defense = physic_defense
 	self.magic_power = magic_power
 	self.magic_power_delta = magic_delta
 	
