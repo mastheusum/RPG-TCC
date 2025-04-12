@@ -5,6 +5,7 @@ var label_tween : Tween
 
 func _ready() -> void:
 	_label_damage.visible = false
+	PlayerAttributes.connect("update_life", _update_lifebar)
 
 func taken_damage_on_hud(value):
 	_label_damage.text = "[center]%.1f" % value
@@ -24,3 +25,7 @@ func taken_damage_intepolate():
 func _reset_damage_label():
 	_label_damage.position = _label_damage.position + Vector2(0, 24)
 	_label_damage.visible = false
+
+func _update_lifebar(max_val, val):
+	$LifeBar.max_value = max_val
+	$LifeBar.value = val

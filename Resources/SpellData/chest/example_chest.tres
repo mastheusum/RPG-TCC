@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://cgyhjwx1nfprg"]
+
+[ext_resource type="Texture2D" uid="uid://cooxusnus3tjw" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 9/439.png" id="1_mff1f"]
+[ext_resource type="PackedScene" uid="uid://c5gqmolnipg5m" path="res://Instances/Spells/chests/Aura.tscn" id="2_fnpl3"]
+[ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="3_axp42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwrut"]
+atlas = ExtResource("1_mff1f")
+region = Rect2(0, 192, 64, 64)
+
+[resource]
+script = ExtResource("3_axp42")
+identification = "Healing Aura"
+power = 1
+mana = 5
+cooldown = 10.0
+icon = SubResource("AtlasTexture_iwrut")
+prefab = ExtResource("2_fnpl3")
+metadata/_custom_type_script = "uid://drj1hpuungh6i"

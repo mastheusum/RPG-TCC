@@ -88,10 +88,19 @@ func _check_cooldowns():
 func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("use_skill_alpha_1") and ManageInventory.weapon.item 
 		and ManageInventory.weapon.item.hability and $"HBox/Skill 1/Cooldown".time_left <= 0):
-		var skill = ManageInventory.weapon.item.hability.animation.instantiate()
-		skill.damage_increase = ManageInventory.weapon.item.hability.damage
+		var skill = ManageInventory.weapon.item.hability.prefab.instantiate()
+		skill.power = ManageInventory.weapon.item.hability.power
 		skill.global_position = PlayerBase.main_character.global_position
 		PlayerBase.main_character.get_parent().add_child(skill)
 		$"HBox/Skill 1/Cooldown".start(ManageInventory.weapon.item.hability.cooldown)
 		$"HBox/Skill 1/Icon".modulate = Color(0.5, 0.5, 0.5)
-	
+	if (event.is_action_pressed("use_skill_alpha_3") and ManageInventory.chest.item 
+		and ManageInventory.chest.item.hability and $"HBox/Skill 3/Cooldown".time_left <= 0):
+		# a SKILL vindo do CHEST sempre será uma aura, logo precisa ser fixada ao
+		# personagem para caso ele se locomova
+		var skill = ManageInventory.chest.item.hability.prefab.instantiate()
+		skill.power = ManageInventory.chest.item.hability.power
+		skill.global_position = Vector2.ZERO
+		PlayerBase.main_character.add_child(skill)
+		$"HBox/Skill 3/Cooldown".start(ManageInventory.chest.item.hability.cooldown)
+		$"HBox/Skill 3/Icon".modulate = Color(0.5, 0.5, 0.5)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://btblof1k7p8xf"]
 
-[ext_resource type="Script" uid="uid://hbpnkvfxl28w" path="res://Scripts/Spells/fissure.gd" id="1_g7cp3"]
+[ext_resource type="Script" uid="uid://vwr2rs41pu81" path="res://Scripts/Spells/area_burst_spell.gd" id="1_bkgor"]
 [ext_resource type="Texture2D" uid="uid://b5exe0gvmqqy8" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 1/16.png" id="2_vndhc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsppj"]
@@ -59,7 +59,7 @@ radius = 48.0
 [node name="WoundingBlow" type="Area2D"]
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_g7cp3")
+script = ExtResource("1_bkgor")
 metadata/_edit_group_ = true
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]

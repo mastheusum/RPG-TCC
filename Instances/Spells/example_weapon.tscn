@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cfappflx4vskn"]
 
-[ext_resource type="Script" uid="uid://hbpnkvfxl28w" path="res://Scripts/Spells/fissure.gd" id="1_vuit0"]
+[ext_resource type="Script" uid="uid://hbpnkvfxl28w" path="res://Scripts/Spells/base_spell.gd" id="1_vuit0"]
 [ext_resource type="Texture2D" uid="uid://b5exe0gvmqqy8" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 1/16.png" id="2_1if5s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fsppj"]

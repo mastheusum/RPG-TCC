@@ -13,8 +13,6 @@ var direction := Vector2()
 func _ready() -> void:
 	main_character = self
 	
-	PlayerAttributes.connect("update_life", update_life_bar)
-	
 	PlayerAttributes.connect("update_mana", update_mana_bar)
 	
 	PlayerAttributes.connect("update_level", update_level)
@@ -61,10 +59,6 @@ func take_damage(damage : float):
 func gain_exp(amount : float):
 	PlayerAttributes.gain_exp(amount)
 
-func update_life_bar(current : float, limit : float):
-	$HUD/LifeBar.max_value = limit
-	$HUD/LifeBar.value = current
-
 func update_mana_bar(current : float, limit : float):
 	$HUD/ManaBar.max_value = limit
 	$HUD/ManaBar.value = current
@@ -76,3 +70,6 @@ func update_level(level, exp, exp_max):
 	$HUD/Level.text = "[center] %d" % PlayerAttributes.level
 	$HUD/ExperienceBar.max_value = PlayerAttributes.exp_to_next_level
 	$HUD/ExperienceBar.value = PlayerAttributes.experience
+
+func healing(amount : float):
+	PlayerAttributes.heal(amount)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bkqdxgprtn8lc"]
 
-[ext_resource type="Script" uid="uid://hbpnkvfxl28w" path="res://Scripts/Spells/fissure.gd" id="1_66yeq"]
+[ext_resource type="Script" uid="uid://vwr2rs41pu81" path="res://Scripts/Spells/area_burst_spell.gd" id="1_hoefv"]
 [ext_resource type="Texture2D" uid="uid://bse30xn08tgh" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 2/71.png" id="2_hoefv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_of5qj"]
@@ -87,7 +87,7 @@ radius = 48.0
 [node name="BrutalAssault" type="Area2D"]
 collision_layer = 2
 collision_mask = 4
-script = ExtResource("1_66yeq")
+script = ExtResource("1_hoefv")
 metadata/_edit_group_ = true
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]

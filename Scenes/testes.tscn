@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://bkuet134dnhli"]
 
 [ext_resource type="Script" uid="uid://bowxmcyu5evyu" path="res://Scripts/start_game.gd" id="1_2lpga"]
-[ext_resource type="Texture2D" uid="uid://dx7yx6vbk33g2" path="res://Resources/WeaponSword.tres" id="1_fs4ro"]
+[ext_resource type="Texture2D" uid="uid://dx7yx6vbk33g2" path="res://Resources/IconWeaponSword.tres" id="1_fs4ro"]
 [ext_resource type="PackedScene" uid="uid://bkhle73tjrws3" path="res://Instances/PlayerCharacters/knight.tscn" id="2_nvr7u"]
-[ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/WeaponBow.tres" id="2_s7eyt"]
+[ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/IconWeaponBow.tres" id="2_s7eyt"]
 [ext_resource type="PackedScene" uid="uid://q8nlvukq8ql7" path="res://Instances/PlayerCharacters/ranger.tscn" id="3_1lspw"]
-[ext_resource type="Texture2D" uid="uid://wtcsbv3bqrgn" path="res://Resources/WeaponStaff.tres" id="3_bwvf1"]
+[ext_resource type="Texture2D" uid="uid://wtcsbv3bqrgn" path="res://Resources/IconWeaponStaff.tres" id="3_bwvf1"]
 [ext_resource type="PackedScene" uid="uid://nyvqscl27yt7" path="res://Instances/PlayerCharacters/wizard.tscn" id="4_gj1nf"]
 [ext_resource type="PackedScene" uid="uid://d0gpq8lco7ufn" path="res://Instances/dropped_item.tscn" id="9_vedbh"]
-[ext_resource type="Resource" uid="uid://cv3peyxnov5hd" path="res://Resources/Itens/Weapon001.tres" id="10_mwlwt"]
+[ext_resource type="Resource" uid="uid://cv3peyxnov5hd" path="res://Resources/Itens/WeaponSword001.tres" id="10_mwlwt"]
 [ext_resource type="PackedScene" uid="uid://b02n807pbraek" path="res://Maps/map_001.tscn" id="10_sg702"]
 [ext_resource type="PackedScene" uid="uid://cq4fvy5of758w" path="res://Instances/TESTES/dummy.tscn" id="11_6ge5o"]
 

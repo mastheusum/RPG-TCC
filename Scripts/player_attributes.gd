@@ -70,8 +70,8 @@ func level_up():
 	define_max_mana()
 	
 	emit_signal("update_level", self.level, self.experience, self.exp_to_next_level)
-	emit_signal("update_life", self.life_max, self.life_max * life_perc)
-	emit_signal("update_mana", self.mana_max, self.mana_max * mana_perc)
+	emit_signal("update_life", self.life_max, self.life)
+	emit_signal("update_mana", self.mana_max, self.mana)
 
 func take_damage(damage):
 	life = clampf(life - damage, 0, life_max)
@@ -95,3 +95,7 @@ func define_physics_defense():
 
 func define_magic_power():
 	pass
+
+func heal(amount : float):
+	life = clamp(life + amount, 0, life_max)
+	emit_signal("update_life", self.life_max, self.life)
