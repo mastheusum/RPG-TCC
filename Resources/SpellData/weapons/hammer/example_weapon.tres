@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://btwj7c2d1x0mv"]
 
-[ext_resource type="Texture2D" uid="uid://bse30xn08tgh" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 2/71.png" id="1_6mynx"]
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_6mynx"]
 [ext_resource type="PackedScene" uid="uid://bkqdxgprtn8lc" path="res://Instances/Spells/weapons/hammers/brutal_assault.tscn" id="2_y02me"]
 [ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="3_m58kf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iwrut"]
 atlas = ExtResource("1_6mynx")
-region = Rect2(256, 448, 64, 64)
+region = Rect2(192, 5120, 64, 64)
 
 [resource]
 script = ExtResource("3_m58kf")

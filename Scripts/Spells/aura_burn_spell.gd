@@ -1,7 +1,5 @@
 extends BaseSpell
 
-class_name AuraHealSpell
-
 @export var duration : float = 5
 @export var delay : float = 1
 var power : float = 0
@@ -21,13 +19,10 @@ func _on_ready():
 	
 	$End.start()
 	$Activate.start()
-	
-	targets.append(get_parent() as PlayerBase)
-	
 
 func _on_body_entered(body : Node2D):
-	if body.is_in_group("Player"):
-		targets.append(body as PlayerBase)
+	if body.is_in_group("Enemy"):
+		targets.append(body)
 
 func _on_body_exited(body : Node2D):
 	if body in targets:
@@ -38,5 +33,5 @@ func _on_timeout():
 
 func _on_activate():
 	for entity in targets:
-		entity = entity as PlayerBase
-		entity.healing(power)
+		entity = entity
+		entity.take_damage(power)

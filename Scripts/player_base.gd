@@ -16,12 +16,7 @@ var direction := Vector2()
 
 func _ready() -> void:
 	main_character = self
-	
-	PlayerAttributes.connect("update_mana", update_mana_bar)
-	
-	PlayerAttributes.connect("update_level", update_level)
-	PlayerAttributes.connect("update_experience", update_experience)
-
+	CanvasHud.visible = true
 	PlayerAttributes.start_attr(15, 5, 5, 5, 3)
 
 func _physics_process(delta: float) -> void:
@@ -54,26 +49,12 @@ func take_damage(damage : float):
 	var dealty = damage - total_def
 	PlayerAttributes.take_damage(dealty)
 	
-	$HUD/LifeBar.value = PlayerAttributes.life
-	$HUD.taken_damage_on_hud(dealty)
-	
 	if PlayerAttributes.life <= 0:
 		get_tree().paused = true
 
 func gain_exp(amount : float):
 	PlayerAttributes.gain_exp(amount)
 
-func update_mana_bar(current : float, limit : float):
-	$HUD/ManaBar.max_value = limit
-	$HUD/ManaBar.value = current
-
-func update_experience(val : float):
-	$HUD/ExperienceBar.value = val
-
-func update_level(level, exp, exp_max):
-	$HUD/Level.text = "[center] %d" % PlayerAttributes.level
-	$HUD/ExperienceBar.max_value = PlayerAttributes.exp_to_next_level
-	$HUD/ExperienceBar.value = PlayerAttributes.experience
 
 func healing(amount : float):
 	PlayerAttributes.heal(amount)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b8tnwtydplp3h"]
 
 [ext_resource type="Script" uid="uid://cjvvj8gerntqd" path="res://Scripts/player_base.gd" id="1_menqn"]
-[ext_resource type="PackedScene" uid="uid://bs42svyup8efj" path="res://Instances/GUI/hud.tscn" id="2_u26jg"]
+[ext_resource type="PackedScene" uid="uid://bs42svyup8efj" path="res://Instances/GUI/hud_bars.tscn" id="2_u26jg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k26js"]
 radius = 16.0

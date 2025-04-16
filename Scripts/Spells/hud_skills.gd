@@ -87,20 +87,34 @@ func _check_cooldowns():
 
 func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("use_skill_alpha_1") and ManageInventory.weapon.item 
-		and ManageInventory.weapon.item.hability and $"HBox/Skill 1/Cooldown".time_left <= 0):
+		and ManageInventory.weapon.item.hability and $"HBox/Skill 1/Cooldown".time_left <= 0 and
+		PlayerAttributes.consume_mana(ManageInventory.weapon.item.hability.mana)):
 		var skill = ManageInventory.weapon.item.hability.prefab.instantiate()
 		skill.power = ManageInventory.weapon.item.hability.power
 		skill.global_position = PlayerBase.main_character.global_position
 		PlayerBase.main_character.get_parent().add_child(skill)
 		$"HBox/Skill 1/Cooldown".start(ManageInventory.weapon.item.hability.cooldown)
 		$"HBox/Skill 1/Icon".modulate = Color(0.5, 0.5, 0.5)
+	if (event.is_action_pressed("use_skill_alpha_2") and ManageInventory.offhand.item 
+		and ManageInventory.offhand.item.hability and $"HBox/Skill 2/Cooldown".time_left <= 0 and
+		PlayerAttributes.consume_mana(ManageInventory.offhand.item.hability.mana)):
+		pass
 	if (event.is_action_pressed("use_skill_alpha_3") and ManageInventory.chest.item 
-		and ManageInventory.chest.item.hability and $"HBox/Skill 3/Cooldown".time_left <= 0):
+		and ManageInventory.chest.item.hability and $"HBox/Skill 3/Cooldown".time_left <= 0 and
+		PlayerAttributes.consume_mana(ManageInventory.chest.item.hability.mana)):
+		pass
+	if (event.is_action_pressed("use_skill_alpha_4") and ManageInventory.head.item 
+		and ManageInventory.head.item.hability and $"HBox/Skill 4/Cooldown".time_left <= 0 and
+		PlayerAttributes.consume_mana(ManageInventory.head.item.hability.mana)):
 		# a SKILL vindo do CHEST sempre será uma aura, logo precisa ser fixada ao
 		# personagem para caso ele se locomova
-		var skill = ManageInventory.chest.item.hability.prefab.instantiate()
-		skill.power = ManageInventory.chest.item.hability.power
+		var skill = ManageInventory.head.item.hability.prefab.instantiate()
+		skill.power = ManageInventory.head.item.hability.power
 		skill.global_position = Vector2.ZERO
 		PlayerBase.main_character.add_child(skill)
-		$"HBox/Skill 3/Cooldown".start(ManageInventory.chest.item.hability.cooldown)
-		$"HBox/Skill 3/Icon".modulate = Color(0.5, 0.5, 0.5)
+		$"HBox/Skill 4/Cooldown".start(ManageInventory.head.item.hability.cooldown)
+		$"HBox/Skill 4/Icon".modulate = Color(0.5, 0.5, 0.5)
+	if (event.is_action_pressed("use_skill_alpha_5") and ManageInventory.legs.item 
+		and ManageInventory.legs.item.hability and $"HBox/Skill 5/Cooldown".time_left <= 0 and
+		PlayerAttributes.consume_mana(ManageInventory.legs.item.hability.mana)):
+		pass

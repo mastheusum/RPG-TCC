@@ -34,13 +34,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -280.0
+offset_left = -448.0
 offset_top = -152.0
-offset_right = 280.0
+offset_right = 448.0
 offset_bottom = -88.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 48
+theme_override_constants/separation = 128
 alignment = 1
 
 [node name="Skill 1" type="NinePatchRect" parent="HBox"]

@@ -15,9 +15,16 @@ var item : Item = null :
 			_panel.get_node("VBox/Attack").text = "Ataque: +%d" % val.attack
 			_panel.get_node("VBox/Defense").text = "Defesa: +%d" % val.defense
 
+func _ready() -> void:
+	if not _panel:
+		_panel = $EquipData
+
 func _on_gui_input(event: InputEvent) -> void:
+	print(0)
 	if event is InputEventMouseButton:
+		print(1)
 		if event.is_action_pressed("right_mouse_action"):
+			print(2)
 			ManageInventory.equip_item(item)
 
 func _on_mouse_entered() -> void:

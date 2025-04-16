@@ -24,8 +24,7 @@ extends Node
 
 signal update_life(max_value : float, value : float)
 signal update_mana(max_value : float, value : float)
-signal update_experience(value : float)
-signal update_level(level : int, exp_current : float, exp_max : float)
+signal update_experience(level : int, exp_max : float, exp_current : float)
 
 # configura os atributos iniciais do personagem
 # configurações secundárias advindas destes atributos
@@ -49,8 +48,7 @@ func start_attr(physic_power : float, physic_delta : float, physic_defense : flo
 	
 	emit_signal("update_life", self.life_max, self.life)
 	emit_signal("update_mana", self.mana_max, self.mana)
-	emit_signal("update_experience", self.experience)
-	emit_signal("update_level", self.level, self.experience, self.exp_to_next_level)
+	emit_signal("update_experience", self.level, self.exp_to_next_level, self.experience)
 
 # ganho de experiência
 # elevação do nível
@@ -60,7 +58,7 @@ func gain_exp(amount):
 	if experience >= exp_to_next_level:
 		level_up()
 	
-	emit_signal("update_experience", self.experience)
+	emit_signal("update_experience", self.level, self.exp_to_next_level, self.experience)
 
 # subir de nível
 # corrigir a valores de experiência
@@ -79,20 +77,19 @@ func level_up():
 	define_max_life()
 	define_max_mana()
 	
-	emit_signal("update_level", self.level, self.experience, self.exp_to_next_level)
 	emit_signal("update_life", self.life_max, self.life)
 	emit_signal("update_mana", self.mana_max, self.mana)
 
 # receber dano
 func take_damage(damage):
 	life = clampf(life - damage, 0, life_max)
-	emit_signal("update_life", self.life)
+	emit_signal("update_life", self.life_max ,self.life)
 
 # quando o jogar morre ele perde parte da 
 # experiência obtida até o momento
 func death_punishment():
 	experience *= 0.2
-	emit_signal("update_experience", self.experience)
+	emit_signal("update_experience", self.level, self.exp_to_next_level, self.experience)
 
 # configurar vida
 func define_max_life():
@@ -119,3 +116,11 @@ func define_magic_power():
 func heal(amount : float):
 	life = clamp(life + amount, 0, life_max)
 	emit_signal("update_life", self.life_max, self.life)
+
+# função para consumir/gastar mana
+func consume_mana(amount : float) -> bool:
+	if mana < amount:
+		return false
+	mana = clamp(mana - amount, 0, mana_max)
+	emit_signal("update_mana", mana_max, mana)
+	return true

@@ -19,10 +19,11 @@ config/icon="res://icon.svg"
 
 PlayerAttributes="*res://AutoLoads/player_attributes.tscn"
 ManageInventory="*res://AutoLoads/manage_inventory.tscn"
+CanvasHud="*res://Instances/GUI/canvas_hud.tscn"
 
 [display]
 
-window/size/viewport_width=720
+window/size/viewport_width=1024
 window/size/viewport_height=600
 window/stretch/mode="viewport"
 
