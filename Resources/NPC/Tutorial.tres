@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="NPCTalkData" load_steps=2 format=3 uid="uid://cmeerja8qpfgw"]
+
+[ext_resource type="Script" uid="uid://bvmvaysrenpql" path="res://Scripts/NPCs/npc_talk_data.gd" id="1_f8tfm"]
+
+[resource]
+script = ExtResource("1_f8tfm")
+talks = Array[String](["Bem vindo ao mundo de Eldia", "Vou ensinar o básicoa você!", "Sua movimentação é feita utilizando as SETAS ou as teclas WASD", "Para atacar utilize o mouse e clique com o botão esquerdo do mouse", "Cuidado pois seus poderes ainda são baixos então é preciso utilizar equipamentos para aumentar sua força", "Aperta a tecla I para abrir o inventário. Passe o mouse por cima do item para ver suas estatísticas e clique caso queira equipar.", "Ao utilizar equipamentos eles podem lhe dar habilidades especiais que ajudarão no combate", "Utilize os números de 1 à 5 para ativar as habilidades do painel de habilidades", "Espero ter ajudado. Agora sua aventura já pode ter início. Retorne ao menú inicial e comece sua campanha!"])
+metadata/_custom_type_script = "uid://bvmvaysrenpql"

@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://bninrx5c0s4if"]
+
+[ext_resource type="Script" uid="uid://b1mww47vrm5a7" path="res://Scripts/GUI/npc_talk.gd" id="1_ukkg7"]
+[ext_resource type="FontFile" uid="uid://cuse44lun3f1h" path="res://Fonts/antiquity-print.ttf" id="2_xwnda"]
+
+[node name="NPC_talk" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ukkg7")
+
+[node name="Interact" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 68.0
+offset_right = 81.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_xwnda")
+text = "Press E"
+
+[node name="BG" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -136.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="BG"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_xwnda")
+theme_override_fonts/italics_font = ExtResource("2_xwnda")
+theme_override_fonts/bold_italics_font = ExtResource("2_xwnda")
+theme_override_fonts/bold_font = ExtResource("2_xwnda")
+bbcode_enabled = true
+text = "Bem vindo ao meu jogo!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Delay" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true

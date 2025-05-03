@@ -1,3 +1,9 @@
+Iniciado o desenvolvimento do sistema de diálogo com NPC.
+
+Quests serão feitas no futuro.
+
+----
+
 Existe espaço para melhoria no sistema de magias
 
 --------

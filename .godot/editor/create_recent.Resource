@@ -1,3 +1,4 @@
+NPCTalkData
 SpellData
 Equipment
 AtlasTexture

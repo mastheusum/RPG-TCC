@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkuet134dnhli"]
+[gd_scene load_steps=21 format=3 uid="uid://bkuet134dnhli"]
 
 [ext_resource type="Script" uid="uid://bowxmcyu5evyu" path="res://Scripts/start_game.gd" id="1_2lpga"]
 [ext_resource type="Texture2D" uid="uid://dx7yx6vbk33g2" path="res://Resources/IconWeaponSword.tres" id="1_fs4ro"]
@@ -11,6 +11,38 @@
 [ext_resource type="Resource" uid="uid://cv3peyxnov5hd" path="res://Resources/Itens/WeaponSword001.tres" id="10_mwlwt"]
 [ext_resource type="PackedScene" uid="uid://b02n807pbraek" path="res://Maps/map_001.tscn" id="10_sg702"]
 [ext_resource type="PackedScene" uid="uid://cq4fvy5of758w" path="res://Instances/TESTES/dummy.tscn" id="11_6ge5o"]
+[ext_resource type="Texture2D" uid="uid://r5ut1ia74we5" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f0.png" id="12_5oesn"]
+[ext_resource type="Script" uid="uid://cvfswg5heqx7u" path="res://Scripts/NPCs/npc_base.gd" id="12_krmq1"]
+[ext_resource type="Resource" uid="uid://cmeerja8qpfgw" path="res://Resources/NPC/Tutorial.tres" id="13_6qiby"]
+[ext_resource type="Texture2D" uid="uid://5mdoxhci0m54" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f1.png" id="13_krmq1"]
+[ext_resource type="Texture2D" uid="uid://bs2cvc8t8vsiy" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f2.png" id="14_6qiby"]
+[ext_resource type="Texture2D" uid="uid://choe3rnvxb1je" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f3.png" id="15_m72hr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_851pq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_5oesn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_krmq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6qiby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_m72hr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nyj0x"]
+size = Vector2(32, 50)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1p6n3"]
+radius = 64.0
 
 [node name="testes" type="Node2D"]
 
@@ -178,6 +210,29 @@ item = ExtResource("10_mwlwt")
 
 [node name="Dummy - angry" parent="." instance=ExtResource("11_6ge5o")]
 position = Vector2(360, 104)
+
+[node name="NPC" type="CharacterBody2D" parent="."]
+position = Vector2(1120, 432)
+script = ExtResource("12_krmq1")
+data = ExtResource("13_6qiby")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC"]
+texture_filter = 3
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_851pq")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC"]
+texture_filter = 3
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_nyj0x")
+
+[node name="Area2D" type="Area2D" parent="NPC"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC/Area2D"]
+position = Vector2(0, 16)
+shape = SubResource("CircleShape2D_1p6n3")
 
 [connection signal="pressed" from="CanvasLayer/GUI/KnightButton" to="CanvasLayer" method="_on_warrior_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/GUI/RangerButton" to="CanvasLayer" method="_on_ranger_button_pressed"]

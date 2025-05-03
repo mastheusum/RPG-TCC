@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://7pkld2oqujx1"]
+[gd_scene load_steps=5 format=3 uid="uid://7pkld2oqujx1"]
 
 [ext_resource type="PackedScene" uid="uid://bs42svyup8efj" path="res://Instances/GUI/hud_bars.tscn" id="1_7mp55"]
 [ext_resource type="PackedScene" uid="uid://dmxvec4mi5shb" path="res://Instances/GUI/hud_skills.tscn" id="2_fcgph"]
 [ext_resource type="PackedScene" uid="uid://c7fjuu6jm6h2s" path="res://Instances/GUI/inventory_gui.tscn" id="3_lnimx"]
+[ext_resource type="PackedScene" uid="uid://bninrx5c0s4if" path="res://Instances/GUI/npc_talk.tscn" id="4_fcgph"]
 
 [node name="CanvasHUD" type="CanvasLayer"]
-visible = false
 
 [node name="HUD_bars" parent="." instance=ExtResource("1_7mp55")]
 
@@ -13,3 +13,5 @@ visible = false
 
 [node name="Inventory_gui" parent="." instance=ExtResource("3_lnimx")]
 visible = false
+
+[node name="NPC_talk" parent="." instance=ExtResource("4_fcgph")]

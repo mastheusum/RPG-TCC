@@ -1,3 +1,8 @@
+res://Instances/GUI
+res://Scripts/GUI
+res://Instances/PlayerCharacters
+res://Scripts/NPCs
+res://Resources/NPC
 res://Sprites/Effect and FX Pixel All Free/Free/Part 3
 res://Sprites/Effect and FX Pixel All Free/Free/Part 2
 res://Resources/SpellData/offhand
@@ -8,7 +13,6 @@ res://Sprites/Effect and FX Pixel All Free/Free/Part 11
 D:/Godot/Projetos v4/rpg-tcc/Scripts/TMP
 res://Sprites/Effect and FX Pixel All Free/Free/Part 12
 res://Resources/SpellData/chest
-res://Instances/GUI
 res://Resources
 res://Sprites/Effect and FX Pixel All Free/Free/Part 9
 res://Sprites/Effect and FX Pixel All Free/Free/Part 1
@@ -16,9 +20,5 @@ res://Sprites
 res://Instances/TESTES
 D:/Godot/Projetos v4/rpg-tcc/builds/windows
 res://Scripts/TMP
-res://Resources/SpellData
-res://Instances/Spells
-res://AutoLoads
-res://Scripts/Inventory
 D:/Godot/Projetos v4/rpg-tcc/builds/linux
 D:/Godot/Projetos v4/rpg-tcc/builds
