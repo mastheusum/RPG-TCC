@@ -1,0 +1,13 @@
+res://Maps/map_001.tscn
+res://Resources/SpellData/chest/example_aura.tres
+res://Resources/SpellData/legs/example_legs.tres
+res://Resources/SpellData/head/example_head.tres
+res://Resources/Itens/Helmet001.tres
+res://Resources/SpellData/weapons/sword/example_weapon.tres
+res://Resources/WeaponSword.tres
+res://Resources/SpellData/weapons/axe/example_weapon.tres
+res://Resources/WeaponAxe.tres
+res://Resources/SpellData/weapons/hammer/example_weapon.tres
+res://Resources/WeaponHammer.tres
+res://Resources/SpellData/offhand/example_offhand.tres
+res://Resources/Itens/Offhand001.tres

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://btwj7c2d1x0mv"]
+
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_6mynx"]
+[ext_resource type="PackedScene" uid="uid://bkqdxgprtn8lc" path="res://Instances/Spells/weapons/hammers/brutal_assault.tscn" id="2_y02me"]
+[ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="3_m58kf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwrut"]
+atlas = ExtResource("1_6mynx")
+region = Rect2(192, 5120, 64, 64)
+
+[resource]
+script = ExtResource("3_m58kf")
+identification = "Brutal Assault"
+power = 20
+mana = 1
+cooldown = 3.0
+icon = SubResource("AtlasTexture_iwrut")
+prefab = ExtResource("2_y02me")
+metadata/_custom_type_script = "uid://drj1hpuungh6i"

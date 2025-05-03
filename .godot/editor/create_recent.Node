@@ -1,0 +1,15 @@
+PointLight2D
+CanvasModulate
+AnimatedSprite2D
+Timer
+BaseSpell
+CollisionShape2D
+Area2D
+AreaBurstSpell
+CanvasLayer
+TileMapLayer
+ProgressBar
+ShapeCast2D
+AnimationTree
+CharacterBody2D
+RichTextLabel

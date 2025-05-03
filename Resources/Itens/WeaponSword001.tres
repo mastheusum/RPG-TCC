@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=4 format=3 uid="uid://cv3peyxnov5hd"]
+
+[ext_resource type="Resource" uid="uid://cdkdd8onlxvhd" path="res://Resources/SpellData/weapons/sword/example_weapon.tres" id="1_6wjgu"]
+[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/equipment.gd" id="2_bhjjc"]
+[ext_resource type="Texture2D" uid="uid://dneyt80fxukrv" path="res://Resources/WeaponSword.tres" id="3_1w4j7"]
+
+[resource]
+script = ExtResource("2_bhjjc")
+life = 10
+defense = 0
+mana = 5
+attack = 1
+type = 3
+identification = "Simple Sword"
+rarity = 0
+sprite = ExtResource("3_1w4j7")
+hability = ExtResource("1_6wjgu")

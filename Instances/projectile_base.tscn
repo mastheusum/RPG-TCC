@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0nrat2jpp5hr"]
+
+[ext_resource type="Script" uid="uid://cn3ih2vn8ldf5" path="res://Scripts/projectile_movement.gd" id="1_30113"]
+[ext_resource type="Texture2D" uid="uid://4y3pbj2tu2o8" path="res://Resources/SkillSprites/projectile_01.tres" id="2_7syip"]
+[ext_resource type="Texture2D" uid="uid://cfo0i587tia5s" path="res://Resources/SkillSprites/projectile_02.tres" id="3_juaex"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqb4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7syip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_juaex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7nmxf"]
+radius = 8.0
+
+[node name="ProjectileBase" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_30113")
+power_min = 10
+power_max = 20
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pqb4e")
+autoplay = "default"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TimerToFree" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7nmxf")
+
+[connection signal="timeout" from="TimerToFree" to="." method="_on_timer_to_free_timeout"]

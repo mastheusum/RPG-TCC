@@ -1,0 +1,206 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkuet134dnhli"]
+
+[ext_resource type="Script" path="res://Scripts/start_game.gd" id="1_2lpga"]
+[ext_resource type="Texture2D" uid="uid://dx7yx6vbk33g2" path="res://Resources/WeaponSword.tres" id="1_fs4ro"]
+[ext_resource type="PackedScene" uid="uid://bkhle73tjrws3" path="res://Instances/PlayerCharacters/knight.tscn" id="2_nvr7u"]
+[ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/WeaponBow.tres" id="2_s7eyt"]
+[ext_resource type="PackedScene" uid="uid://q8nlvukq8ql7" path="res://Instances/PlayerCharacters/ranger.tscn" id="3_1lspw"]
+[ext_resource type="Texture2D" uid="uid://wtcsbv3bqrgn" path="res://Resources/WeaponStaff.tres" id="3_bwvf1"]
+[ext_resource type="PackedScene" uid="uid://nyvqscl27yt7" path="res://Instances/PlayerCharacters/wizard.tscn" id="4_gj1nf"]
+[ext_resource type="PackedScene" uid="uid://cxnpjk21ghf37" path="res://Instances/spawn_enemy.tscn" id="8_pqlbi"]
+[ext_resource type="PackedScene" uid="uid://cw15xcrj5a2lk" path="res://Instances/enemy_base.tscn" id="9_opcyf"]
+[ext_resource type="PackedScene" uid="uid://b02n807pbraek" path="res://Maps/map_001.tscn" id="10_sg702"]
+
+[node name="testes" type="Node2D"]
+
+[node name="REFERENCIAL" type="ColorRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerSpawnPoint" type="Node2D" parent="."]
+position = Vector2(576, 360)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_2lpga")
+knight = ExtResource("2_nvr7u")
+ranger = ExtResource("3_1lspw")
+wizzard = ExtResource("4_gj1nf")
+
+[node name="GUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = -120.0
+offset_bottom = -144.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="KnightButton" type="Button" parent="CanvasLayer/GUI"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -64.0
+offset_right = 128.0
+offset_bottom = 64.0
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/KnightButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_fs4ro")
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/KnightButton"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center]Cavaleiro"
+
+[node name="RangerButton" type="Button" parent="CanvasLayer/GUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/RangerButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_s7eyt")
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/RangerButton"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center]Arqueiro"
+
+[node name="WizzardButton" type="Button" parent="CanvasLayer/GUI"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/WizzardButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_bwvf1")
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/WizzardButton"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center]Feiticeiro"
+
+[node name="SpawnEnemy" parent="." node_paths=PackedStringArray("spawn_points") instance=ExtResource("8_pqlbi")]
+autostart = false
+enemy = ExtResource("9_opcyf")
+spawn_points = [NodePath("Point 1"), NodePath("Point 2"), NodePath("Point 3"), NodePath("Point 4"), NodePath("Point 5"), NodePath("Point 6"), NodePath("Point 7"), NodePath("Point 8"), NodePath("Point 9")]
+
+[node name="Point 1" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(72, 120)
+
+[node name="Point 2" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(648, 120)
+
+[node name="Point 3" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(408, 216)
+
+[node name="Point 4" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(600, 264)
+
+[node name="Point 5" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(696, 408)
+
+[node name="Point 6" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(600, 552)
+
+[node name="Point 7" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(256, 408)
+
+[node name="Point 8" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(120, 360)
+
+[node name="Point 9" type="Node2D" parent="SpawnEnemy"]
+position = Vector2(72, 552)
+
+[node name="Map001" parent="." instance=ExtResource("10_sg702")]
+
+[connection signal="pressed" from="CanvasLayer/GUI/KnightButton" to="CanvasLayer" method="_on_warrior_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/RangerButton" to="CanvasLayer" method="_on_ranger_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/WizzardButton" to="CanvasLayer" method="_on_wizzard_button_pressed"]

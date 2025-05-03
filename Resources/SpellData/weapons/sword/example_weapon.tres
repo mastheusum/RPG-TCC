@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://cdkdd8onlxvhd"]
+
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_glrgg"]
+[ext_resource type="PackedScene" uid="uid://btblof1k7p8xf" path="res://Instances/Spells/weapons/swords/wounding_blow.tscn" id="2_glrgg"]
+[ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="3_87ldw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwrut"]
+atlas = ExtResource("1_glrgg")
+region = Rect2(640, 4800, 64, 64)
+
+[resource]
+script = ExtResource("3_87ldw")
+identification = "Wounding Blow"
+power = 15
+mana = 1
+cooldown = 3.0
+icon = SubResource("AtlasTexture_iwrut")
+prefab = ExtResource("2_glrgg")
+metadata/_custom_type_script = "uid://drj1hpuungh6i"

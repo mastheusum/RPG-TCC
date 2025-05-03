@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dcn4obenklado"]
+
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_mxfp6"]
+
+[resource]
+atlas = ExtResource("1_mxfp6")
+region = Rect2(768, 7936, 64, 64)

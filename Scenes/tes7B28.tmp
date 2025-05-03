@@ -1,0 +1,162 @@
+[gd_scene load_steps=14 format=3 uid="uid://bkuet134dnhli"]
+
+[ext_resource type="Script" path="res://Scripts/player_ranged_short.gd" id="1_euava"]
+[ext_resource type="PackedScene" uid="uid://d0nrat2jpp5hr" path="res://Instances/projectile.tscn" id="2_uxyp8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k26js"]
+radius = 16.0
+
+[sub_resource type="Animation" id="Animation_rygud"]
+resource_name = "Attacking"
+
+[sub_resource type="Animation" id="Animation_li0st"]
+resource_name = "Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackOffset/Area2D/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ftaog"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackOffset/Area2D/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ru006"]
+_data = {
+"Attacking": SubResource("Animation_rygud"),
+"Idle": SubResource("Animation_li0st"),
+"RESET": SubResource("Animation_ftaog")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i7ivy"]
+animation = &"Attacking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xche8"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3jke7"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cldcv"]
+advance_mode = 2
+advance_condition = &"Attacking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_elj5j"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ckr5p"]
+states/Attacking/node = SubResource("AnimationNodeAnimation_i7ivy")
+states/Attacking/position = Vector2(644, 99.9259)
+states/Idle/node = SubResource("AnimationNodeAnimation_xche8")
+states/Idle/position = Vector2(380, 103.185)
+states/Start/position = Vector2(170.667, 108)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_3jke7"), "Idle", "Attacking", SubResource("AnimationNodeStateMachineTransition_cldcv"), "Attacking", "Idle", SubResource("AnimationNodeStateMachineTransition_elj5j")]
+
+[node name="testes" type="Node2D"]
+
+[node name="REFERENCIAL" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerRangedShort" type="CharacterBody2D" parent="."]
+position = Vector2(540, 360)
+script = ExtResource("1_euava")
+shoot_pre = ExtResource("2_uxyp8")
+delay_to_free = 2.0
+damage = 10
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="PlayerRangedShort"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.999988, 0.391043, 0.205126, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRangedShort"]
+shape = SubResource("CircleShape2D_k26js")
+
+[node name="Camera2D" type="Camera2D" parent="PlayerRangedShort"]
+
+[node name="AttackOffset" type="Node2D" parent="PlayerRangedShort"]
+
+[node name="HUD" type="Control" parent="PlayerRangedShort"]
+custom_minimum_size = Vector2(1080, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LifeBar" type="ProgressBar" parent="PlayerRangedShort/HUD"]
+custom_minimum_size = Vector2(400, 24)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 416.0
+offset_bottom = 40.0
+mouse_filter = 2
+value = 50.0
+show_percentage = false
+
+[node name="ManaBar" type="ProgressBar" parent="PlayerRangedShort/HUD"]
+custom_minimum_size = Vector2(400, 24)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 416.0
+offset_bottom = 72.0
+mouse_filter = 2
+value = 50.0
+show_percentage = false
+
+[node name="ManaBar2" type="ProgressBar" parent="PlayerRangedShort/HUD"]
+custom_minimum_size = Vector2(1048, 16)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 688.0
+offset_right = 1064.0
+offset_bottom = 704.0
+mouse_filter = 2
+value = 50.0
+show_percentage = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerRangedShort"]
+libraries = {
+"": SubResource("AnimationLibrary_ru006")
+}
+autoplay = "Idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="PlayerRangedShort"]
+tree_root = SubResource("AnimationNodeStateMachine_ckr5p")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/Attacking = false

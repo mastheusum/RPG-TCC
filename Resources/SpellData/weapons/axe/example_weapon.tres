@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://dbhsqicpvyy8u"]
+
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_cv1ko"]
+[ext_resource type="PackedScene" uid="uid://b8642gghepfke" path="res://Instances/Spells/weapons/axes/critical_strike.tscn" id="2_gaj4f"]
+[ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="3_g1bbw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwrut"]
+atlas = ExtResource("1_cv1ko")
+region = Rect2(960, 5440, 64, 64)
+
+[resource]
+script = ExtResource("3_g1bbw")
+identification = "Critical Strike"
+power = 20
+mana = 1
+cooldown = 3.0
+icon = SubResource("AtlasTexture_iwrut")
+prefab = ExtResource("2_gaj4f")
+metadata/_custom_type_script = "uid://drj1hpuungh6i"

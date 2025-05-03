@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://d0s74opwiggmk"]
+
+[ext_resource type="Script" uid="uid://cdy71ic01r87s" path="res://Scripts/Spells/buff_spell.gd" id="1_6fk65"]
+[ext_resource type="Texture2D" uid="uid://ogjifs5sor2p" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 3/124.png" id="2_6fk65"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1t1e"]
+atlas = ExtResource("2_6fk65")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0ywi"]
+atlas = ExtResource("2_6fk65")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xou64"]
+atlas = ExtResource("2_6fk65")
+region = Rect2(256, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1hpm"]
+atlas = ExtResource("2_6fk65")
+region = Rect2(320, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpah6"]
+atlas = ExtResource("2_6fk65")
+region = Rect2(384, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb5w7"]
+atlas = ExtResource("2_6fk65")
+region = Rect2(448, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfoc8"]
+atlas = ExtResource("2_6fk65")
+region = Rect2(512, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48x7t"]
+atlas = ExtResource("2_6fk65")
+region = Rect2(576, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbkfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1t1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0ywi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xou64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1hpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpah6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb5w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfoc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48x7t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0djvq"]
+radius = 48.0
+
+[node name="OffhandBuffSpell" type="Area2D"]
+z_index = 3
+collision_layer = 0
+script = ExtResource("1_6fk65")
+duration = 3.0
+move_speed = -50.0
+physic_attack = 15.0
+physic_defense = 15.0
+metadata/_edit_group_ = true
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_qbkfu")
+autoplay = "default"
+frame_progress = 0.412015
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0djvq")
+
+[node name="End" type="Timer" parent="."]

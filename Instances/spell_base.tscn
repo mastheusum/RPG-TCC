@@ -1,0 +1,124 @@
+[gd_scene load_steps=15 format=3 uid="uid://c57b6pgntm0uw"]
+
+[ext_resource type="Script" uid="uid://cp0cp7l1i37w" path="res://Scripts/spell_base.gd" id="1_5wqsu"]
+[ext_resource type="Texture2D" uid="uid://eievro1era4" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 4/175.png" id="2_g25bb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc7wh"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ud06"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gc034"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgxs7"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8id63"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(256, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wia0u"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(320, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhxxm"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(384, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cew88"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(448, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6qpu"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(512, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83gvn"]
+atlas = ExtResource("2_g25bb")
+region = Rect2(576, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hpksi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc7wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ud06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gc034")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgxs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8id63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wia0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhxxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cew88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6qpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83gvn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffw15"]
+size = Vector2(40, 40)
+
+[node name="SpellBase" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_5wqsu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hpksi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ffw15")
+
+[node name="EndSpell" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Tick" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="EndSpell" to="." method="_on_end_spell"]
+[connection signal="timeout" from="Tick" to="." method="_on_tick_timeout"]

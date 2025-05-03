@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://crw47ab61mous"]
+
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_0sarb"]
+[ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="1_4kxvs"]
+[ext_resource type="PackedScene" uid="uid://d0s74opwiggmk" path="res://Instances/Spells/offhands/offhand_buff_spell.tscn" id="2_kprtj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0viud"]
+atlas = ExtResource("1_0sarb")
+region = Rect2(384, 3456, 64, 64)
+
+[resource]
+script = ExtResource("1_4kxvs")
+identification = "Growth"
+power = 0
+mana = 2
+cooldown = 10.0
+icon = SubResource("AtlasTexture_0viud")
+prefab = ExtResource("2_kprtj")
+metadata/_custom_type_script = "uid://drj1hpuungh6i"

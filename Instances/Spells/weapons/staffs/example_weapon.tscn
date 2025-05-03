@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://dsrp4ylc0msou"]
+
+[ext_resource type="Script" uid="uid://hbpnkvfxl28w" path="res://Scripts/Spells/base_spell.gd" id="1_ks3fg"]
+[ext_resource type="Texture2D" uid="uid://b5exe0gvmqqy8" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 1/16.png" id="2_av3hs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsppj"]
+atlas = ExtResource("2_av3hs")
+region = Rect2(384, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_che6t"]
+atlas = ExtResource("2_av3hs")
+region = Rect2(448, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3cfb"]
+atlas = ExtResource("2_av3hs")
+region = Rect2(512, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7c7y"]
+atlas = ExtResource("2_av3hs")
+region = Rect2(576, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oicm7"]
+atlas = ExtResource("2_av3hs")
+region = Rect2(640, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shmrp"]
+atlas = ExtResource("2_av3hs")
+region = Rect2(704, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbkfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsppj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_che6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3cfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7c7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oicm7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shmrp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0djvq"]
+radius = 48.0
+
+[node name="ExampleWeapon" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_ks3fg")
+metadata/_edit_group_ = true
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_qbkfu")
+autoplay = "default"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0djvq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=5 format=3 uid="uid://bu32c84cwlgmg"]
+
+[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/equipment.gd" id="1_bysv2"]
+[ext_resource type="Resource" uid="uid://crw47ab61mous" path="res://Resources/SpellData/offhand/example_offhand.tres" id="1_re07w"]
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="2_nufdd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_re07w"]
+atlas = ExtResource("2_nufdd")
+region = Rect2(448, 832, 64, 64)
+
+[resource]
+script = ExtResource("1_bysv2")
+life = 10
+defense = 0
+mana = 10
+attack = 0
+type = 4
+identification = "Pérola Encantada"
+rarity = 2
+sprite = SubResource("AtlasTexture_re07w")
+hability = ExtResource("1_re07w")
+metadata/_custom_type_script = "uid://bde6nyoqqkpbj"

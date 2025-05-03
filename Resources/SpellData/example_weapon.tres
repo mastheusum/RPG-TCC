@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://k4hp3j45vyyu"]
+
+[ext_resource type="PackedScene" uid="uid://cfappflx4vskn" path="res://Instances/Spells/example_weapon.tscn" id="1_hq22y"]
+[ext_resource type="Texture2D" uid="uid://b5exe0gvmqqy8" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 1/16.png" id="2_ybsb7"]
+[ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="3_6vya4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwrut"]
+atlas = ExtResource("2_ybsb7")
+region = Rect2(512, 320, 64, 64)
+
+[resource]
+script = ExtResource("3_6vya4")
+identification = "Fury"
+damage = 15
+mana = 2
+cooldown = 3.0
+icon = SubResource("AtlasTexture_iwrut")
+animation = ExtResource("1_hq22y")
+metadata/_custom_type_script = "uid://drj1hpuungh6i"

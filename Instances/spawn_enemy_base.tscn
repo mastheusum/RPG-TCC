@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://bfvhho2irdw2m"]
+
+[ext_resource type="Script" uid="uid://26s8h28bkstk" path="res://Scripts/spawn_enemy.gd" id="1_j5i5i"]
+[ext_resource type="Script" uid="uid://i78yeqpjlkrk" path="res://Scripts/enemy_base.gd" id="2_eniuj"]
+[ext_resource type="Texture2D" uid="uid://byhkoso5qqd67" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f0.png" id="3_iadto"]
+[ext_resource type="Texture2D" uid="uid://cp6mgckbj5pm" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f1.png" id="4_s7m8n"]
+[ext_resource type="Texture2D" uid="uid://b8xca174ebge6" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f2.png" id="5_p65lh"]
+[ext_resource type="Texture2D" uid="uid://bqwxuy3d63u1w" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f3.png" id="6_ehh52"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2tpi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_iadto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s7m8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p65lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ehh52")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ylcxn"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vtchx"]
+radius = 384.0
+
+[node name="SpawnEnemy" type="Node2D"]
+z_index = 2
+position = Vector2(72, 120)
+script = ExtResource("1_j5i5i")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="Enemy" type="CharacterBody2D" parent="." groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("2_eniuj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_e2tpi")
+autoplay = "default"
+frame_progress = 0.792929
+
+[node name="ColorRect" type="ColorRect" parent="Enemy"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.215686, 0.227451, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("CircleShape2D_ylcxn")
+
+[node name="Agent" type="NavigationAgent2D" parent="Enemy"]
+target_desired_distance = 20.0
+
+[node name="FollowArea" type="Area2D" parent="Enemy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/FollowArea"]
+shape = SubResource("CircleShape2D_vtchx")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timeout"]

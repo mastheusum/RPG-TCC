@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8tnwtydplp3h"]
+
+[ext_resource type="Script" uid="uid://cjvvj8gerntqd" path="res://Scripts/player_base.gd" id="1_menqn"]
+[ext_resource type="PackedScene" uid="uid://bs42svyup8efj" path="res://Instances/GUI/hud_bars.tscn" id="2_u26jg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k26js"]
+radius = 16.0
+
+[node name="PlayerBase" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_menqn")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.999988, 0.391043, 0.205126, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k26js")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AttackOffset" type="Node2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("2_u26jg")]

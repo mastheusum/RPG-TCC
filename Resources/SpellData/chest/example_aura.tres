@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://btlbtrotm321w"]
+
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_cul1v"]
+[ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="1_tu7dj"]
+[ext_resource type="PackedScene" uid="uid://ddw16tkr8qyfq" path="res://Instances/Spells/chests/aura_burn_spell.tscn" id="2_8untd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leyie"]
+atlas = ExtResource("1_cul1v")
+region = Rect2(832, 3904, 64, 64)
+
+[resource]
+script = ExtResource("1_tu7dj")
+identification = "Coração Furioso"
+power = 5
+mana = 2
+cooldown = 10.0
+icon = SubResource("AtlasTexture_leyie")
+prefab = ExtResource("2_8untd")
+metadata/_custom_type_script = "uid://drj1hpuungh6i"

@@ -1,0 +1,149 @@
+[gd_scene load_steps=22 format=3 uid="uid://q8nlvukq8ql7"]
+
+[ext_resource type="Script" uid="uid://b2t4qsceh1nil" path="res://Scripts/player_ranged.gd" id="1_y7qre"]
+[ext_resource type="PackedScene" uid="uid://d0nrat2jpp5hr" path="res://Instances/projectile_base.tscn" id="2_xt6sg"]
+[ext_resource type="Texture2D" uid="uid://bc58ntqn1upex" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f0.png" id="3_jiorg"]
+[ext_resource type="PackedScene" uid="uid://bs42svyup8efj" path="res://Instances/GUI/hud_bars.tscn" id="3_k687y"]
+[ext_resource type="Texture2D" uid="uid://dxw2gr4l8ige0" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f3.png" id="5_bi2jp"]
+[ext_resource type="Texture2D" uid="uid://l746wbopbn46" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/elf_m_idle_anim_f2.png" id="6_0cnqb"]
+[ext_resource type="Texture2D" uid="uid://d1l2xh2abcrek" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f1.png" id="7_1648r"]
+[ext_resource type="Texture2D" uid="uid://ch4lwivf5djaa" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f2.png" id="8_ijrvc"]
+[ext_resource type="Texture2D" uid="uid://cl0w5k8irtc7l" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/elf_m_run_anim_f3.png" id="9_k38o2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k26js"]
+radius = 16.0
+
+[sub_resource type="Animation" id="Animation_rygud"]
+resource_name = "Attacking"
+length = 0.1
+
+[sub_resource type="Animation" id="Animation_li0st"]
+resource_name = "Idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_jiorg"), ExtResource("5_bi2jp"), ExtResource("6_0cnqb"), ExtResource("5_bi2jp")]
+}
+
+[sub_resource type="Animation" id="Animation_ftaog"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_jiorg")]
+}
+
+[sub_resource type="Animation" id="Animation_gafp6"]
+resource_name = "walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_jiorg"), ExtResource("7_1648r"), ExtResource("8_ijrvc"), ExtResource("9_k38o2")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ru006"]
+_data = {
+&"Attacking": SubResource("Animation_rygud"),
+&"Idle": SubResource("Animation_li0st"),
+&"RESET": SubResource("Animation_ftaog"),
+&"walk": SubResource("Animation_gafp6")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i7ivy"]
+animation = &"Attacking"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xche8"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3jke7"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cldcv"]
+advance_mode = 2
+advance_condition = &"Attacking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_elj5j"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ckr5p"]
+states/Attacking/node = SubResource("AnimationNodeAnimation_i7ivy")
+states/Attacking/position = Vector2(644, 99.9259)
+states/Idle/node = SubResource("AnimationNodeAnimation_xche8")
+states/Idle/position = Vector2(380, 103.185)
+states/Start/position = Vector2(170.667, 108)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_3jke7"), "Idle", "Attacking", SubResource("AnimationNodeStateMachineTransition_cldcv"), "Attacking", "Idle", SubResource("AnimationNodeStateMachineTransition_elj5j")]
+
+[node name="PlayerRanged" type="CharacterBody2D" groups=["Player"]]
+texture_filter = 1
+script = ExtResource("1_y7qre")
+shoot_preload = ExtResource("2_xt6sg")
+shoot_speed = 600.0
+delay_to_free = 2.5
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+scale = Vector2(3, 3)
+texture = ExtResource("3_jiorg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.999988, 0.391043, 0.205126, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k26js")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AttackOffset" type="Node2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("3_k687y")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ru006")
+}
+autoplay = "Idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_ckr5p")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/Attacking = false

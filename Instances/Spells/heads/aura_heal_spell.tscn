@@ -1,0 +1,106 @@
+[gd_scene load_steps=15 format=3 uid="uid://c5gqmolnipg5m"]
+
+[ext_resource type="Script" uid="uid://6eb2fuge635u" path="res://Scripts/Spells/aura_heal_spell.gd" id="1_ja77g"]
+[ext_resource type="Texture2D" uid="uid://cooxusnus3tjw" path="res://Sprites/Effect and FX Pixel All Free/Free/Part 9/439.png" id="2_ve1vp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_835fg"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8mol"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(64, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpq1j"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(128, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3uph"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eueba"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(256, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrf5t"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(320, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf72q"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(384, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fap0f"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(448, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlokp"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(512, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohcl3"]
+atlas = ExtResource("2_ve1vp")
+region = Rect2(576, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbkfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_835fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8mol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpq1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3uph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eueba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrf5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf72q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fap0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlokp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohcl3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0djvq"]
+radius = 48.0
+
+[node name="AuraHealSpell" type="Area2D"]
+z_index = 3
+collision_layer = 0
+script = ExtResource("1_ja77g")
+metadata/_edit_group_ = true
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 24)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_qbkfu")
+autoplay = "default"
+frame_progress = 0.952565
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0djvq")
+
+[node name="End" type="Timer" parent="."]
+
+[node name="Activate" type="Timer" parent="."]

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SpellData" load_steps=5 format=3 uid="uid://du5shrwpt3lta"]
+
+[ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="1_218iy"]
+[ext_resource type="Script" uid="uid://drj1hpuungh6i" path="res://Scripts/Spells/spell_data.gd" id="1_rn2l5"]
+[ext_resource type="PackedScene" uid="uid://ccva4rrmvo2ew" path="res://Instances/Spells/legs/leg_buff_spell.tscn" id="2_3y4q1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3y4q1"]
+atlas = ExtResource("1_218iy")
+region = Rect2(64, 3520, 64, 64)
+
+[resource]
+script = ExtResource("1_rn2l5")
+identification = "Haste"
+power = 0
+mana = 1
+cooldown = 5.0
+icon = SubResource("AtlasTexture_3y4q1")
+prefab = ExtResource("2_3y4q1")
+metadata/_custom_type_script = "uid://drj1hpuungh6i"
