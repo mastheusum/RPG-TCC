@@ -1,3 +1,4 @@
+res://Instances/NPCs
 res://Instances/GUI
 res://Scripts/GUI
 res://Instances/PlayerCharacters
@@ -19,6 +20,5 @@ res://Sprites/Effect and FX Pixel All Free/Free/Part 1
 res://Sprites
 res://Instances/TESTES
 D:/Godot/Projetos v4/rpg-tcc/builds/windows
-res://Scripts/TMP
 D:/Godot/Projetos v4/rpg-tcc/builds/linux
 D:/Godot/Projetos v4/rpg-tcc/builds

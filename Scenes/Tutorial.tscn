@@ -1,0 +1,272 @@
+[gd_scene load_steps=20 format=3 uid="uid://bkuet134dnhli"]
+
+[ext_resource type="Script" uid="uid://bowxmcyu5evyu" path="res://Scripts/start_game.gd" id="1_fx2vl"]
+[ext_resource type="PackedScene" uid="uid://bkhle73tjrws3" path="res://Instances/PlayerCharacters/knight.tscn" id="2_mqud2"]
+[ext_resource type="PackedScene" uid="uid://q8nlvukq8ql7" path="res://Instances/PlayerCharacters/ranger.tscn" id="3_sswaw"]
+[ext_resource type="PackedScene" uid="uid://nyvqscl27yt7" path="res://Instances/PlayerCharacters/wizard.tscn" id="4_kpk71"]
+[ext_resource type="Texture2D" uid="uid://dx7yx6vbk33g2" path="res://Resources/IconWeaponSword.tres" id="5_8nvbb"]
+[ext_resource type="Texture2D" uid="uid://dvr5vwp1g4clq" path="res://Resources/IconWeaponBow.tres" id="6_orlbv"]
+[ext_resource type="Texture2D" uid="uid://wtcsbv3bqrgn" path="res://Resources/IconWeaponStaff.tres" id="7_m8quk"]
+[ext_resource type="PackedScene" uid="uid://b02n807pbraek" path="res://Maps/map_001.tscn" id="8_qae3o"]
+[ext_resource type="PackedScene" uid="uid://d0gpq8lco7ufn" path="res://Instances/dropped_item.tscn" id="9_jyml5"]
+[ext_resource type="Resource" uid="uid://cv3peyxnov5hd" path="res://Resources/Itens/WeaponSword001.tres" id="10_8brlw"]
+[ext_resource type="PackedScene" uid="uid://c85lbl53oq58m" path="res://Instances/NPCs/npc_tutorial_01.tscn" id="11_8i65c"]
+[ext_resource type="Script" uid="uid://i78yeqpjlkrk" path="res://Scripts/enemy_base.gd" id="12_fx2vl"]
+[ext_resource type="Texture2D" uid="uid://byhkoso5qqd67" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f0.png" id="13_mqud2"]
+[ext_resource type="Texture2D" uid="uid://cp6mgckbj5pm" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f1.png" id="14_sswaw"]
+[ext_resource type="Texture2D" uid="uid://b8xca174ebge6" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f2.png" id="15_kpk71"]
+[ext_resource type="Texture2D" uid="uid://bqwxuy3d63u1w" path="res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f3.png" id="16_8nvbb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2tpi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_mqud2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sswaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kpk71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8nvbb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ylcxn"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fx2vl"]
+radius = 224.0
+
+[node name="Tutorial" type="Node2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.617455, 0.617455, 0.617455, 1)
+
+[node name="PlayerSpawnPoint" type="Node2D" parent="."]
+position = Vector2(576, 360)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("1_fx2vl")
+knight = ExtResource("2_mqud2")
+ranger = ExtResource("3_sswaw")
+wizzard = ExtResource("4_kpk71")
+
+[node name="GUI" type="Control" parent="CanvasLayer"]
+custom_minimum_size = Vector2(460.8, 0)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="KnightButton" type="Button" parent="CanvasLayer/GUI"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -64.0
+offset_right = 128.0
+offset_bottom = 64.0
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/KnightButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_8nvbb")
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/KnightButton"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center]Cavaleiro"
+
+[node name="RangerButton" type="Button" parent="CanvasLayer/GUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+disabled = true
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/RangerButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_orlbv")
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/RangerButton"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center]Arqueiro"
+
+[node name="WizzardButton" type="Button" parent="CanvasLayer/GUI"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 0
+grow_vertical = 2
+disabled = true
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/GUI/WizzardButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_m8quk")
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/GUI/WizzardButton"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center]Feiticeiro"
+
+[node name="Map001" parent="." instance=ExtResource("8_qae3o")]
+
+[node name="DroppedItem" parent="." instance=ExtResource("9_jyml5")]
+position = Vector2(96, 48)
+
+[node name="DroppedItem2" parent="." instance=ExtResource("9_jyml5")]
+position = Vector2(664, 56)
+item = ExtResource("10_8brlw")
+
+[node name="NPC_Tutorial_01" parent="." instance=ExtResource("11_8i65c")]
+position = Vector2(1120, 432)
+
+[node name="TutorialDungeonEpcenter" type="Node2D" parent="."]
+position = Vector2(2208, 2352)
+
+[node name="Point1" type="Node2D" parent="TutorialDungeonEpcenter"]
+position = Vector2(-528, -1736)
+
+[node name="Point2" type="Node2D" parent="TutorialDungeonEpcenter"]
+position = Vector2(-344, -968)
+
+[node name="Point3" type="Node2D" parent="TutorialDungeonEpcenter"]
+position = Vector2(-1432, -984)
+
+[node name="Point4" type="Node2D" parent="TutorialDungeonEpcenter"]
+position = Vector2(-1280, -1712)
+
+[node name="EnemyBase" type="CharacterBody2D" parent="TutorialDungeonEpcenter" node_paths=PackedStringArray("patrol_points") groups=["Enemy"]]
+position = Vector2(-856, -1288)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("12_fx2vl")
+patrol_points = [NodePath("../Point1"), NodePath("../Point2"), NodePath("../Point3"), NodePath("../Point4")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TutorialDungeonEpcenter/EnemyBase"]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_e2tpi")
+autoplay = "default"
+frame_progress = 0.792929
+
+[node name="ColorRect" type="ColorRect" parent="TutorialDungeonEpcenter/EnemyBase"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.215686, 0.227451, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialDungeonEpcenter/EnemyBase"]
+shape = SubResource("CircleShape2D_ylcxn")
+
+[node name="Agent" type="NavigationAgent2D" parent="TutorialDungeonEpcenter/EnemyBase"]
+target_desired_distance = 20.0
+
+[node name="FollowArea" type="Area2D" parent="TutorialDungeonEpcenter/EnemyBase"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialDungeonEpcenter/EnemyBase/FollowArea"]
+shape = SubResource("CircleShape2D_fx2vl")
+
+[connection signal="pressed" from="CanvasLayer/GUI/KnightButton" to="CanvasLayer" method="_on_warrior_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/RangerButton" to="CanvasLayer" method="_on_ranger_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/WizzardButton" to="CanvasLayer" method="_on_wizzard_button_pressed"]

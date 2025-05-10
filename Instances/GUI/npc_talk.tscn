@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bninrx5c0s4if"]
+[gd_scene load_steps=5 format=3 uid="uid://bninrx5c0s4if"]
 
 [ext_resource type="Script" uid="uid://b1mww47vrm5a7" path="res://Scripts/GUI/npc_talk.gd" id="1_ukkg7"]
 [ext_resource type="FontFile" uid="uid://cuse44lun3f1h" path="res://Fonts/antiquity-print.ttf" id="2_xwnda"]
+[ext_resource type="Texture2D" uid="uid://wxtpa0ooqas2" path="res://Sprites/UI/Retro Inventory/Original/Inventory_Slot_1.png" id="3_xwnda"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2to4l"]
+texture = ExtResource("3_xwnda")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
 
 [node name="NPC_talk" type="Control"]
 visible = false
@@ -28,7 +36,7 @@ offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_xwnda")
-text = "Press E"
+text = "Interagir"
 
 [node name="BG" type="Panel" parent="."]
 visible = false
@@ -41,6 +49,7 @@ offset_top = -136.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2to4l")
 
 [node name="Label" type="RichTextLabel" parent="BG"]
 layout_mode = 1
@@ -60,5 +69,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Delay" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.05
 one_shot = true
