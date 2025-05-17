@@ -1,4 +1,4 @@
-res://AutoLoads/player_attributes.tscn
+res://Scenes/Tutorial.tscn
 res://Resources/SpellData/chest/example_aura.tres
 res://Resources/SpellData/legs/example_legs.tres
 res://Resources/SpellData/head/example_head.tres
@@ -12,13 +12,12 @@ res://Resources/WeaponHammer.tres
 res://Resources/SpellData/offhand/example_offhand.tres
 res://Resources/Itens/Offhand001.tres
 res://Resources/NPC/Tutorial.tres
-res://AutoLoads/manage_inventory.tscn
-res://Scenes/testes.tscn
 res://Instances/GUI/canvas_hud.tscn
 res://Instances/GUI/hud_bars.tscn
 res://Instances/GUI/hud_skills.tscn
 res://Instances/GUI/npc_talk.tscn
-res://Scripts/GUI/npc_talk.gd
 res://Maps/map_001.tscn
-res://Scenes/Tutorial.tscn
 res://Scripts/enemy_base.gd
+res://Scripts/hud.gd
+res://Scripts/NPCs/npc_talk_data.gd
+res://Scripts/GUI/npc_talk.gd

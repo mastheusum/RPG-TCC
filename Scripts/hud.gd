@@ -7,6 +7,7 @@ func _ready() -> void:
 	_label_damage.visible = false
 	PlayerAttributes.connect("update_life", _update_lifebar)
 	PlayerAttributes.connect("update_mana", _update_manabar)
+	PlayerAttributes.connect("update_experience", _update_level)
 
 func taken_damage_on_hud(value):
 	_label_damage.text = "[center]%.1f" % value
@@ -39,6 +40,6 @@ func _update_experience(val : float):
 	$ExperienceBar.value = val
 
 func _update_level(level, exp, exp_max):
-	$Level.text = "[center] %d" % PlayerAttributes.level
-	$ExperienceBar.max_value = PlayerAttributes.exp_to_next_level
-	$ExperienceBar.value = PlayerAttributes.experience
+	$Level.text = "[center] %d" % level
+	$ExperienceBar.max_value = exp_max
+	$ExperienceBar.value = exp

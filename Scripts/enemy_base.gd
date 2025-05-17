@@ -85,12 +85,12 @@ func take_damage(damage):
 		dead()
 
 func dead():
-	daddy.alive = false
+	#daddy.alive = false
 	$CollisionShape2D.disabled = true
 	$AnimatedSprite2D.visible = false
 
 func live():
-	daddy.alive = true
+	#daddy.alive = true
 	$CollisionShape2D.disabled = false
 	$AnimatedSprite2D.visible = true
 	_life = life_max

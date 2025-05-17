@@ -1,3 +1,9 @@
+Sistema de diálogo com NPC atualizado
+
+A caminho do desenvolvimento de Quests
+
+17 05 25
+----
 Iniciado o desenvolvimento do sistema de diálogo com NPC.
 
 Quests serão feitas no futuro.

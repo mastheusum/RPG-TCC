@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_f8tfm")
-talks = Array[String](["Bem vindo ao mundo de Eldia", "Vou ensinar o básicoa você!", "Sua movimentação é feita utilizando as SETAS ou as teclas WASD", "Para atacar utilize o mouse e clique com o botão esquerdo do mouse", "Cuidado pois seus poderes ainda são baixos então é preciso utilizar equipamentos para aumentar sua força", "Aperta a tecla I para abrir o inventário. Passe o mouse por cima do item para ver suas estatísticas e clique caso queira equipar.", "Ao utilizar equipamentos eles podem lhe dar habilidades especiais que ajudarão no combate", "Utilize os números de 1 à 5 para ativar as habilidades do painel de habilidades", "Espero ter ajudado. Agora sua aventura já pode ter início. Retorne ao menú inicial e comece sua campanha!"])
+talks = Array[String](["Olá! Bem vindo ao mundo de Eldia", "Para movimentar seu personagem utilize as setas oi o WASD", "Para atacar basta mirar com o mouse e clickar o o botão esquerdo do mouse", "Ao derrotar monstros você ganhará pontos de experiência que o deixarão mais forte", "Ajudar os habitantes do reino irão lhe conceder pontos extras e recompensas alternativas", "Gostaria de me ajudar a derrotar alguns monstros?"])
+opt = Array[int]([0, 0, 0, 0, 0, 2])
 metadata/_custom_type_script = "uid://bvmvaysrenpql"
