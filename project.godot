@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 PlayerAttributes="*res://AutoLoads/player_attributes.tscn"
 ManageInventory="*res://AutoLoads/manage_inventory.tscn"
+QuestController="*res://AutoLoads/quest_controller.tscn"
 CanvasHud="*res://Instances/GUI/canvas_hud.tscn"
 
 [display]

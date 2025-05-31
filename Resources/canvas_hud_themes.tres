@@ -1,0 +1,52 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b48pkj05smkon"]
+
+[ext_resource type="Texture2D" uid="uid://wxtpa0ooqas2" path="res://Sprites/UI/Retro Inventory/Original/Inventory_Slot_1.png" id="1_gox81"]
+[ext_resource type="FontFile" uid="uid://cuse44lun3f1h" path="res://Fonts/antiquity-print.ttf" id="2_7glji"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_anw5n"]
+texture = ExtResource("1_gox81")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7glji"]
+texture = ExtResource("1_gox81")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q83qi"]
+texture = ExtResource("1_gox81")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[resource]
+Button/fonts/font = ExtResource("2_7glji")
+Label/fonts/font = ExtResource("2_7glji")
+Panel/styles/panel = SubResource("StyleBoxTexture_anw5n")
+ProgressBar/fonts/font = ExtResource("2_7glji")
+RichTextLabel/fonts/bold_font = ExtResource("2_7glji")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_7glji")
+RichTextLabel/fonts/italics_font = ExtResource("2_7glji")
+RichTextLabel/fonts/mono_font = ExtResource("2_7glji")
+RichTextLabel/fonts/normal_font = ExtResource("2_7glji")
+Tree/fonts/font = ExtResource("2_7glji")
+Tree/fonts/title_button_font = ExtResource("2_7glji")
+Tree/styles/selected = SubResource("StyleBoxTexture_7glji")
+Tree/styles/selected_focus = SubResource("StyleBoxTexture_q83qi")

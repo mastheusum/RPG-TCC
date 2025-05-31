@@ -1,10 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://bs42svyup8efj"]
+[gd_scene load_steps=17 format=3 uid="uid://bs42svyup8efj"]
 
-[ext_resource type="Script" uid="uid://bx5idos2uefop" path="res://Scripts/hud.gd" id="1_t4mso"]
+[ext_resource type="Script" uid="uid://bx5idos2uefop" path="res://Scripts/Autoloads/hud.gd" id="1_t4mso"]
 [ext_resource type="Texture2D" uid="uid://dqq7itif4ppjc" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Health_01.png" id="2_2klja"]
 [ext_resource type="Texture2D" uid="uid://bylsnnsp2gfv1" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Health_01_Bar01.png" id="3_tqdp4"]
 [ext_resource type="FontFile" uid="uid://cuse44lun3f1h" path="res://Fonts/antiquity-print.ttf" id="4_103uw"]
-[ext_resource type="Texture2D" uid="uid://ccr6xn1s60nwd" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Hearts_Red_1.png" id="5_cbm8u"]
 [ext_resource type="Texture2D" uid="uid://clxbapn7kahvn" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Health_03.png" id="6_cg10n"]
 [ext_resource type="Texture2D" uid="uid://dbkqptg2mqer8" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Health_03_Bar03.png" id="7_5vdcs"]
 [ext_resource type="Texture2D" uid="uid://cmkoocqa8qrpf" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Settings.png" id="8_degq8"]
@@ -63,53 +62,48 @@ texture_margin_bottom = 8.0
 region_rect = Rect2(16, 16, 64, 64)
 
 [node name="HUD_bars" type="Control"]
-custom_minimum_size = Vector2(720, 600)
+custom_minimum_size = Vector2(1024, 144)
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 144.0
 grow_horizontal = 2
-grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_t4mso")
 
 [node name="LifeBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(296, 24)
-layout_mode = 0
-offset_left = 80.0
-offset_top = 16.0
-offset_right = 512.0
-offset_bottom = 64.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 8.0
+offset_right = 144.0
+offset_bottom = 56.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_634ds")
 theme_override_styles/fill = SubResource("StyleBoxTexture_oudh7")
 value = 50.0
 show_percentage = false
 
-[node name="Label_DamageTaken" type="RichTextLabel" parent="LifeBar"]
-layout_mode = 0
-offset_left = 368.0
-offset_top = 8.0
-offset_right = 424.0
-offset_bottom = 32.0
-theme_override_colors/default_color = Color(0.825687, 0, 0.171229, 1)
-theme_override_fonts/normal_font = ExtResource("4_103uw")
-bbcode_enabled = true
-text = "[center]0000"
-
-[node name="TextureRect" type="TextureRect" parent="LifeBar"]
-layout_mode = 0
-offset_right = 48.0
-offset_bottom = 48.0
-texture = ExtResource("5_cbm8u")
-
 [node name="ManaBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(296, 24)
-layout_mode = 0
-offset_left = 80.0
-offset_top = 56.0
-offset_right = 512.0
-offset_bottom = 104.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -40.0
+offset_right = 144.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_706ru")
 theme_override_styles/fill = SubResource("StyleBoxTexture_sjsgy")
@@ -118,10 +112,19 @@ show_percentage = false
 
 [node name="ExperienceBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(0, 16)
-layout_mode = 0
-offset_top = 96.0
-offset_right = 512.0
-offset_bottom = 144.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -128.0
+offset_right = 420.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_dqucu")
 theme_override_styles/fill = SubResource("StyleBoxTexture_aoif5")
@@ -129,19 +132,27 @@ value = 50.0
 show_percentage = false
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_top = 16.0
-offset_right = 80.0
-offset_bottom = 96.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_right = 28.0
+offset_bottom = 60.0
+grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_5g8ds")
 
 [node name="Level" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 32.0
-offset_right = 72.0
-offset_bottom = 80.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = 16.0
+offset_right = 22.0
+offset_bottom = 40.0
+grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("4_103uw")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[center]999"

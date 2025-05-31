@@ -1,3 +1,4 @@
+QuestTaskData
 NPCTalkData
 SpellData
 Equipment

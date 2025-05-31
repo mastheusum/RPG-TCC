@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc2x5xcvw38ww"]
+
+[ext_resource type="Theme" uid="uid://b48pkj05smkon" path="res://Resources/canvas_hud_themes.tres" id="1_usyl3"]
+[ext_resource type="Script" uid="uid://cln210ehxubgq" path="res://Scripts/quests/quest_log.gd" id="2_rprv0"]
+
+[node name="Quest_log" type="Control"]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -108.0
+offset_right = 384.0
+offset_bottom = 148.0
+grow_vertical = 2
+theme = ExtResource("1_usyl3")
+script = ExtResource("2_rprv0")
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 0
+offset_right = 312.0
+offset_bottom = 248.0

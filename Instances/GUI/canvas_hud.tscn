@@ -1,17 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://7pkld2oqujx1"]
+[gd_scene load_steps=7 format=3 uid="uid://7pkld2oqujx1"]
 
 [ext_resource type="PackedScene" uid="uid://bs42svyup8efj" path="res://Instances/GUI/hud_bars.tscn" id="1_7mp55"]
+[ext_resource type="Script" uid="uid://cvx7y05l3b64l" path="res://Scripts/Autoloads/canvas_hud.gd" id="1_anw5n"]
 [ext_resource type="PackedScene" uid="uid://dmxvec4mi5shb" path="res://Instances/GUI/hud_skills.tscn" id="2_fcgph"]
 [ext_resource type="PackedScene" uid="uid://c7fjuu6jm6h2s" path="res://Instances/GUI/inventory_gui.tscn" id="3_lnimx"]
 [ext_resource type="PackedScene" uid="uid://bninrx5c0s4if" path="res://Instances/GUI/npc_talk.tscn" id="4_fcgph"]
+[ext_resource type="PackedScene" uid="uid://cc2x5xcvw38ww" path="res://Instances/GUI/quest_log.tscn" id="5_lnimx"]
 
 [node name="CanvasHUD" type="CanvasLayer"]
+script = ExtResource("1_anw5n")
 
 [node name="HUD_bars" parent="." instance=ExtResource("1_7mp55")]
+visible = false
 
 [node name="hud_skills" parent="." instance=ExtResource("2_fcgph")]
+visible = false
 
 [node name="Inventory_gui" parent="." instance=ExtResource("3_lnimx")]
 visible = false
 
 [node name="NPC_talk" parent="." instance=ExtResource("4_fcgph")]
+visible = false
+
+[node name="Quest_log" parent="." instance=ExtResource("5_lnimx")]
+visible = false

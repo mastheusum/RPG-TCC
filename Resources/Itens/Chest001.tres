@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" load_steps=4 format=3 uid="uid://by5oxftwv1p5x"]
 
-[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/equipment.gd" id="1_deoil"]
+[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/Inventory/equipment.gd" id="1_deoil"]
 [ext_resource type="Resource" uid="uid://btlbtrotm321w" path="res://Resources/SpellData/chest/example_aura.tres" id="1_u4ys0"]
 [ext_resource type="Texture2D" uid="uid://lsu6jplq0g6d" path="res://Resources/Chest.tres" id="2_nen1t"]
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7fjuu6jm6h2s"]
+[gd_scene load_steps=9 format=3 uid="uid://c7fjuu6jm6h2s"]
 
 [ext_resource type="Script" uid="uid://6ke3gnn3qtrr" path="res://Scripts/Inventory/inventory_gui.gd" id="1_n1s14"]
+[ext_resource type="Theme" uid="uid://b48pkj05smkon" path="res://Resources/canvas_hud_themes.tres" id="1_q85tg"]
 [ext_resource type="Texture2D" uid="uid://6l6mg7d102hq" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_9Slices.png" id="2_e13u2"]
 [ext_resource type="Texture2D" uid="uid://d17snofvqg0rm" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_4.png" id="4_p5pgb"]
 [ext_resource type="Texture2D" uid="uid://c6mfba0hbibxj" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_2.png" id="5_gvrhq"]
@@ -16,15 +17,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_q85tg")
 script = ExtResource("1_n1s14")
 
 [node name="Panel" type="NinePatchRect" parent="."]
-custom_minimum_size = Vector2(288, 280)
 layout_mode = 0
-offset_left = 48.0
-offset_top = 144.0
-offset_right = 352.0
-offset_bottom = 448.0
+offset_left = 736.0
+offset_top = 232.0
+offset_right = 976.0
+offset_bottom = 536.0
 texture = ExtResource("2_e13u2")
 region_rect = Rect2(0, 0, 96, 96)
 patch_margin_left = 16
@@ -34,11 +35,10 @@ patch_margin_bottom = 16
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
 clip_contents = false
-custom_minimum_size = Vector2(268, 260)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 296.0
+offset_right = 224.0
 offset_bottom = 284.0
 mouse_filter = 2
 
@@ -49,12 +49,11 @@ mouse_filter = 2
 columns = 4
 
 [node name="Equipments" type="NinePatchRect" parent="."]
-custom_minimum_size = Vector2(248, 248)
 layout_mode = 0
-offset_left = 704.0
-offset_top = 176.0
+offset_left = 752.0
+offset_top = 80.0
 offset_right = 960.0
-offset_bottom = 424.0
+offset_bottom = 232.0
 texture = ExtResource("2_e13u2")
 region_rect = Rect2(0, 0, 96, 96)
 patch_margin_left = 16
@@ -62,82 +61,12 @@ patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 16
 
-[node name="Weapon" type="NinePatchRect" parent="Equipments"]
-custom_minimum_size = Vector2(64, 64)
+[node name="Head" type="NinePatchRect" parent="Equipments"]
 layout_mode = 2
 offset_left = 24.0
-offset_top = 92.0
-offset_right = 88.0
-offset_bottom = 156.0
-mouse_filter = 0
-texture = ExtResource("5_gvrhq")
-region_rect = Rect2(16, 16, 64, 64)
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-
-[node name="Icon" type="TextureRect" parent="Equipments/Weapon"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
-expand_mode = 1
-
-[node name="Legs" type="NinePatchRect" parent="Equipments"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-offset_left = 96.0
-offset_top = 160.0
-offset_right = 160.0
-offset_bottom = 224.0
-mouse_filter = 0
-texture = ExtResource("8_o6ffj")
-region_rect = Rect2(16, 16, 64, 64)
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-
-[node name="Icon" type="TextureRect" parent="Equipments/Legs"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
-expand_mode = 1
-
-[node name="Chest" type="NinePatchRect" parent="Equipments"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-offset_left = 96.0
-offset_top = 92.0
-offset_right = 160.0
-offset_bottom = 156.0
-mouse_filter = 0
-texture = ExtResource("6_o3cru")
-region_rect = Rect2(16, 16, 64, 64)
-patch_margin_left = 8
-patch_margin_top = 8
-patch_margin_right = 8
-patch_margin_bottom = 8
-
-[node name="Icon" type="TextureRect" parent="Equipments/Chest"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
-expand_mode = 1
-
-[node name="Head" type="NinePatchRect" parent="Equipments"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-offset_left = 96.0
 offset_top = 24.0
-offset_right = 160.0
-offset_bottom = 88.0
+offset_right = 72.0
+offset_bottom = 72.0
 mouse_filter = 0
 texture = ExtResource("4_p5pgb")
 region_rect = Rect2(16, 16, 64, 64)
@@ -153,14 +82,83 @@ offset_top = 8.0
 offset_right = 56.0
 offset_bottom = 56.0
 expand_mode = 1
+stretch_mode = 1
+
+[node name="Chest" type="NinePatchRect" parent="Equipments"]
+layout_mode = 2
+offset_left = 80.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 72.0
+mouse_filter = 0
+texture = ExtResource("6_o3cru")
+region_rect = Rect2(16, 16, 64, 64)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="Equipments/Chest"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Legs" type="NinePatchRect" parent="Equipments"]
+layout_mode = 2
+offset_left = 136.0
+offset_top = 24.0
+offset_right = 184.0
+offset_bottom = 72.0
+mouse_filter = 0
+texture = ExtResource("8_o6ffj")
+region_rect = Rect2(16, 16, 64, 64)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="Equipments/Legs"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Weapon" type="NinePatchRect" parent="Equipments"]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 80.0
+offset_right = 72.0
+offset_bottom = 128.0
+mouse_filter = 0
+texture = ExtResource("5_gvrhq")
+region_rect = Rect2(16, 16, 64, 64)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Icon" type="TextureRect" parent="Equipments/Weapon"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 1
 
 [node name="Offhand" type="NinePatchRect" parent="Equipments"]
-custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-offset_left = 168.0
-offset_top = 92.0
-offset_right = 232.0
-offset_bottom = 156.0
+offset_left = 136.0
+offset_top = 80.0
+offset_right = 184.0
+offset_bottom = 128.0
 mouse_filter = 0
 texture = ExtResource("9_hooas")
 region_rect = Rect2(16, 16, 64, 64)
@@ -173,12 +171,13 @@ patch_margin_bottom = 8
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
+offset_right = 40.0
+offset_bottom = 40.0
 expand_mode = 1
+stretch_mode = 1
 
-[connection signal="gui_input" from="Equipments/Weapon" to="." method="_on_weapon_gui_input"]
-[connection signal="gui_input" from="Equipments/Legs" to="." method="_on_legs_gui_input"]
-[connection signal="gui_input" from="Equipments/Chest" to="." method="_on_chest_gui_input"]
 [connection signal="gui_input" from="Equipments/Head" to="." method="_on_head_gui_input"]
+[connection signal="gui_input" from="Equipments/Chest" to="." method="_on_chest_gui_input"]
+[connection signal="gui_input" from="Equipments/Legs" to="." method="_on_legs_gui_input"]
+[connection signal="gui_input" from="Equipments/Weapon" to="." method="_on_weapon_gui_input"]
 [connection signal="gui_input" from="Equipments/Offhand" to="." method="_on_offhand_gui_input"]

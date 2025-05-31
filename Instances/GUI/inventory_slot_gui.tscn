@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dayg4w7godk5u"]
+[gd_scene load_steps=5 format=3 uid="uid://dayg4w7godk5u"]
 
 [ext_resource type="Texture2D" uid="uid://e8yc776eyrsm" path="res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_1.png" id="1_6rp6k"]
+[ext_resource type="Theme" uid="uid://b48pkj05smkon" path="res://Resources/canvas_hud_themes.tres" id="1_48aie"]
 [ext_resource type="Script" uid="uid://cel38owf03nld" path="res://Scripts/Inventory/inventory_slot_gui.gd" id="2_517py"]
 [ext_resource type="Texture2D" uid="uid://lsu6jplq0g6d" path="res://Resources/Chest.tres" id="3_g4d24"]
 
 [node name="Slot" type="NinePatchRect"]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(48, 48)
 mouse_filter = 0
 mouse_default_cursor_shape = 2
+theme = ExtResource("1_48aie")
 texture = ExtResource("1_6rp6k")
 region_rect = Rect2(16, 16, 64, 64)
 patch_margin_left = 8
@@ -17,23 +19,26 @@ patch_margin_bottom = 8
 script = ExtResource("2_517py")
 
 [node name="Icon" type="TextureRect" parent="."]
+clip_contents = true
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
+offset_right = 40.0
+offset_bottom = 40.0
 texture = ExtResource("3_g4d24")
 expand_mode = 1
+stretch_mode = 1
 
 [node name="Amount" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 40.0
-offset_right = 56.0
-offset_bottom = 64.0
+offset_top = 24.0
+offset_right = 40.0
+offset_bottom = 48.0
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "[right]1"
+text = "[right]999"
 
 [node name="EquipData" type="Panel" parent="."]
 visible = false
@@ -55,6 +60,7 @@ offset_bottom = 172.0
 custom_minimum_size = Vector2(176, 24)
 layout_mode = 2
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "[center]Martelo de Miolnyr"
 
@@ -62,6 +68,7 @@ text = "[center]Martelo de Miolnyr"
 custom_minimum_size = Vector2(176, 24)
 layout_mode = 2
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "Tipo: Arma"
 
@@ -69,6 +76,7 @@ text = "Tipo: Arma"
 custom_minimum_size = Vector2(176, 24)
 layout_mode = 2
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "Vida: +xx"
 
@@ -76,6 +84,7 @@ text = "Vida: +xx"
 custom_minimum_size = Vector2(176, 24)
 layout_mode = 2
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "Mana: +xx"
 
@@ -83,6 +92,7 @@ text = "Mana: +xx"
 custom_minimum_size = Vector2(176, 24)
 layout_mode = 2
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "Ataque: +xx"
 
@@ -90,6 +100,7 @@ text = "Ataque: +xx"
 custom_minimum_size = Vector2(176, 24)
 layout_mode = 2
 mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "Defesa: +xx"
 

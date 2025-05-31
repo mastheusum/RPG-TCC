@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuestTaskData" load_steps=6 format=3 uid="uid://bpnn1hhmcddik"]
+
+[ext_resource type="Script" uid="uid://cegs4ec8dgqjd" path="res://Scripts/Inventory/item.gd" id="1_a7kvc"]
+[ext_resource type="Script" uid="uid://cw4n3jjuka63y" path="res://Scripts/quests/quest_task_data.gd" id="1_dina8"]
+[ext_resource type="Resource" uid="uid://dq413g5m3n4l" path="res://Resources/Itens/WeaponAxe001.tres" id="2_s2222"]
+[ext_resource type="Resource" uid="uid://danaevetggnmo" path="res://Resources/Itens/WeaponHammer001.tres" id="3_e4r30"]
+[ext_resource type="Resource" uid="uid://cv3peyxnov5hd" path="res://Resources/Itens/WeaponSword001.tres" id="4_5m0un"]
+
+[resource]
+script = ExtResource("1_dina8")
+quest_name = "Beginning before the End"
+type = 2
+target_identification = "Tutor"
+amount = 1
+exp_bount = 0
+gold_bount = 0
+itens_bount = Array[ExtResource("1_a7kvc")]([ExtResource("2_s2222"), ExtResource("3_e4r30"), ExtResource("4_5m0un")])
+metadata/_custom_type_script = "uid://cw4n3jjuka63y"

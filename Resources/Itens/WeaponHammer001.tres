@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Equipment" load_steps=4 format=3 uid="uid://danaevetggnmo"]
 
 [ext_resource type="Resource" uid="uid://btwj7c2d1x0mv" path="res://Resources/SpellData/weapons/hammer/example_weapon.tres" id="1_g16lf"]
-[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/equipment.gd" id="2_phqi2"]
+[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/Inventory/equipment.gd" id="2_phqi2"]
 [ext_resource type="Texture2D" uid="uid://cf4y0uel6l8n3" path="res://Resources/WeaponHammer.tres" id="3_phqi2"]
 
 [resource]

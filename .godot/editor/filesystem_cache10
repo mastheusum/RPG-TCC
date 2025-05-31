@@ -1,33 +1,30 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747489943
+::res://::1748700651
 export_presets.cfg::TextFile/TextFile::-1::1743866759::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::4227361457422081857::1737468847::1743257966::1::::<><><>0<>0<>00620f911f2c1879fe7f9e6bf15bbe2e<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile/TextFile::-1::1746286636::0::1::::<><><>0<>0<><>::
-::res://AutoLoads/::1746885891
-manage_inventory.tscn::PackedScene::7830263497167407298::1746885891::0::1::::<><><>0<>0<><>::uid://bkgskxatepot7::::res://Scripts/Inventory/manage_inventory.gd<>uid://ckmvn56iq08s0::::res://Scripts/Inventory/item_slot.gd<>uid://by5oxftwv1p5x::::res://Resources/Itens/Chest001.tres<>uid://ba2u7hy70gcoj::::res://Scripts/Inventory/invetory.gd<>uid://cecskp20frwfm::::res://Resources/Itens/Boots001.tres<>uid://rlpvv8vnowhh::::res://Resources/Itens/Helmet001.tres<>uid://cv3peyxnov5hd::::res://Resources/Itens/WeaponSword001.tres<>uid://dq413g5m3n4l::::res://Resources/Itens/WeaponAxe001.tres<>uid://danaevetggnmo::::res://Resources/Itens/WeaponHammer001.tres<>uid://bu32c84cwlgmg::::res://Resources/Itens/Offhand001.tres
-player_attributes.tscn::PackedScene::4849130682394772198::1746885891::0::1::::<><><>0<>0<><>::uid://m6c2114r6ekq::::res://Scripts/player_attributes.gd
-::res://builds/::1746288759
-::res://builds/linux/::1746890893
-::res://builds/windows/::1746890892
+README.md::TextFile/TextFile::-1::1747495059::0::1::::<><><>0<>0<><>::
+::res://AutoLoads/::1748700409
+manage_inventory.tscn::PackedScene/PackedScene::7830263497167407298::1746885891::0::1::::<><><>0<>0<><>::uid://bkgskxatepot7::::res://Scripts/Inventory/manage_inventory.gd<>uid://ckmvn56iq08s0::::res://Scripts/Inventory/item_slot.gd<>uid://by5oxftwv1p5x::::res://Resources/Itens/Chest001.tres<>uid://ba2u7hy70gcoj::::res://Scripts/Inventory/invetory.gd<>uid://cecskp20frwfm::::res://Resources/Itens/Boots001.tres<>uid://rlpvv8vnowhh::::res://Resources/Itens/Helmet001.tres<>uid://cv3peyxnov5hd::::res://Resources/Itens/WeaponSword001.tres<>uid://dq413g5m3n4l::::res://Resources/Itens/WeaponAxe001.tres<>uid://danaevetggnmo::::res://Resources/Itens/WeaponHammer001.tres<>uid://bu32c84cwlgmg::::res://Resources/Itens/Offhand001.tres
+player_attributes.tscn::PackedScene/PackedScene::4849130682394772198::1748700409::0::1::::<><><>0<>0<><>::uid://m6c2114r6ekq::::res://Scripts/Autoloads/player_attributes.gd
+quest_controller.tscn::PackedScene/PackedScene::8656949223588716479::1748700409::0::1::::<><><>0<>0<><>::uid://bm288x27yftcl::::res://Scripts/Autoloads/quest_controller.gd
 ::res://Fonts/::1743858833
 antiquity-print.ttf::FontFile/FontFile::6214073236811424383::1738614751::1743858833::1::::<><><>0<>0<>35e3397390d2a95ad78935cd5ea313fe<>res://.godot/imported/antiquity-print.ttf-ebc7d90ed71888f7d7506e0c9bada1e9.fontdata::
-::res://Instances/::1746887317
+::res://Instances/::1748700615
 damage_area.tscn::PackedScene/PackedScene::6483535303436285096::1743858854::0::1::::<><><>0<>0<><>::
 dropped_item.tscn::PackedScene/PackedScene::8927310486522710631::1743858854::0::1::::<><><>0<>0<><>::uid://ch5og0bpkymen::::res://Scripts/Inventory/dropped_item.gd<>uid://cecskp20frwfm::::res://Resources/Itens/Boots001.tres
 enemy_base.tscn::PackedScene/PackedScene::6372532463828691116::1744399192::0::1::::<><><>0<>0<><>::uid://i78yeqpjlkrk::::res://Scripts/enemy_base.gd<>uid://byhkoso5qqd67::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f0.png<>uid://cp6mgckbj5pm::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f1.png<>uid://b8xca174ebge6::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f2.png<>uid://bqwxuy3d63u1w::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f3.png
 projectile_base.tscn::PackedScene/PackedScene::8941853281792880063::1743858854::0::1::::<><><>0<>0<><>::uid://cn3ih2vn8ldf5::::res://Scripts/projectile_movement.gd<>uid://4y3pbj2tu2o8::::res://Resources/SkillSprites/projectile_01.tres<>uid://cfo0i587tia5s::::res://Resources/SkillSprites/projectile_02.tres
-spawn_enemy.tscn::PackedScene/PackedScene::6414949077033206660::1743858854::0::1::::<><><>0<>0<><>::uid://26s8h28bkstk::::res://Scripts/spawn_enemy.gd
-spawn_enemy_base.tscn::PackedScene/PackedScene::2781155131648184418::1743858854::0::1::::<><><>0<>0<><>::uid://26s8h28bkstk::::res://Scripts/spawn_enemy.gd<>uid://i78yeqpjlkrk::::res://Scripts/enemy_base.gd<>uid://byhkoso5qqd67::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f0.png<>uid://cp6mgckbj5pm::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f1.png<>uid://b8xca174ebge6::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f2.png<>uid://bqwxuy3d63u1w::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f3.png
 spell_base.tscn::PackedScene/PackedScene::6944683638996535506::1743858854::0::1::::<><><>0<>0<><>::uid://cp0cp7l1i37w::::res://Scripts/spell_base.gd<>uid://eievro1era4::::res://Sprites/Effect and FX Pixel All Free/Free/Part 4/175.png
-::res://Instances/GUI/::1746889984
-canvas_hud.tscn::PackedScene::2277635676326595692::1746889984::0::1::::<><><>0<>0<><>::uid://bs42svyup8efj::::res://Instances/GUI/hud_bars.tscn<>uid://dmxvec4mi5shb::::res://Instances/GUI/hud_skills.tscn<>uid://c7fjuu6jm6h2s::::res://Instances/GUI/inventory_gui.tscn<>uid://bninrx5c0s4if::::res://Instances/GUI/npc_talk.tscn
-hud_bars.tscn::PackedScene::3711359468136114491::1746889984::0::1::::<><><>0<>0<><>::uid://bx5idos2uefop::::res://Scripts/hud.gd<>uid://dqq7itif4ppjc::::res://Sprites/UI/Retro Inventory/Scaled 3x/Health_01.png<>uid://bylsnnsp2gfv1::::res://Sprites/UI/Retro Inventory/Scaled 3x/Health_01_Bar01.png<>uid://cuse44lun3f1h::::res://Fonts/antiquity-print.ttf<>uid://ccr6xn1s60nwd::::res://Sprites/UI/Retro Inventory/Scaled 3x/Hearts_Red_1.png<>uid://clxbapn7kahvn::::res://Sprites/UI/Retro Inventory/Scaled 3x/Health_03.png<>uid://dbkqptg2mqer8::::res://Sprites/UI/Retro Inventory/Scaled 3x/Health_03_Bar03.png<>uid://cmkoocqa8qrpf::::res://Sprites/UI/Retro Inventory/Scaled 3x/Settings.png<>uid://bmrcp378nw6w3::::res://Sprites/UI/Retro Inventory/Scaled 3x/Settings_Bar02.png<>uid://e8yc776eyrsm::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_1.png
-hud_skills.tscn::PackedScene::8050291213505926247::1746889984::0::1::::<><><>0<>0<><>::uid://c8bon6qs3fk8d::::res://Scripts/Spells/hud_skills.gd<>uid://by5japlqjs7tu::::res://Resources/Fonts/Underdog-Regular.ttf
+::res://Instances/GUI/::1748700422
+canvas_hud.tscn::PackedScene/PackedScene::2277635676326595692::1748290397::0::1::::<><><>0<>0<><>::uid://bs42svyup8efj::::res://Instances/GUI/hud_bars.tscn<>uid://dmxvec4mi5shb::::res://Instances/GUI/hud_skills.tscn<>uid://c7fjuu6jm6h2s::::res://Instances/GUI/inventory_gui.tscn<>uid://bninrx5c0s4if::::res://Instances/GUI/npc_talk.tscn<>uid://cc2x5xcvw38ww::::res://Instances/GUI/quest_log.tscn
+hud_bars.tscn::PackedScene/PackedScene::3711359468136114491::1748288761::0::1::::<><><>0<>0<><>::uid://bx5idos2uefop::::res://Scripts/hud.gd<>uid://dqq7itif4ppjc::::res://Sprites/UI/Retro Inventory/Scaled 3x/Health_01.png<>uid://bylsnnsp2gfv1::::res://Sprites/UI/Retro Inventory/Scaled 3x/Health_01_Bar01.png<>uid://cuse44lun3f1h::::res://Fonts/antiquity-print.ttf<>uid://clxbapn7kahvn::::res://Sprites/UI/Retro Inventory/Scaled 3x/Health_03.png<>uid://dbkqptg2mqer8::::res://Sprites/UI/Retro Inventory/Scaled 3x/Health_03_Bar03.png<>uid://cmkoocqa8qrpf::::res://Sprites/UI/Retro Inventory/Scaled 3x/Settings.png<>uid://bmrcp378nw6w3::::res://Sprites/UI/Retro Inventory/Scaled 3x/Settings_Bar02.png<>uid://e8yc776eyrsm::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_1.png
+hud_skills.tscn::PackedScene/PackedScene::8050291213505926247::1748288761::0::1::::<><><>0<>0<><>::uid://c8bon6qs3fk8d::::res://Scripts/Spells/hud_skills.gd<>uid://by5japlqjs7tu::::res://Resources/Fonts/Underdog-Regular.ttf
 inventory_gui.tscn::PackedScene/PackedScene::7029789520168655452::1744813642::0::1::::<><><>0<>0<><>::uid://6ke3gnn3qtrr::::res://Scripts/Inventory/inventory_gui.gd<>uid://6l6mg7d102hq::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_9Slices.png<>uid://d17snofvqg0rm::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_4.png<>uid://c6mfba0hbibxj::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_2.png<>uid://s6656e8x647x::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_5.png<>uid://tcqpqvdohhni::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_8.png<>uid://uhlvsmk66c3j::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_3.png
 inventory_slot_gui.tscn::PackedScene/PackedScene::7209224412395474800::1744813570::0::1::::<><><>0<>0<><>::uid://e8yc776eyrsm::::res://Sprites/UI/Retro Inventory/Scaled 3x/Inventory_Slot_1.png<>uid://cel38owf03nld::::res://Scripts/Inventory/inventory_slot_gui.gd<>uid://lsu6jplq0g6d::::res://Resources/Chest.tres
-npc_talk.tscn::PackedScene::3316211606928553833::1746889984::0::1::::<><><>0<>0<><>::uid://b1mww47vrm5a7::::res://Scripts/GUI/npc_talk.gd<>uid://cuse44lun3f1h::::res://Fonts/antiquity-print.ttf<>uid://wxtpa0ooqas2::::res://Sprites/UI/Retro Inventory/Original/Inventory_Slot_1.png
+npc_talk.tscn::PackedScene/PackedScene::3316211606928553833::1748700422::0::1::::<><><>0<>0<><>::uid://b1mww47vrm5a7::::res://Scripts/quests/npc_talk.gd<>uid://cuse44lun3f1h::::res://Fonts/antiquity-print.ttf<>uid://wxtpa0ooqas2::::res://Sprites/UI/Retro Inventory/Original/Inventory_Slot_1.png
+quest_log.tscn::PackedScene/PackedScene::4970408530784001254::1748700422::0::1::::<><><>0<>0<><>::uid://b48pkj05smkon::::res://Resources/canvas_hud_themes.tres<>uid://cln210ehxubgq::::res://Scripts/quests/quest_log.gd
 ::res://Instances/NPCs/::1746887333
-npc_tutorial_01.tscn::PackedScene::7151674838169949382::1746887333::0::1::::<><><>0<>0<><>::uid://cvfswg5heqx7u::::res://Scripts/NPCs/npc_base.gd<>uid://cmeerja8qpfgw::::res://Resources/NPC/Tutorial.tres<>uid://r5ut1ia74we5::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f0.png<>uid://5mdoxhci0m54::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f1.png<>uid://bs2cvc8t8vsiy::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f2.png<>uid://choe3rnvxb1je::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f3.png
+npc_tutorial_01.tscn::PackedScene/PackedScene::7151674838169949382::1746887333::0::1::::<><><>0<>0<><>::uid://cvfswg5heqx7u::::res://Scripts/NPCs/npc_base.gd<>uid://cmeerja8qpfgw::::res://Resources/NPC/Tutorial.tres<>uid://r5ut1ia74we5::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f0.png<>uid://5mdoxhci0m54::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f1.png<>uid://bs2cvc8t8vsiy::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f2.png<>uid://choe3rnvxb1je::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_f_idle_anim_f3.png
 ::res://Instances/PlayerCharacters/::1745681772
 base.tscn::PackedScene/PackedScene::4742705344622937891::1744813393::0::1::::<><><>0<>0<><>::uid://cjvvj8gerntqd::::res://Scripts/player_base.gd<>uid://bs42svyup8efj::::res://Instances/GUI/hud_bars.tscn
 knight.tscn::PackedScene/PackedScene::3103436519325616592::1745681772::0::1::::<><><>0<>0<><>::uid://bpicrwo1yi8on::::res://Scripts/player_melee.gd<>uid://ct64aich31lp5::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_idle_anim_f0.png<>uid://hbky4iv3efxd::::res://Resources/SkillSprites/melee_attack_03.tres<>uid://bg7dcs4pf10bb::::res://Resources/SkillSprites/melee_attack_01.tres<>uid://dy4yw20ac4pqx::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_idle_anim_f1.png<>uid://b8l77mut8p6la::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_idle_anim_f2.png<>uid://dlkqkvib04omi::::res://Resources/SkillSprites/melee_attack_02.tres<>uid://c0fj1r8221nky::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_idle_anim_f3.png<>uid://b7a3vwg2ibym3::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_run_anim_f0.png<>uid://cdjqt85dhih3f::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_run_anim_f1.png<>uid://0lelvk54xifv::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_run_anim_f2.png<>uid://buc1omhhvnmyo::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/knight_m_run_anim_f3.png
@@ -56,30 +53,31 @@ wounding_blow.tscn::PackedScene/PackedScene::3722766281884286799::1744812451::0:
 example_weapon.tscn::PackedScene/PackedScene::4210619399777496953::1744467606::0::1::::<><><>0<>0<><>::uid://hbpnkvfxl28w::::res://Scripts/Spells/base_spell.gd<>uid://b5exe0gvmqqy8::::res://Sprites/Effect and FX Pixel All Free/Free/Part 1/16.png
 ::res://Instances/TESTES/::1745677768
 dummy.tscn::PackedScene/PackedScene::5956072214646896000::1745677768::0::1::::<><><>0<>0<><>::uid://bqewkjc7ya61p::::res://Scripts/TMP/dummy.gd<>uid://66l661mk3ad4::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/big_zombie_idle_anim_f0.png<>uid://dw3b5obwc4f3e::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/big_zombie_idle_anim_f1.png<>uid://ogv7a7drd0is::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/big_zombie_idle_anim_f2.png<>uid://rj06nx8pjypr::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/big_zombie_idle_anim_f3.png
-::res://Maps/::1746889984
-map_001.tscn::PackedScene::4197729589309381130::1746889984::0::1::::<><><>0<>0<><>::uid://bpuuvu8wo3ljb::::res://Sprites/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png<>uid://dj8vw2dw4xkxy::::res://Sprites/0x72_DungeonTilesetII_v1.7/atlas_walls_low-16x16.png<>uid://cnhr4g87meb4g::::res://Sprites/Raven Fantasy - Pixel Art Tileset - Green Forest v2/All Tileset/16x16.png<>uid://dddiboc4blhc6::::res://Sprites/Circle.png
-::res://Resources/::1746885333
+::res://Maps/::1748288761
+map_001.tscn::PackedScene/PackedScene::4197729589309381130::1748288761::0::1::::<><><>0<>0<><>::uid://bpuuvu8wo3ljb::::res://Sprites/0x72_DungeonTilesetII_v1.7/atlas_floor-16x16.png<>uid://dj8vw2dw4xkxy::::res://Sprites/0x72_DungeonTilesetII_v1.7/atlas_walls_low-16x16.png<>uid://cnhr4g87meb4g::::res://Sprites/Raven Fantasy - Pixel Art Tileset - Green Forest v2/All Tileset/16x16.png<>uid://dddiboc4blhc6::::res://Sprites/Circle.png
+::res://Resources/::1748700409
 Boots.tres::AtlasTexture/AtlasTexture::7328262502370065164::1743858763::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
+canvas_hud_themes.tres::Theme/Theme::4490950740628420881::1748700409::0::1::::<><><>0<>0<><>::uid://wxtpa0ooqas2::::res://Sprites/UI/Retro Inventory/Original/Inventory_Slot_1.png<>uid://cuse44lun3f1h::::res://Fonts/antiquity-print.ttf
 Chest.tres::AtlasTexture/AtlasTexture::810506275462192417::1743858763::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
 Helmet.tres::AtlasTexture/AtlasTexture::2927040344891165062::1744471551::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
 IconWeaponBow.tres::AtlasTexture/AtlasTexture::8670182380628247126::1737482094::0::1::::<><><>0<>0<><>::uid://dml3txrl0xa6u::::res://Sprites/32x32_PixelWeapons_Free.png
 IconWeaponStaff.tres::AtlasTexture/AtlasTexture::1583531401878089069::1737482111::0::1::::<><><>0<>0<><>::uid://dml3txrl0xa6u::::res://Sprites/32x32_PixelWeapons_Free.png
 IconWeaponSword.tres::AtlasTexture/AtlasTexture::8841165484694847671::1737482073::0::1::::<><><>0<>0<><>::uid://dml3txrl0xa6u::::res://Sprites/32x32_PixelWeapons_Free.png
-WeaponAxe.tres::AtlasTexture::5052733461666620920::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
-WeaponHammer.tres::AtlasTexture::5185155450306022658::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
-WeaponSword.tres::AtlasTexture::8081467439449927663::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
+WeaponAxe.tres::AtlasTexture/AtlasTexture::5052733461666620920::1748700408::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
+WeaponHammer.tres::AtlasTexture/AtlasTexture::5185155450306022658::1748700409::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
+WeaponSword.tres::AtlasTexture/AtlasTexture::8081467439449927663::1748700408::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
 ::res://Resources/Fonts/::1743858833
 Underdog-Regular.ttf::FontFile/FontFile::4133431522145409402::1743858763::1743858833::1::::<><><>0<>0<>8d11f00672411d9a9c72e77bfc801a45<>res://.godot/imported/Underdog-Regular.ttf-0efd51ba5418a315a2d05e67328d934f.fontdata::
-::res://Resources/Itens/::1746885333
-Boots001.tres::Resource/Equipment::5058837091958528966::1745679161::0::1::::<><><>0<>0<><>::uid://bde6nyoqqkpbj::::res://Scripts/equipment.gd<>uid://du5shrwpt3lta::::res://Resources/SpellData/legs/example_legs.tres<>uid://dcn4obenklado::::res://Resources/Boots.tres
-Chest001.tres::Resource/Equipment::4133775667782931951::1745676776::0::1::::<><><>0<>0<><>::uid://bde6nyoqqkpbj::::res://Scripts/equipment.gd<>uid://btlbtrotm321w::::res://Resources/SpellData/chest/example_aura.tres<>uid://lsu6jplq0g6d::::res://Resources/Chest.tres
-Helmet001.tres::Resource/Equipment::1216867908645698797::1746885333::0::1::::<><><>0<>0<><>::uid://bde6nyoqqkpbj::::res://Scripts/equipment.gd<>uid://cgyhjwx1nfprg::::res://Resources/SpellData/head/example_head.tres<>uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
-Offhand001.tres::Resource/Equipment::3849644842150519534::1746885333::0::1::::<><><>0<>0<><>::uid://bde6nyoqqkpbj::::res://Scripts/equipment.gd<>uid://crw47ab61mous::::res://Resources/SpellData/offhand/example_offhand.tres<>uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
-WeaponAxe001.tres::Resource/Equipment::245405279713654137::1745676776::0::1::::<><><>0<>0<><>::uid://dbhsqicpvyy8u::::res://Resources/SpellData/weapons/axe/example_weapon.tres<>uid://bde6nyoqqkpbj::::res://Scripts/equipment.gd<>uid://cd8t1t42gm2x5::::res://Resources/WeaponAxe.tres
-WeaponHammer001.tres::Resource/Equipment::7186107215098812874::1745676776::0::1::::<><><>0<>0<><>::uid://btwj7c2d1x0mv::::res://Resources/SpellData/weapons/hammer/example_weapon.tres<>uid://bde6nyoqqkpbj::::res://Scripts/equipment.gd<>uid://cf4y0uel6l8n3::::res://Resources/WeaponHammer.tres
-WeaponSword001.tres::Resource/Equipment::6305528855666806993::1745676776::0::1::::<><><>0<>0<><>::uid://cdkdd8onlxvhd::::res://Resources/SpellData/weapons/sword/example_weapon.tres<>uid://bde6nyoqqkpbj::::res://Scripts/equipment.gd<>uid://dneyt80fxukrv::::res://Resources/WeaponSword.tres
-::res://Resources/NPC/::1746886478
-Tutorial.tres::Resource/NPCTalkData::5623638702757776142::1746886478::0::1::::<><><>0<>0<><>::uid://bvmvaysrenpql::::res://Scripts/NPCs/npc_talk_data.gd
+::res://Resources/Itens/::1748700651
+Boots001.tres::Resource/Equipment::5058837091958528966::1748700650::0::1::::<><><>0<>0<><>::uid://bde6nyoqqkpbj::::res://Scripts/Inventory/equipment.gd<>uid://du5shrwpt3lta::::res://Resources/SpellData/legs/example_legs.tres<>uid://dcn4obenklado::::res://Resources/Boots.tres
+Chest001.tres::Resource/Equipment::4133775667782931951::1748700650::0::1::::<><><>0<>0<><>::uid://bde6nyoqqkpbj::::res://Scripts/Inventory/equipment.gd<>uid://btlbtrotm321w::::res://Resources/SpellData/chest/example_aura.tres<>uid://lsu6jplq0g6d::::res://Resources/Chest.tres
+Helmet001.tres::Resource/Equipment::1216867908645698797::1748700651::0::1::::<><><>0<>0<><>::uid://bde6nyoqqkpbj::::res://Scripts/Inventory/equipment.gd<>uid://cgyhjwx1nfprg::::res://Resources/SpellData/head/example_head.tres<>uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
+Offhand001.tres::Resource/Equipment::3849644842150519534::1748700651::0::1::::<><><>0<>0<><>::uid://bde6nyoqqkpbj::::res://Scripts/Inventory/equipment.gd<>uid://crw47ab61mous::::res://Resources/SpellData/offhand/example_offhand.tres<>uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png
+WeaponAxe001.tres::Resource/Equipment::245405279713654137::1748700651::0::1::::<><><>0<>0<><>::uid://dbhsqicpvyy8u::::res://Resources/SpellData/weapons/axe/example_weapon.tres<>uid://bde6nyoqqkpbj::::res://Scripts/Inventory/equipment.gd<>uid://cd8t1t42gm2x5::::res://Resources/WeaponAxe.tres
+WeaponHammer001.tres::Resource/Equipment::7186107215098812874::1748700651::0::1::::<><><>0<>0<><>::uid://btwj7c2d1x0mv::::res://Resources/SpellData/weapons/hammer/example_weapon.tres<>uid://bde6nyoqqkpbj::::res://Scripts/Inventory/equipment.gd<>uid://cf4y0uel6l8n3::::res://Resources/WeaponHammer.tres
+WeaponSword001.tres::Resource/Equipment::6305528855666806993::1748700651::0::1::::<><><>0<>0<><>::uid://cdkdd8onlxvhd::::res://Resources/SpellData/weapons/sword/example_weapon.tres<>uid://bde6nyoqqkpbj::::res://Scripts/Inventory/equipment.gd<>uid://dneyt80fxukrv::::res://Resources/WeaponSword.tres
+::res://Resources/NPC/::1748700409
+Tutorial.tres::Resource/NPCTalkData::5623638702757776142::1748700409::0::1::::<><><>0<>0<><>::uid://bvmvaysrenpql::::res://Scripts/NPCs/npc_talk_data.gd
 ::res://Resources/SkillSprites/::1738612994
 melee_attack_01.tres::AtlasTexture/AtlasTexture::2873800547126211911::1738612528::0::1::::<><><>0<>0<><>::uid://b3o4pogjnrym2::::res://Sprites/Effect and FX Pixel All Free/Free/Part 1/06.png
 melee_attack_02.tres::AtlasTexture/AtlasTexture::7952973553890358128::1738612545::0::1::::<><><>0<>0<><>::uid://b3o4pogjnrym2::::res://Sprites/Effect and FX Pixel All Free/Free/Part 1/06.png
@@ -88,57 +86,60 @@ projectile_01.tres::AtlasTexture/AtlasTexture::2086748461985962713::1738612894::
 projectile_02.tres::AtlasTexture/AtlasTexture::5154220713462291134::1738612906::0::1::::<><><>0<>0<><>::uid://6c8x1inkh0uf::::res://Sprites/Effect and FX Pixel All Free/Free/Part 3/134.png
 ::res://Resources/SpellData/::1745680989
 example_weapon.tres::Resource/SpellData::762208683021611148::1744467149::0::1::::<><><>0<>0<><>::uid://cfappflx4vskn::::res://Instances/Spells/example_weapon.tscn<>uid://b5exe0gvmqqy8::::res://Sprites/Effect and FX Pixel All Free/Free/Part 1/16.png<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
-::res://Resources/SpellData/chest/::1746885333
-example_aura.tres::Resource/SpellData::3742812430591989366::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd<>uid://ddw16tkr8qyfq::::res://Instances/Spells/chests/aura_burn_spell.tscn
-::res://Resources/SpellData/head/::1746885333
-example_head.tres::Resource/SpellData::5243961778649452924::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://c5gqmolnipg5m::::res://Instances/Spells/heads/aura_heal_spell.tscn<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
-::res://Resources/SpellData/legs/::1746885333
-example_legs.tres::Resource/SpellData::8626076590479559970::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd<>uid://ccva4rrmvo2ew::::res://Instances/Spells/legs/leg_buff_spell.tscn
-::res://Resources/SpellData/offhand/::1746885333
-example_offhand.tres::Resource/SpellData::6013285961005787666::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd<>uid://d0s74opwiggmk::::res://Instances/Spells/offhands/offhand_buff_spell.tscn
+::res://Resources/SpellData/chest/::1748700408
+example_aura.tres::Resource/SpellData::3742812430591989366::1748700408::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd<>uid://ddw16tkr8qyfq::::res://Instances/Spells/chests/aura_burn_spell.tscn
+::res://Resources/SpellData/head/::1748700408
+example_head.tres::Resource/SpellData::5243961778649452924::1748700408::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://c5gqmolnipg5m::::res://Instances/Spells/heads/aura_heal_spell.tscn<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
+::res://Resources/SpellData/legs/::1748700408
+example_legs.tres::Resource/SpellData::8626076590479559970::1748700408::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd<>uid://ccva4rrmvo2ew::::res://Instances/Spells/legs/leg_buff_spell.tscn
+::res://Resources/SpellData/offhand/::1748700409
+example_offhand.tres::Resource/SpellData::6013285961005787666::1748700409::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd<>uid://d0s74opwiggmk::::res://Instances/Spells/offhands/offhand_buff_spell.tscn
 ::res://Resources/SpellData/weapons/::1744404296
-::res://Resources/SpellData/weapons/axe/::1746885333
-example_weapon.tres::Resource/SpellData::7245023441555005254::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://b8642gghepfke::::res://Instances/Spells/weapons/axes/critical_strike.tscn<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
-::res://Resources/SpellData/weapons/hammer/::1746885333
-example_weapon.tres::Resource/SpellData::3766028768673290121::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://bkqdxgprtn8lc::::res://Instances/Spells/weapons/hammers/brutal_assault.tscn<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
-::res://Resources/SpellData/weapons/sword/::1746885333
-example_weapon.tres::Resource/SpellData::5004240939705016397::1746885333::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://btblof1k7p8xf::::res://Instances/Spells/weapons/swords/wounding_blow.tscn<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
-::res://Scenes/::1746889984
+::res://Resources/SpellData/weapons/axe/::1748700408
+example_weapon.tres::Resource/SpellData::7245023441555005254::1748700408::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://b8642gghepfke::::res://Instances/Spells/weapons/axes/critical_strike.tscn<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
+::res://Resources/SpellData/weapons/hammer/::1748700409
+example_weapon.tres::Resource/SpellData::3766028768673290121::1748700409::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://bkqdxgprtn8lc::::res://Instances/Spells/weapons/hammers/brutal_assault.tscn<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
+::res://Resources/SpellData/weapons/sword/::1748700408
+example_weapon.tres::Resource/SpellData::5004240939705016397::1748700408::0::1::::<><><>0<>0<><>::uid://u08k7be7bo8g::::res://Sprites/Free - Raven Fantasy Icons/64x64.png<>uid://btblof1k7p8xf::::res://Instances/Spells/weapons/swords/wounding_blow.tscn<>uid://drj1hpuungh6i::::res://Scripts/Spells/spell_data.gd
+::res://Scenes/::1748290569
 testes_2.tscn::PackedScene/PackedScene::7802680568075730234::1743858855::0::1::::<><><>0<>0<><>::uid://cusjhm6l68gf::::res://Scripts/TMP/testes_2.gd
-Tutorial.tscn::PackedScene::3129874883393662418::1746889984::0::1::::<><><>0<>0<><>::uid://bowxmcyu5evyu::::res://Scripts/start_game.gd<>uid://bkhle73tjrws3::::res://Instances/PlayerCharacters/knight.tscn<>uid://q8nlvukq8ql7::::res://Instances/PlayerCharacters/ranger.tscn<>uid://nyvqscl27yt7::::res://Instances/PlayerCharacters/wizard.tscn<>uid://dx7yx6vbk33g2::::res://Resources/IconWeaponSword.tres<>uid://dvr5vwp1g4clq::::res://Resources/IconWeaponBow.tres<>uid://wtcsbv3bqrgn::::res://Resources/IconWeaponStaff.tres<>uid://b02n807pbraek::::res://Maps/map_001.tscn<>uid://d0gpq8lco7ufn::::res://Instances/dropped_item.tscn<>uid://cv3peyxnov5hd::::res://Resources/Itens/WeaponSword001.tres<>uid://c85lbl53oq58m::::res://Instances/NPCs/npc_tutorial_01.tscn<>uid://i78yeqpjlkrk::::res://Scripts/enemy_base.gd<>uid://byhkoso5qqd67::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f0.png<>uid://cp6mgckbj5pm::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f1.png<>uid://b8xca174ebge6::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f2.png<>uid://bqwxuy3d63u1w::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f3.png
-::res://Scripts/::1746889929
-enemy_base.gd::GDScript::629617592553456828::1746889929::0::1::::EnemyBase<>CharacterBody2D<><>0<>0<><>::
-equipment.gd::GDScript/GDScript::2607151450656385207::1742656227::0::1::::Equipment<>Item<><>0<>0<><>::
-hud.gd::GDScript/GDScript::4063187277700513727::1744814272::0::1::::<>Control<><>0<>0<><>::
-player_attributes.gd::GDScript/GDScript::906432891566793756::1745681769::0::1::::<>Node<><>0<>0<><>::
+Tutorial.tscn::PackedScene/PackedScene::3129874883393662418::1748290569::0::1::::<><><>0<>0<><>::uid://bowxmcyu5evyu::::res://Scripts/start_game.gd<>uid://bkhle73tjrws3::::res://Instances/PlayerCharacters/knight.tscn<>uid://q8nlvukq8ql7::::res://Instances/PlayerCharacters/ranger.tscn<>uid://nyvqscl27yt7::::res://Instances/PlayerCharacters/wizard.tscn<>uid://dx7yx6vbk33g2::::res://Resources/IconWeaponSword.tres<>uid://dvr5vwp1g4clq::::res://Resources/IconWeaponBow.tres<>uid://wtcsbv3bqrgn::::res://Resources/IconWeaponStaff.tres<>uid://b02n807pbraek::::res://Maps/map_001.tscn<>uid://d0gpq8lco7ufn::::res://Instances/dropped_item.tscn<>uid://cv3peyxnov5hd::::res://Resources/Itens/WeaponSword001.tres<>uid://c85lbl53oq58m::::res://Instances/NPCs/npc_tutorial_01.tscn<>uid://i78yeqpjlkrk::::res://Scripts/enemy_base.gd<>uid://byhkoso5qqd67::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f0.png<>uid://cp6mgckbj5pm::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f1.png<>uid://b8xca174ebge6::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f2.png<>uid://bqwxuy3d63u1w::::res://Sprites/0x72_DungeonTilesetII_v1.7/frames/chort_run_anim_f3.png
+::res://Scripts/::1748700650
+enemy_base.gd::GDScript/GDScript::629617592553456828::1747490154::0::1::::EnemyBase<>CharacterBody2D<><>0<>0<><>::
+hud.gd::GDScript/GDScript::4063187277700513727::1748098473::0::1::::<>Control<><>0<>0<><>::
 player_base.gd::GDScript/GDScript::5449185764701362791::1745681677::0::1::::PlayerBase<>CharacterBody2D<><>0<>0<><>::
 player_melee.gd::GDScript/GDScript::3455921331132692333::1745681654::0::1::::PlayerMelee<>PlayerBase<><>0<>0<><>::
 player_ranged.gd::GDScript/GDScript::4322532953441861647::1741895613::0::1::::PlayerRanged<>PlayerBase<><>0<>0<><>::
 player_wizzard.gd::GDScript/GDScript::6592141327394808627::1741895613::0::1::::PlayerWizzard<>PlayerBase<><>0<>0<><>::
 projectile_movement.gd::GDScript/GDScript::5743598599500305052::1741895613::0::1::::ProjectileMovement<>CharacterBody2D<><>0<>0<><>::
-spawn_enemy.gd::GDScript/GDScript::1960246736545675416::1742326033::0::1::::SpawnEnemy<>Node2D<><>0<>0<><>::
 spell_base.gd::GDScript/GDScript::172865687812808582::1741895613::0::1::::SpellBase<>Node2D<><>0<>0<><>::
 start_game.gd::GDScript/GDScript::3415898868646344088::1746280659::0::1::::<>CanvasLayer<><>0<>0<><>::
-::res://Scripts/GUI/::1746885889
-npc_talk.gd::GDScript::4237479786225693736::1746885889::0::1::::<>Control<><>0<>0<><>::
-::res://Scripts/Inventory/::1745680577
+::res://Scripts/Autoloads/::1748700409
+player_attributes.gd::GDScript/GDScript::906432891566793756::1745681769::0::1::::<>Node<><>0<>0<><>::
+quest_controller.gd::GDScript/GDScript::3286488849902255235::1748290628::0::1::::<>Node<><>0<>0<><>::
+::res://Scripts/Inventory/::1748700650
 dropped_item.gd::GDScript/GDScript::5326956673460792005::1742400208::0::1::::<>Node2D<><>0<>0<><>::
+equipment.gd::GDScript::2607151450656385207::1742656227::0::1::::Equipment<>Item<><>0<>0<><>::
 inventory_gui.gd::GDScript/GDScript::2196791136371292223::1743796908::0::1::::<>Control<><>0<>0<><>::
 inventory_slot_gui.gd::GDScript/GDScript::5078064673803612349::1745677140::0::1::::<>NinePatchRect<><>0<>0<><>::
 invetory.gd::GDScript/GDScript::2443430774539338541::1742655968::0::1::::Inventory<>Resource<><>0<>0<><>::
 item.gd::GDScript/GDScript::5067127917042370677::1743796920::0::1::::Item<>Resource<><>0<>0<><>::
 item_slot.gd::GDScript/GDScript::5500802232959430025::1742395914::0::1::::ItemSlot<>Resource<><>0<>0<><>::
 manage_inventory.gd::GDScript/GDScript::3101807359312906998::1745680577::0::1::::<>Node<><>0<>0<><>::
-::res://Scripts/NPCs/::1746285895
+::res://Scripts/NPCs/::1747493810
 npc_base.gd::GDScript/GDScript::6258261527699168336::1746285895::0::1::::<>CharacterBody2D<><>0<>0<><>::
-npc_talk_data.gd::GDScript/GDScript::3886435279133753519::1746283810::0::1::::NPCTalkData<>Resource<><>0<>0<><>::
-::res://Scripts/Spells/::1745681403
+npc_talk_data.gd::GDScript/GDScript::3886435279133753519::1747493810::0::1::::NPCTalkData<>Resource<><>0<>0<><>::
+::res://Scripts/quests/::1748700433
+npc_talk.gd::GDScript/GDScript::4237479786225693736::1747494902::0::1::::<>Control<><>0<>0<><>::
+quest_log.gd::GDScript/GDScript::5573442667266099664::1748290397::0::1::::<>Control<><>0<>0<><>::
+quest_task_data.gd::GDScript::6377702692961448876::1748290945::0::1::::QuestTaskData<>Node<><>0<>0<><>::
+::res://Scripts/Spells/::1748098319
 area_burst_spell.gd::GDScript/GDScript::1520463354356875012::1745678488::0::1::::AreaBurstSpell<>BaseSpell<><>0<>0<><>::
 aura_burn_spell.gd::GDScript/GDScript::738880806259923272::1745677531::0::1::::<>BaseSpell<><>0<>0<><>::
 aura_heal_spell.gd::GDScript/GDScript::2184220891015490424::1745680669::0::1::::AuraHealSpell<>BaseSpell<><>0<>0<><>::
 base_spell.gd::GDScript/GDScript::494320811365318796::1744467785::0::1::::BaseSpell<>Area2D<><>0<>0<><>::
 buff_spell.gd::GDScript/GDScript::5034942763255535774::1745680669::0::1::::BuffSpell<>BaseSpell<><>0<>0<><>::
-hud_skills.gd::GDScript/GDScript::7092012492211014069::1745681403::0::1::::<>Control<><>0<>0<><>::
+hud_skills.gd::GDScript/GDScript::7092012492211014069::1748098319::0::1::::<>Control<><>0<>0<><>::
 spell_data.gd::GDScript/GDScript::8372643754754320322::1744469586::0::1::::SpellData<>Resource<><>0<>0<><>::
 ::res://Scripts/TMP/::1745677596
 dummy.gd::GDScript/GDScript::3519053801983571967::1745677596::0::1::::<>CharacterBody2D<><>0<>0<><>::

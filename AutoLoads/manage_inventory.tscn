@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://djtbkb6o3186q"]
+[gd_scene load_steps=13 format=3 uid="uid://djtbkb6o3186q"]
 
 [ext_resource type="Script" uid="uid://bkgskxatepot7" path="res://Scripts/Inventory/manage_inventory.gd" id="1_tlqe5"]
 [ext_resource type="Script" uid="uid://ckmvn56iq08s0" path="res://Scripts/Inventory/item_slot.gd" id="2_hw5a0"]
@@ -6,27 +6,7 @@
 [ext_resource type="Script" uid="uid://ba2u7hy70gcoj" path="res://Scripts/Inventory/invetory.gd" id="4_2smpw"]
 [ext_resource type="Resource" uid="uid://cecskp20frwfm" path="res://Resources/Itens/Boots001.tres" id="4_w6654"]
 [ext_resource type="Resource" uid="uid://rlpvv8vnowhh" path="res://Resources/Itens/Helmet001.tres" id="5_wyl2f"]
-[ext_resource type="Resource" uid="uid://cv3peyxnov5hd" path="res://Resources/Itens/WeaponSword001.tres" id="6_h3cyq"]
-[ext_resource type="Resource" uid="uid://dq413g5m3n4l" path="res://Resources/Itens/WeaponAxe001.tres" id="7_aajdp"]
-[ext_resource type="Resource" uid="uid://danaevetggnmo" path="res://Resources/Itens/WeaponHammer001.tres" id="8_oslo4"]
 [ext_resource type="Resource" uid="uid://bu32c84cwlgmg" path="res://Resources/Itens/Offhand001.tres" id="9_oslo4"]
-
-[sub_resource type="Resource" id="Resource_31x17"]
-script = ExtResource("2_hw5a0")
-item = ExtResource("6_h3cyq")
-amount = 1
-
-[sub_resource type="Resource" id="Resource_vebc1"]
-script = ExtResource("2_hw5a0")
-item = ExtResource("8_oslo4")
-amount = 1
-metadata/_custom_type_script = "uid://ckmvn56iq08s0"
-
-[sub_resource type="Resource" id="Resource_aajdp"]
-script = ExtResource("2_hw5a0")
-item = ExtResource("7_aajdp")
-amount = 1
-metadata/_custom_type_script = "uid://ckmvn56iq08s0"
 
 [sub_resource type="Resource" id="Resource_oslo4"]
 script = ExtResource("2_hw5a0")
@@ -54,7 +34,7 @@ metadata/_custom_type_script = "uid://ckmvn56iq08s0"
 
 [sub_resource type="Resource" id="Resource_fgg8o"]
 script = ExtResource("4_2smpw")
-item_list = Array[ExtResource("2_hw5a0")]([SubResource("Resource_31x17"), SubResource("Resource_vebc1"), SubResource("Resource_aajdp"), SubResource("Resource_oslo4"), SubResource("Resource_vpekf"), SubResource("Resource_x8l6q"), SubResource("Resource_ouymh")])
+item_list = Array[ExtResource("2_hw5a0")]([SubResource("Resource_oslo4"), SubResource("Resource_vpekf"), SubResource("Resource_x8l6q"), SubResource("Resource_ouymh")])
 
 [node name="ManageInventory" type="Node"]
 script = ExtResource("1_tlqe5")

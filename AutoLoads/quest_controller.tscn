@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvlqxonf1sjpn"]
+
+[ext_resource type="Script" uid="uid://bm288x27yftcl" path="res://Scripts/Autoloads/quest_controller.gd" id="1_ll2ve"]
+[ext_resource type="Script" uid="uid://cw4n3jjuka63y" path="res://Scripts/quests/quest_task_data.gd" id="2_2ng12"]
+[ext_resource type="Resource" uid="uid://bpnn1hhmcddik" path="res://Resources/Quests/InteractWithTutor.tres" id="3_6gawk"]
+
+[node name="QuestController" type="Node"]
+script = ExtResource("1_ll2ve")
+quest_list = Array[ExtResource("2_2ng12")]([ExtResource("3_6gawk")])

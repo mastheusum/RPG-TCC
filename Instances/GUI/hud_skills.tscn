@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dmxvec4mi5shb"]
 
+[ext_resource type="Theme" uid="uid://b48pkj05smkon" path="res://Resources/canvas_hud_themes.tres" id="1_0q0e7"]
 [ext_resource type="Script" uid="uid://c8bon6qs3fk8d" path="res://Scripts/Spells/hud_skills.gd" id="1_gp6hp"]
-[ext_resource type="FontFile" uid="uid://by5japlqjs7tu" path="res://Resources/Fonts/Underdog-Regular.ttf" id="2_03bau"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l5qq3"]
 load_path = "res://.godot/imported/Inventory_Slot_1.png-1e436edb7db2c724a6b4340993fe2589.ctex"
@@ -26,244 +26,201 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = ExtResource("1_0q0e7")
 script = ExtResource("1_gp6hp")
 
-[node name="HBox" type="HBoxContainer" parent="."]
+[node name="Box" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -6.0
-offset_top = -584.0
-offset_right = 512.0
-offset_bottom = -520.0
+offset_left = -256.0
+offset_top = -64.0
+offset_right = 262.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="Skill 1" type="NinePatchRect" parent="HBox"]
-custom_minimum_size = Vector2(64, 64)
+[node name="Skill 1" type="NinePatchRect" parent="Box"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 texture = SubResource("CompressedTexture2D_l5qq3")
 region_rect = Rect2(16, 16, 64, 64)
 
-[node name="Icon" type="TextureRect" parent="HBox/Skill 1"]
+[node name="Icon" type="TextureRect" parent="Box/Skill 1"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
+offset_right = 40.0
+offset_bottom = 40.0
 expand_mode = 1
+stretch_mode = 1
 
-[node name="Identification" type="RichTextLabel" parent="HBox/Skill 1"]
+[node name="Identification" type="RichTextLabel" parent="Box/Skill 1"]
+visible = false
 layout_mode = 0
-offset_left = -32.0
-offset_top = 64.0
-offset_right = 88.0
-offset_bottom = 120.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 16
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 96.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
-[node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 1"]
+[node name="CooldownTxt" type="RichTextLabel" parent="Box/Skill 1"]
 layout_mode = 0
-offset_left = -28.0
-offset_top = 23.0
-offset_right = 92.0
-offset_bottom = 47.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 20
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]999"
 
-[node name="Cooldown" type="Timer" parent="HBox/Skill 1"]
+[node name="Cooldown" type="Timer" parent="Box/Skill 1"]
 one_shot = true
 
-[node name="Skill 2" type="NinePatchRect" parent="HBox"]
-custom_minimum_size = Vector2(64, 64)
+[node name="Skill 2" type="NinePatchRect" parent="Box"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 texture = SubResource("CompressedTexture2D_fbe7a")
 region_rect = Rect2(16, 16, 64, 64)
 
-[node name="Icon" type="TextureRect" parent="HBox/Skill 2"]
+[node name="Icon" type="TextureRect" parent="Box/Skill 2"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
+offset_right = 40.0
+offset_bottom = 40.0
 expand_mode = 1
+stretch_mode = 1
 
-[node name="Identification" type="RichTextLabel" parent="HBox/Skill 2"]
+[node name="Identification" type="RichTextLabel" parent="Box/Skill 2"]
+visible = false
 layout_mode = 0
-offset_left = -32.0
-offset_top = 64.0
-offset_right = 88.0
-offset_bottom = 120.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 16
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 96.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
-[node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 2"]
+[node name="CooldownTxt" type="RichTextLabel" parent="Box/Skill 2"]
 layout_mode = 0
-offset_left = -28.0
-offset_top = 23.0
-offset_right = 92.0
-offset_bottom = 47.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 20
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]999"
 
-[node name="Cooldown" type="Timer" parent="HBox/Skill 2"]
+[node name="Cooldown" type="Timer" parent="Box/Skill 2"]
 one_shot = true
 
-[node name="Skill 3" type="NinePatchRect" parent="HBox"]
-custom_minimum_size = Vector2(64, 64)
+[node name="Skill 3" type="NinePatchRect" parent="Box"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 texture = SubResource("CompressedTexture2D_s6m7w")
 region_rect = Rect2(16, 16, 64, 64)
 
-[node name="Icon" type="TextureRect" parent="HBox/Skill 3"]
+[node name="Icon" type="TextureRect" parent="Box/Skill 3"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
+offset_right = 40.0
+offset_bottom = 40.0
 expand_mode = 1
+stretch_mode = 1
 
-[node name="Identification" type="RichTextLabel" parent="HBox/Skill 3"]
+[node name="Identification" type="RichTextLabel" parent="Box/Skill 3"]
+visible = false
 layout_mode = 0
-offset_left = -32.0
-offset_top = 64.0
-offset_right = 88.0
-offset_bottom = 120.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 16
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 96.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
-[node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 3"]
+[node name="CooldownTxt" type="RichTextLabel" parent="Box/Skill 3"]
 layout_mode = 0
-offset_left = -28.0
-offset_top = 23.0
-offset_right = 92.0
-offset_bottom = 47.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 20
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]999"
 
-[node name="Cooldown" type="Timer" parent="HBox/Skill 3"]
+[node name="Cooldown" type="Timer" parent="Box/Skill 3"]
 one_shot = true
 
-[node name="Skill 4" type="NinePatchRect" parent="HBox"]
-custom_minimum_size = Vector2(64, 64)
+[node name="Skill 4" type="NinePatchRect" parent="Box"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 texture = SubResource("CompressedTexture2D_pcw1w")
 region_rect = Rect2(16, 16, 64, 64)
 
-[node name="Icon" type="TextureRect" parent="HBox/Skill 4"]
+[node name="Icon" type="TextureRect" parent="Box/Skill 4"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
+offset_right = 40.0
+offset_bottom = 40.0
 expand_mode = 1
+stretch_mode = 1
 
-[node name="Identification" type="RichTextLabel" parent="HBox/Skill 4"]
+[node name="Identification" type="RichTextLabel" parent="Box/Skill 4"]
+visible = false
 layout_mode = 0
-offset_left = -32.0
-offset_top = 64.0
-offset_right = 88.0
-offset_bottom = 120.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 16
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 96.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
-[node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 4"]
+[node name="CooldownTxt" type="RichTextLabel" parent="Box/Skill 4"]
 layout_mode = 0
-offset_left = -28.0
-offset_top = 23.0
-offset_right = 92.0
-offset_bottom = 47.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 20
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]999"
 
-[node name="Cooldown" type="Timer" parent="HBox/Skill 4"]
+[node name="Cooldown" type="Timer" parent="Box/Skill 4"]
 one_shot = true
 
-[node name="Skill 5" type="NinePatchRect" parent="HBox"]
-custom_minimum_size = Vector2(64, 64)
+[node name="Skill 5" type="NinePatchRect" parent="Box"]
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 texture = SubResource("CompressedTexture2D_elsu0")
 region_rect = Rect2(16, 16, 64, 64)
 
-[node name="Icon" type="TextureRect" parent="HBox/Skill 5"]
+[node name="Icon" type="TextureRect" parent="Box/Skill 5"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 56.0
-offset_bottom = 56.0
+offset_right = 40.0
+offset_bottom = 40.0
 expand_mode = 1
+stretch_mode = 1
 
-[node name="Identification" type="RichTextLabel" parent="HBox/Skill 5"]
+[node name="Identification" type="RichTextLabel" parent="Box/Skill 5"]
+visible = false
 layout_mode = 0
-offset_left = -32.0
-offset_top = 64.0
-offset_right = 88.0
-offset_bottom = 120.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 16
+offset_left = -24.0
+offset_top = -16.0
+offset_right = 96.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]Evocar Inferno"
 
-[node name="CooldownTxt" type="RichTextLabel" parent="HBox/Skill 5"]
+[node name="CooldownTxt" type="RichTextLabel" parent="Box/Skill 5"]
 layout_mode = 0
-offset_left = -28.0
-offset_top = 23.0
-offset_right = 92.0
-offset_bottom = 47.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
-theme_override_fonts/normal_font = ExtResource("2_03bau")
-theme_override_fonts/mono_font = ExtResource("2_03bau")
-theme_override_font_sizes/normal_font_size = 20
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 40.0
 bbcode_enabled = true
 text = "[center]999"
 
-[node name="Cooldown" type="Timer" parent="HBox/Skill 5"]
+[node name="Cooldown" type="Timer" parent="Box/Skill 5"]
 one_shot = true

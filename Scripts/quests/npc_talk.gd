@@ -4,6 +4,10 @@ extends Control
 var _index = -1
 var _letters = 0
 
+var identification : String = ''
+
+signal end_conversation(identification : String)
+
 func _ready() -> void:
 	self.visible = false
 	$BG.visible = false
@@ -63,6 +67,7 @@ func advance_talk():
 		_letters = 0
 		if _index >= data.talks.size():
 			remove_talks()
+			emit_signal('end_conversation', identification )
 			return
 		_active_buttons()
 		$BG/Label.visible_characters = _letters
@@ -82,7 +87,6 @@ func _timed():
 	$BG/Label.visible_characters = _letters
 	if _letters < data.talks[_index].length():
 		$Delay.start(0.05)
-	
 
 func _active_buttons():
 	$Next.visible = false
@@ -100,4 +104,3 @@ func _active_buttons():
 			$Options.visible = true
 			$Options/Accept.disabled = false
 			$Options/Negate.disabled = false
-		

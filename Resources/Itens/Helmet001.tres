@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Equipment" load_steps=5 format=3 uid="uid://rlpvv8vnowhh"]
 
-[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/equipment.gd" id="1_6qme3"]
+[ext_resource type="Script" uid="uid://bde6nyoqqkpbj" path="res://Scripts/Inventory/equipment.gd" id="1_6qme3"]
 [ext_resource type="Resource" uid="uid://cgyhjwx1nfprg" path="res://Resources/SpellData/head/example_head.tres" id="1_mv8nd"]
 [ext_resource type="Texture2D" uid="uid://u08k7be7bo8g" path="res://Sprites/Free - Raven Fantasy Icons/64x64.png" id="2_wcncj"]
 

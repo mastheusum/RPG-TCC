@@ -1,6 +1,11 @@
-res://Instances/NPCs
+res://Resources/Quests
+res://Scripts/Autoloads
+res://Scripts
+res://AutoLoads
 res://Instances/GUI
-res://Scripts/GUI
+res://Scenes
+res://Resources
+res://Instances/NPCs
 res://Instances/PlayerCharacters
 res://Scripts/NPCs
 res://Resources/NPC
@@ -14,11 +19,7 @@ res://Sprites/Effect and FX Pixel All Free/Free/Part 11
 D:/Godot/Projetos v4/rpg-tcc/Scripts/TMP
 res://Sprites/Effect and FX Pixel All Free/Free/Part 12
 res://Resources/SpellData/chest
-res://Resources
 res://Sprites/Effect and FX Pixel All Free/Free/Part 9
-res://Sprites/Effect and FX Pixel All Free/Free/Part 1
-res://Sprites
-res://Instances/TESTES
 D:/Godot/Projetos v4/rpg-tcc/builds/windows
 D:/Godot/Projetos v4/rpg-tcc/builds/linux
 D:/Godot/Projetos v4/rpg-tcc/builds
